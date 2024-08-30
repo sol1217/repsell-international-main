@@ -10,7 +10,7 @@ const Brands = () => {
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <SectionTitle
-            title="Marcas Clientes de Repsell International"
+            title="Marcas Clientes de Repsell Internacional"
             paragraph="Nos enorgullece contar con la confianza y respaldo de algunas marcas prestigiosas y reconocidas en Costa Rica. "
             center
           />

@@ -312,7 +312,7 @@ const BlogSidebarPage = () => {
               <div className="w-full px-4 lg:w-4/12">
                 <div className="mb-10 mt-12  cursor-pointer rounded-sm bg-primary p-6 shadow-three lg:mt-0">
                   <a
-                    href="/newBlog"
+                    href="/signin"
                     className="flex items-center justify-center text-center"
                   >
                     Crear un nuevo Blog

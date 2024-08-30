@@ -66,7 +66,7 @@ const Header = () => {
                   style={{ width: "auto", height: "auto" }}
                 />
 
-                <p className="wei name-company ">Repsell International</p>
+                <p className="wei name-company ">Repsell Internacional</p>
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">

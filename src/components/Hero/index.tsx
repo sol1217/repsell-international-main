@@ -26,7 +26,7 @@ const Hero = () => {
               }}
             >
               <p className="name-company" style={{ fontSize: "90px" }}>
-                Repsell Internaltional
+                Repsell Internalcional
               </p>
             </div>
           </div>

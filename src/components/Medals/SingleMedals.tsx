@@ -5,6 +5,8 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaCheckCircle } from "react-icons/fa";
+import error from "../../../public/images/hero/error.png";
+import white from "../../../public/images/products/color/white.jpeg";
 
 import { colorMapping } from "@/utils/colorMapping";
 
@@ -58,7 +60,7 @@ const SingleMedals = () => {
                 </span>
                 <img
                   className="mx-auto object-contain"
-                  src={medal.image || ""}
+                  src={medal.image || error}
                   alt={medal.name}
                   style={{ width: "300px", height: "300px" }}
                 />
@@ -85,8 +87,7 @@ const SingleMedals = () => {
                     <div className="mr-4 flex flex-row flex-wrap gap-3">
                       {(medal.color || "").split(",").map((color, index) => {
                         const colorKey = color.trim().toLowerCase();
-                        const imageSrc =
-                          colorMapping[colorKey] || defaultImageSrc;
+                        const imageSrc = colorMapping[colorKey] || white;
 
                         return (
                           <div key={index} className="flex items-center gap-2">

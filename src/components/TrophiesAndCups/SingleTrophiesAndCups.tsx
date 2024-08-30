@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { colorMapping } from "@/utils/colorMapping";
 import { FaCheckCircle } from "react-icons/fa";
+import error from "../../../public/images/hero/error.png";
+import white from "../../../public/images/products/color/white.jpeg";
 
 const SingleTrophiesAndCups = () => {
   const [trophies, setTrophies] = useState([]);
@@ -31,8 +33,8 @@ const SingleTrophiesAndCups = () => {
     const storedTrophies = JSON.parse(localStorage.getItem("trophies")) || [];
     const updatedTrophies = [...storedTrophies, trophy];
     localStorage.setItem("trophies", JSON.stringify(updatedTrophies));
-    setAddedTrophyId(trophy.id); // Set the added trophy ID to display the message
-    setTimeout(() => setAddedTrophyId(null), 3000); // Clear the message after 3 seconds
+    setAddedTrophyId(trophy.id);
+    setTimeout(() => setAddedTrophyId(null), 3000);
   };
 
   return (
@@ -50,7 +52,7 @@ const SingleTrophiesAndCups = () => {
                 </span>
                 <img
                   className="mx-auto object-contain"
-                  src={trophy.image || "/images/error.png"} // Provide a fallback image
+                  src={trophy.image || error}
                   alt={trophy.name}
                   style={{ width: "300px", height: "300px" }}
                 />
@@ -74,8 +76,7 @@ const SingleTrophiesAndCups = () => {
                     <div className="mr-4 flex flex-row flex-wrap gap-3">
                       {(trophy.color || "").split(",").map((color, index) => {
                         const colorKey = color.trim().toLowerCase();
-                        const imageSrc =
-                          colorMapping[colorKey] || "/images/default-color.png";
+                        const imageSrc = colorMapping[colorKey] || white;
 
                         return (
                           <div key={index} className="flex items-center gap-2">

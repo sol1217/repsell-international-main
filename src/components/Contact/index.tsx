@@ -1,12 +1,13 @@
 "use client";
-
 import NewsLatterBox from "./NewsLatterBox";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [buttonText, setButtonText] = useState("Enviar Mensaje");
+  const [isSent, setIsSent] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -21,10 +22,12 @@ const Contact = () => {
         )
         .then(
           () => {
-            console.log("SUCCESS!");
+            setIsSent(true);
+            setButtonText("Enviado ✅");
           },
           (error) => {
             console.error("FAILED...", error.text);
+            setButtonText("Enviar Mensaje");
           },
         );
     }
@@ -94,8 +97,11 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-sm bg-[#e11b24] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b26]/90 dark:shadow-submit-dark">
-                      Enviar Mensaje
+                    <button
+                      className="rounded-sm bg-[#e11b24] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b26]/90 dark:shadow-submit-dark"
+                      disabled={isSent} // Disable the button after sending the message
+                    >
+                      {buttonText}
                     </button>
                   </div>
                 </div>

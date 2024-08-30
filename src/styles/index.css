@@ -114,3 +114,21 @@
     padding-top: 0;
   }
 }
+
+
+@media (max-width: 1250px) {
+  .cart-main {
+    flex-direction: column;
+  }
+}
+@media (max-width: 665px) {
+  .cart-products {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .cart-product{
+    border: none;
+  }
+}

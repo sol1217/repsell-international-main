@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaCheckCircle } from "react-icons/fa";
@@ -32,8 +31,8 @@ const SinglePromotional = () => {
       JSON.parse(localStorage.getItem("selectedPromotionals")) || [];
     storedItems.push(promotional);
     localStorage.setItem("selectedPromotionals", JSON.stringify(storedItems));
-    setAddedPromotionalId(promotional.id); // Set the added promotional ID to display the message
-    setTimeout(() => setAddedPromotionalId(null), 3000); // Clear the message after 3 seconds
+    setAddedPromotionalId(promotional.id);
+    setTimeout(() => setAddedPromotionalId(null), 3000);
   };
 
   return (

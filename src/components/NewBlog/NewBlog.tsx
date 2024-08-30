@@ -1,28 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const NewBlog = () => {
   const [message, setMessage] = useState("");
+  const [preview, setPreview] = useState(null);
+  const fileInputRef = useRef(null);
 
-  const [formData, setFormData] = useState({
-    title: "",
-    description: "",
-    additionalTitle: "",
-    additionalText: "",
-    list: ["", "", "", ""],
-    phrase: "",
-  });
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    if (name.startsWith("point")) {
-      const index = parseInt(name.split("-")[1], 10);
-      const updatedList = [...formData.list];
-      updatedList[index] = value;
-      setFormData({ ...formData, list: updatedList });
-    } else {
-      setFormData({ ...formData, [name]: value });
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onloadend = () => {
+        const base64Image = reader.result;
+
+        if (typeof base64Image === "string") {
+          setPreview(base64Image);
+        }
+      };
+
+      reader.readAsDataURL(file);
     }
   };
 
@@ -30,12 +29,15 @@ const NewBlog = () => {
     e.preventDefault();
 
     try {
+      const formDataPost = new FormData(e.target);
+
+      console.log(e.target);
+
+      formDataPost.append("image", preview);
+
       const response = await fetch("http://localhost:3001/blogs", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: formDataPost,
       });
 
       if (response.ok) {
@@ -69,7 +71,33 @@ const NewBlog = () => {
               </p>
 
               <form onSubmit={handleSubmit}>
-                <input type="file" />
+                <div className="mb-8">
+                  <label
+                    htmlFor="image"
+                    className="mb-3 block text-sm text-dark dark:text-white"
+                  >
+                    Imagen:
+                  </label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleFileChange}
+                    ref={fileInputRef}
+                    className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                  />
+                </div>
+
+                {/* Preview de la imagen */}
+                {preview && (
+                  <div className="mb-8">
+                    <img
+                      src={preview}
+                      alt="Vista previa"
+                      className="h-auto max-w-full"
+                    />
+                  </div>
+                )}
+
                 <div className="mb-8">
                   <label
                     htmlFor="title"
@@ -82,8 +110,6 @@ const NewBlog = () => {
                     type="text"
                     name="title"
                     placeholder="Ingresa un título detallado"
-                    value={formData.title}
-                    onChange={handleInputChange}
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   />
                 </div>
@@ -98,8 +124,6 @@ const NewBlog = () => {
                     required
                     name="description"
                     placeholder="Ingresa una descripción completa del blog"
-                    value={formData.description}
-                    onChange={handleInputChange}
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   ></textarea>
                 </div>
@@ -115,8 +139,6 @@ const NewBlog = () => {
                     type="text"
                     name="additionalTitle"
                     placeholder="Ingresa un título para la información adicional"
-                    value={formData.additionalTitle}
-                    onChange={handleInputChange}
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   />
                 </div>
@@ -130,8 +152,6 @@ const NewBlog = () => {
                   <textarea
                     name="additionalText"
                     placeholder="Ingresa cualquier información adicional"
-                    value={formData.additionalText}
-                    onChange={handleInputChange}
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   ></textarea>
                 </div>
@@ -141,20 +161,6 @@ const NewBlog = () => {
                 >
                   Puntos Clave:
                 </label>
-                <div className="mb-8 flex flex-col gap-3">
-                  {formData.list.map((point, index) => (
-                    <input
-                      key={index}
-                      required
-                      type="text"
-                      name={`point-${index}`}
-                      placeholder={`Punto ${index + 1}`}
-                      value={point}
-                      onChange={handleInputChange}
-                      className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                    />
-                  ))}
-                </div>
 
                 <div className="mb-8">
                   <label
@@ -167,8 +173,6 @@ const NewBlog = () => {
                     required
                     name="phrase"
                     placeholder="Ingresa una frase o cita inspiradora"
-                    value={formData.phrase}
-                    onChange={handleInputChange}
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   ></textarea>
                 </div>
