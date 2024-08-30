@@ -9,7 +9,7 @@ const NewProduct = () => {
   const [selectedStyles, setSelectedStyles] = useState("");
   const [preview, setPreview] = useState(null);
   const fileInputRef = useRef(null);
-
+  
   const categorias = [
     { value: "", label: "Elegir Categoria" },
     { value: "medals", label: "Medallas" },
@@ -45,7 +45,6 @@ const NewProduct = () => {
     promotionals: "http://localhost:3001/new-promotional",
     prints: "http://localhost:3001/new-print",
   };
-
   const handleChange = (event) => {
     setSelectedCategoria(event.target.value);
   };
@@ -56,6 +55,7 @@ const NewProduct = () => {
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
+
     if (file) {
       const reader = new FileReader();
 
@@ -93,9 +93,12 @@ const NewProduct = () => {
       alert("Endpoint no encontrado para la categoría seleccionada.");
       return;
     }
-
+    
     const formData = new FormData(e.target);
-
+    // Agregarla al form data
+    //Al nosotros tener ya la imagen precargada en el estado de la aplicacion  "preview y este ya estar convertido a base64 lo unico que tienes que hacer es un append
+    //con clave valor en este caso image y a la par el valor en base 64 en el back esta el resto de la explicacion method:app.post /new-medal line 107
+    formData.append('image', preview);
     try {
       const response = await fetch(endpoint, {
         method: "POST",
