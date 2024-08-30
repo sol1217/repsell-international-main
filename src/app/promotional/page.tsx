@@ -1,0 +1,20 @@
+import { Metadata } from "next";
+import Promotional from "@/components/Promotional/Promotional";
+
+export const metadata: Metadata = {
+  title: "Promocionales y empresariales",
+  description:
+    "Nuestros productos promocionales y empresariales están diseñados para fortalecer la identidad de tu marca y crear un impacto duradero. Desde regalos corporativos hasta material publicitario, ofrecemos soluciones personalizadas que reflejan la esencia de tu empresa.",
+  keywords:
+    "promocionales, empresariales, diseños, ganadores, marca, publicitario,personalizados",
+};
+
+const PromotionalPage = () => {
+  return (
+    <>
+      <Promotional />
+    </>
+  );
+};
+
+export default PromotionalPage;
