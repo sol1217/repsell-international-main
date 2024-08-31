@@ -155,12 +155,20 @@ const NewBlog = () => {
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   ></textarea>
                 </div>
-                <label
-                  htmlFor="important-points"
-                  className="mb-3 block text-sm text-dark dark:text-white"
-                >
-                  Puntos Clave:
-                </label>
+                <div className="mb-8">
+                  <label
+                    htmlFor="important-points"
+                    className="mb-3 block text-sm text-dark dark:text-white"
+                  >
+                    Puntos Clave:
+                  </label>
+                  <input
+                    name="list"
+                    required
+                    placeholder="Ingresa puntos importantes"
+                    className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                  />
+                </div>
 
                 <div className="mb-8">
                   <label

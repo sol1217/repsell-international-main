@@ -90,7 +90,7 @@ const SignIn = () => {
                 <div className="mb-8 flex flex-col justify-between sm:flex-row sm:items-center">
                   <div>
                     <a
-                      href="#0"
+                      href="https://wa.link/h2pg27"
                       className="text-sm font-medium text-primary hover:underline"
                     >
                       Olvidaste la cuenta?

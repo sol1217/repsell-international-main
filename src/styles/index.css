@@ -132,3 +132,9 @@
     border: none;
   }
 }
+
+@media (max-width: 770px) {
+  .change-color{
+    display: none;
+  }
+}

@@ -323,11 +323,11 @@ const BlogSidebarPage = () => {
                     Todos los blogs:
                   </h3>
                   {blogsList.length > 0 ? (
-                    <ul className="flex flex-col items-start gap-3">
+                    <ul className="flex flex-col items-start gap-3 p-4">
                       <select
                         value={selectedBlogId}
                         onChange={handleBlogSelect}
-                        className="rounded border p-2"
+                        className="w-[90%] rounded border p-2"
                       >
                         {blogsList.map((blg) => (
                           <option key={blg.id} value={blg.id}>
