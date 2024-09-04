@@ -13,7 +13,9 @@ const SingleRecognitions = () => {
   useEffect(() => {
     const fetchRecognitions = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/recognitions");
+        const response = await axios.get(
+          "https://repsell-international-backend.onrender.com/recognitions",
+        );
         const uniqueRecognitions = response.data.data.filter(
           (recognition, index, self) =>
             index === self.findIndex((m) => m.name === recognition.name),

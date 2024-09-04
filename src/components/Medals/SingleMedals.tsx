@@ -17,7 +17,9 @@ const SingleMedals = () => {
   useEffect(() => {
     const fetchMedals = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/medals");
+        const response = await axios.get(
+          "https://repsell-international-backend.onrender.com/medals",
+        );
         const uniqueMedals = response.data.data.filter(
           (medal, index, self) =>
             index === self.findIndex((m) => m.name === medal.name),

@@ -24,11 +24,19 @@ const ProductMain = () => {
         medalsRes,
         impresionRes,
       ] = await Promise.all([
-        axios.get("http://localhost:3001/trophies"),
-        axios.get("http://localhost:3001/recognitions"),
-        axios.get("http://localhost:3001/promotional"),
-        axios.get("http://localhost:3001/medals"),
-        axios.get("http://localhost:3001/impresion"),
+        axios.get(
+          "https://repsell-international-backend.onrender.com/trophies",
+        ),
+        axios.get(
+          "https://repsell-international-backend.onrender.com/recognitions",
+        ),
+        axios.get(
+          "https://repsell-international-backend.onrender.com/promotional",
+        ),
+        axios.get("https://repsell-international-backend.onrender.com/medals"),
+        axios.get(
+          "https://repsell-international-backend.onrender.com/impresion",
+        ),
       ]);
 
       setTrophies(trophiesRes.data.data || []);
@@ -44,7 +52,7 @@ const ProductMain = () => {
   const deleteProduct = async (id, category) => {
     try {
       const response = await axios.delete(
-        "http://localhost:3001/delete-product",
+        "https://repsell-international-backend.onrender.com/delete-product",
         {
           data: { id, category },
         },

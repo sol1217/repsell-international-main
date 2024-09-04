@@ -13,13 +13,16 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:3001/admin", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const response = await fetch(
+      "https://repsell-international-backend.onrender.com/admin",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ User: user, password }),
       },
-      body: JSON.stringify({ User: user, password }),
-    });
+    );
 
     const resultado = await response.json();
     console.log(resultado);

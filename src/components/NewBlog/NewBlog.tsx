@@ -35,10 +35,13 @@ const NewBlog = () => {
 
       formDataPost.append("image", preview);
 
-      const response = await fetch("http://localhost:3001/blogs", {
-        method: "POST",
-        body: formDataPost,
-      });
+      const response = await fetch(
+        "https://repsell-international-backend.onrender.com/blogs",
+        {
+          method: "POST",
+          body: formDataPost,
+        },
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -106,6 +109,7 @@ const NewBlog = () => {
                     Título del Blog:
                   </label>
                   <input
+                    maxLength={100}
                     required
                     type="text"
                     name="title"
@@ -121,6 +125,7 @@ const NewBlog = () => {
                     Descripción Completa:
                   </label>
                   <textarea
+                    maxLength={500}
                     required
                     name="description"
                     placeholder="Ingresa una descripción completa del blog"
@@ -136,6 +141,7 @@ const NewBlog = () => {
                   </label>
                   <input
                     required
+                    maxLength={100}
                     type="text"
                     name="additionalTitle"
                     placeholder="Ingresa un título para la información adicional"
@@ -150,6 +156,7 @@ const NewBlog = () => {
                     Información Adicional:
                   </label>
                   <textarea
+                    maxLength={400}
                     name="additionalText"
                     placeholder="Ingresa cualquier información adicional"
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -164,6 +171,7 @@ const NewBlog = () => {
                   </label>
                   <input
                     name="list"
+                    maxLength={300}
                     required
                     placeholder="Ingresa puntos importantes"
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -179,6 +187,7 @@ const NewBlog = () => {
                   </label>
                   <textarea
                     required
+                    maxLength={300}
                     name="phrase"
                     placeholder="Ingresa una frase o cita inspiradora"
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"

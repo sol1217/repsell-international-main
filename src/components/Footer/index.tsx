@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MdEmail } from "react-icons/md";
 import { FaFacebookF, FaWaze } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { GiConcentrationOrb } from "react-icons/gi";
 
 const Footer = () => {
   return (
@@ -183,17 +184,12 @@ const Footer = () => {
 
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
-              DevelopedBy
-              <a
-                href="http://uideck.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                Sol Calderón
-              </a>
-            </p>
+            <span className="mb-1 flex items-center justify-center  gap-3 text-base font-medium text-body-color">
+              <GiConcentrationOrb fontSize={25} color="white" />
+              <span className="border-b-2 font-serif text-2xl">
+                Más allá de la medalla
+              </span>
+            </span>
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">

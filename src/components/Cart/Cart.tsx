@@ -17,8 +17,8 @@ const Cart = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm("info@gruposelley.com", "cotizacion", form.current, {
+        publicKey: "frFPhKvlbZ8DyyXhk",
       })
       .then(
         () => {
@@ -78,7 +78,7 @@ const Cart = () => {
     <div className="flex flex-col gap-10 p-7 ">
       <Breadcrumb
         pageName="Repsell International (Cotización)"
-        description="Cotiza Reconocimientos, Medallas, Promocionales, Trofeos, Copas y Impresiones."
+        description="Cotiza Reconocimientos, Promocionales y Impresiones a gran formato."
       />
       <div>
         <div className="cart-main flex flex-row items-start justify-center gap-32 ">
@@ -87,8 +87,8 @@ const Cart = () => {
               Productos Seleccionados:
             </h3>
             <p className="text-red-black border-b border-body-color border-opacity-25 text-center text-base leading-relaxed dark:border-white dark:border-opacity-25">
-              🏆 Cotiza todo tipo de Medallas, Trofeos
-              <br /> Copas con nosotros. 🏆
+              🏆 Cotiza todo tipo de Reconocimientos, Promocionales y<br />
+              Impresiones a gran formato. con nosotros. 🏆
             </p>
             {cartItems.length > 0 ? (
               <form ref={form} onSubmit={sendEmail}>
@@ -116,10 +116,18 @@ const Cart = () => {
                 ))}
                 <input
                   type="number"
-                  minLength={8}
+                  maxLength={8}
                   required
                   placeholder="Ingresa un numero de telefono para enviar la cotización"
                   name="number"
+                  className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
+                />
+                <input
+                  type="email"
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  placeholder="Ingresa tu correo electronico"
+                  name="email"
                   className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
                 />
                 <input

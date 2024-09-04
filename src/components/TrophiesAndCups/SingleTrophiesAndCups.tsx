@@ -15,7 +15,9 @@ const SingleTrophiesAndCups = () => {
   useEffect(() => {
     const fetchTrophies = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/trophies");
+        const response = await axios.get(
+          "https://repsell-international-backend.onrender.com/trophies",
+        );
         const uniqueTrophies = response.data.data.filter(
           (trophy, index, self) =>
             index === self.findIndex((m) => m.name === trophy.name),

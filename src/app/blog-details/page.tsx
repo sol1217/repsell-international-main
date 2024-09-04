@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GiConcentrationOrb } from "react-icons/gi";
 
 import { Metadata } from "next";
 
@@ -26,8 +27,11 @@ const BlogDetailsPage = () => {
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4"></div>
                       <div className="w-full">
-                        <span className="mb-1 text-base font-medium text-body-color">
-                          <span>Somos Repsell International</span>
+                        <span className="mb-1 flex items-center justify-center  gap-3 text-base font-medium text-body-color">
+                          <GiConcentrationOrb fontSize={25} color="white" />
+                          <span className="border-b-2 font-serif text-2xl">
+                            Somos Repsell internacional
+                          </span>
                         </span>
                       </div>
                     </div>

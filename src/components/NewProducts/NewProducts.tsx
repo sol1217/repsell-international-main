@@ -39,11 +39,13 @@ const NewProduct = () => {
   ];
 
   const endpoints = {
-    medals: "http://localhost:3001/new-medal",
-    recognitions: "http://localhost:3001/new-recognition",
-    trophies: "http://localhost:3001/new-trophy",
-    promotionals: "http://localhost:3001/new-promotional",
-    prints: "http://localhost:3001/new-print",
+    medals: "https://repsell-international-backend.onrender.com/new-medal",
+    recognitions:
+      "https://repsell-international-backend.onrender.com/new-recognition",
+    trophies: "https://repsell-international-backend.onrender.com/new-trophy",
+    promotionals:
+      "https://repsell-international-backend.onrender.com/new-promotional",
+    prints: "https://repsell-international-backend.onrender.com/new-print",
   };
   const handleChange = (event) => {
     setSelectedCategoria(event.target.value);

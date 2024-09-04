@@ -12,7 +12,9 @@ const SinglePromotional = () => {
   useEffect(() => {
     const fetchPromotional = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/promotional");
+        const response = await axios.get(
+          "https://repsell-international-backend.onrender.com/promotional",
+        );
         const uniquePromotional = response.data.data.filter(
           (promotional, index, self) =>
             index === self.findIndex((m) => m.name === promotional.name),

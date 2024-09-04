@@ -1,6 +1,5 @@
 "use client";
 
-import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import NewsLatterBox from "@/components/Contact/NewsLatterBox";
@@ -21,7 +20,9 @@ const BlogSidebarPage = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/blogs");
+        const response = await axios.get(
+          "https://repsell-international-backend.onrender.com/blogs",
+        );
         const uniqueBlogs = response.data.data.filter(
           (blog, index, self) =>
             index === self.findIndex((b) => b.title === blog.title),
@@ -47,7 +48,9 @@ const BlogSidebarPage = () => {
 
   const handleBlogSelect = (event) => {
     const selectedId = event.target.value;
-    const selectedBlog = blogsList.find((blog) => blog.id === selectedId);
+    const selectedBlog = blogsList.find(
+      (blog) => blog.id === parseInt(selectedId),
+    );
     setBlog(selectedBlog);
     setSelectedBlogId(selectedId);
   };
@@ -114,7 +117,7 @@ const BlogSidebarPage = () => {
                     <div className="mb-10 w-full overflow-hidden rounded">
                       <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                         <Image
-                          src="/images/blog/blog-details-01.jpg"
+                          src={blog.image}
                           alt="image"
                           fill
                           className="h-full w-full object-cover object-center"
@@ -122,16 +125,14 @@ const BlogSidebarPage = () => {
                       </div>
                     </div>
                     <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"></p>
-                    <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                      description
-                    </p>
+
                     <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                       {blog.additionalTitle}
                     </h3>
-                    <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                    <p className="mb-10  text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                       {blog.additionalText}
                     </p>
-                    <ul>
+                    <ul className="mt-24">
                       {listItems.map((item, index) => (
                         <li
                           key={index}
@@ -143,7 +144,7 @@ const BlogSidebarPage = () => {
                       ))}
                     </ul>
 
-                    <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
+                    <div className=" relative z-10 mb-10 mt-20 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                       <p className="text-center text-base font-medium italic text-body-color">
                         {blog.phrase}
                       </p>

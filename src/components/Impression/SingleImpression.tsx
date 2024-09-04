@@ -12,7 +12,9 @@ const SingleImpression = () => {
   useEffect(() => {
     const fetchImpression = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/impresion");
+        const response = await axios.get(
+          "https://repsell-international-backend.onrender.com/impresion",
+        );
         const uniqueImpression = response.data.data.filter(
           (impression, index, self) =>
             index === self.findIndex((m) => m.name === impression.name),
