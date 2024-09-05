@@ -6,10 +6,10 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 h-[100vh] overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 flex h-[100vh] items-center justify-center overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
         {/* Video background */}
-        <div className="absolute inset-0 z-0 h-[2000px]">
+        <div className=" absolute inset-0 z-0 h-[2000px]">
           <video
             className="h-full w-full object-cover opacity-20"
             autoPlay
@@ -22,7 +22,7 @@ const Hero = () => {
 
         <div className="hover:scale-99 relative z-10 flex flex-col items-center justify-center">
           <Image
-            className="transition-transform duration-300 ease-in-out hover:scale-110"
+            className="repsell-name transition-transform duration-300 ease-in-out hover:scale-110"
             src={repsell}
             alt="repsell-naem"
             width={750}
