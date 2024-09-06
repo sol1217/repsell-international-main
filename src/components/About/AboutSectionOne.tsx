@@ -26,7 +26,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Comprometidos con nuestros clientes"
-                paragraph="Con un enfoque en la calidad, la creatividad y la satisfacción del cliente, nos esforzamos por convertir cada reconocimiento en una experiencia inolvidable."
+                paragraph="Nos enfocamos en la calidad, la creatividad y la satisfacción de nuestros clientes. Convertimos cada reconocimiento en una experiencia inolvidable."
                 mb="44px"
               />
 

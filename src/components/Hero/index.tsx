@@ -1,5 +1,6 @@
 import repsell from "../../../public/images/hero/repsell-name.png";
 import Image from "next/image";
+import repsellImage from "../../../public/images/repsell-1.jpg";
 
 const Hero = () => {
   return (
@@ -29,7 +30,7 @@ const Hero = () => {
             height={750}
           />
           <p className="border-b-2 font-serif text-3xl">
-            Mas alla de la medalla
+            Más allá de la medalla
           </p>
         </div>
 

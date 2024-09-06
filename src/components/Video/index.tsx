@@ -14,7 +14,7 @@ const Video = () => {
       <div className="container">
         <SectionTitle
           title="Nuestro personal está siempre dispuesto a ayudarte"
-          paragraph="Estamos aquí para ayudarte en cada paso del camino. Nuestro equipo está a tu disposición para asegurar que tu experiencia con nosotros sea excepcional."
+          paragraph="Nuestras asesoras están para ayudarte en cada paso a elegir el reconocimiento perfecto. Nuestro equipo altamente capacitado está a su disposición para asegurar que su experiencia con nosotros sea excepcional."
           center
           mb="80px"
         />

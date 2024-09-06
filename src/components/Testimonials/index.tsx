@@ -38,7 +38,7 @@ const Testimonials = () => {
       <div className="container">
         <SectionTitle
           title=" la dedicación guía todas nuestras operaciones."
-          paragraph="Cada detalle cuenta. En Repsell, la calidad no es solo un objetivo, es nuestra promesa. "
+          paragraph="Cada detalle cuenta. En Repsell Internacional, la calidad no es solo un objetivo, es nuestra promesa. "
           center
         />
 

@@ -20,7 +20,6 @@ const AboutPage = () => {
         pageName="Sobre Nosotros"
         description="Nuestra misión es brindar un servicio excepcional y garantizar que cada cliente reciba un producto que exceda sus expectativas."
       />
-      <AboutSectionOne />
       <BlogDetailsPage />
 
       <AboutSectionTwo />

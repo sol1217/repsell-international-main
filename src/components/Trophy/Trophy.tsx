@@ -7,7 +7,7 @@ const Trophy = () => {
     <section className="bg-gray-light p-24 dark:bg-bg-color-dark">
       <SectionTitle
         title="PREMIAMOS TU ESFUERZO"
-        paragraph="Nos dedicamos a ofrecer productos de la más alta calidad en el mercado. Compruébelo usted mismo."
+        paragraph="En Repsell Internacional nos dedicamos a ofrecer los productos de la más alta calidad en el mercado ¡Compruébalo!."
         center
       />
       <div className="container">
@@ -18,18 +18,18 @@ const Trophy = () => {
               src={trophy}
               alt=""
             />
-            <div className="flex flex-col items-center gap-10">
-              <h2 className="w-full text-center" style={{ fontSize: "40px" }}>
+            <div className="flex flex-col gap-10">
+              <h2 className="w-full" style={{ fontSize: "40px" }}>
                 Líder en Premiciaciones
               </h2>
-              <div className="custom-description text-center lg:w-[600px] ">
-                Hay que innovar, y REPSELL INTERNACIONAL, líder en premiaciones
-                y reconocimientos, también va de la mano con las nuevas
-                tendencias y productos.
+              <div className="custom-description lg:w-[600px] ">
+                Hay que innovar, y en Repsell Internacional lo sabemos. Por eso,
+                somos líderes en premiaciones y reconocimientos, porque vamos de
+                la mano con las nuevas tendencias y productos
               </div>
               <a
                 href="/trophiesAndCups"
-                className="rounded-sm bg-[#e11b24] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
+                className="rounded-sm bg-[#e11b24] px-9 py-4 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
               >
                 Trofeos y Copas
               </a>

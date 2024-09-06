@@ -33,7 +33,7 @@ const featuresData: Feature[] = [
     icon: <Image src={resina} alt="" height={200} width={200} />,
     title: "Resinas",
     paragraph:
-      "lNuestras figuras y trofeos en resina son altamente personalizables y versátiles. Ofrecen la posibilidad de crear formas detalladas y únicas, perfectas para premiaciones temáticas o específicas, manteniendo siempre la calidad y el detalle que nos caracterizan.",
+      "Nuestras figuras y trofeos en resina son altamente personalizables y versátiles. Ofrecen la posibilidad de crear formas detalladas y únicas, perfectas para premiaciones temáticas o específicas, manteniendo siempre la calidad y el detalle que nos caracterizan.",
   },
   {
     id: 1,

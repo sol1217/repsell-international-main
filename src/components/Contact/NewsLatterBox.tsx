@@ -49,7 +49,7 @@ const NewsLatterBox = () => {
               <IoLogoWhatsapp fontSize={40} color=" dark:text-black" />
             </a>
             <a
-              href="/"
+              href="https://www.instagram.com/repsellcr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               aria-label="social-link"
               target="_blank"
               rel="noopener noreferrer"

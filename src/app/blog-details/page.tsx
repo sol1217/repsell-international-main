@@ -30,7 +30,7 @@ const BlogDetailsPage = () => {
                         <span className="mb-1 flex items-center justify-center  gap-3 text-base font-medium text-body-color">
                           <GiConcentrationOrb fontSize={25} color="white" />
                           <span className="border-b-2 font-serif text-2xl">
-                            Somos Repsell internacional
+                            Somos Repsell Internacional.
                           </span>
                         </span>
                       </div>
@@ -45,6 +45,11 @@ const BlogDetailsPage = () => {
                     innovadores de diseño tecnológico en la educación. Llegando
                     a vincularnos con el MEP y los Colegios Técnicos a nivel
                     nacional, así mismo con empresas privadas y el INA
+                    <br /> <br />
+                    Luego, cambiamos nuestro giro comercial en el 2000 al
+                    fusionar la empresa con Grabados y Diseños Selley, para
+                    continuar con el legado de nuestro fundador Pal Z Selley
+                    Gyaraki.
                   </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
@@ -77,6 +82,15 @@ const BlogDetailsPage = () => {
                     con Sublimación, convirtiéndose en un éxito rotundo.
                     Inclusive, para el ICODER, son las medallas estrella de
                     premiaciones deportivas en la actualidad.
+                    <br />
+                    <br />
+                    Una característica que nos destaca es que utilizamos
+                    materiales resistentes y amigables con el medio ambiente
+                    proporcionando confianza a todos nuestros clientes.
+                    Comenzando así a entablar la futura industria de medallas en
+                    metal para el consumo nacional y extranjero. Siendo la mejor
+                    empresa en la fabricación y distribución de medallas de
+                    metal.
                   </p>
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                     Características que nos destacan.

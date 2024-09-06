@@ -22,7 +22,7 @@ const GalleryAbout = () => {
     <div className="">
       <SectionTitle
         title="GALERIA"
-        paragraph="En Repsell, convertimos tus ideas en obras maestras de gran formato. Desde murales impresionantes hasta banners impactantes, nuestra impresión de gran formato eleva tu visión al siguiente nivel. "
+        paragraph="En Repsell Internacional, convertimos tus ideas en obras maestras de gran formato. Desde murales impresionantes hasta banners impactantes, nuestra impresión de gran formato eleva tu visión al siguiente nivel. "
         center
       />
       <div className="mb-20 flex flex-wrap items-center justify-center gap-1">
