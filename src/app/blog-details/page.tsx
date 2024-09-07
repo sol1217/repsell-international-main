@@ -51,14 +51,60 @@ const BlogDetailsPage = () => {
                     continuar con el legado de nuestro fundador Pal Z Selley
                     Gyaraki.
                   </p>
-                  <div className="mb-10 w-full overflow-hidden rounded">
-                    <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      <Image
-                        src="/images/hero/story-repsell.jpeg"
-                        alt="image"
-                        fill
-                        className="object-cover object-center"
-                      />
+                  <div className="repsell-img-box">
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="grid grid-rows-1 gap-3">
+                        <div className="repsell-img relative aspect-[7/60] w-full gap-3 sm:aspect-[97/44]">
+                          <Image
+                            src="/images/hero/story-repsell.jpeg"
+                            alt="image 1"
+                            fill
+                            className=" object-cover object-center"
+                          />
+                        </div>
+                        <div className="relative aspect-[97/80] w-full sm:aspect-[97/44]">
+                          <Image
+                            src="/images/hero/story-1.jpeg"
+                            alt="image 2"
+                            fill
+                            className="object-cover object-center"
+                          />
+                        </div>
+                      </div>
+                      <div className=" relative h-[50] w-full sm:aspect-[97/90]">
+                        <Image
+                          src="/images/hero/story-2.jpeg"
+                          alt="image 3"
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                    <div className="mt-3 grid grid-cols-3 gap-3">
+                      <div className="relative aspect-[97/44] h-[50] w-full">
+                        <Image
+                          src="/images/hero/story-3.jpeg"
+                          alt="image 3"
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
+                      <div className="relative aspect-[97/44] h-[50] w-full">
+                        <Image
+                          src="/images/hero/story-4.jpeg"
+                          alt="image 3"
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
+                      <div className="relative w-[40]">
+                        <Image
+                          src="/images/hero/story-5.jpeg"
+                          alt="image 3"
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
                     </div>
                   </div>
                   <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">

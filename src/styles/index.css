@@ -153,3 +153,27 @@
     height: 150px;
   }
 }
+
+@media (max-width: 574px) {
+  .repsell-img{
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .repsell-img-box{
+    margin: 10px;
+  }
+}
+
+@media (min-width: 800px) {
+  .bumbles-edition{
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .video-repsell{
+    display: none;
+  }
+}

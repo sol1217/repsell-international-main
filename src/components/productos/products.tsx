@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const ProductMain = () => {
@@ -10,6 +10,7 @@ const ProductMain = () => {
   const [promotional, setPromotional] = useState([]);
   const [medals, setMedals] = useState([]);
   const [impresion, setImpresion] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchProducts();
@@ -46,6 +47,8 @@ const ProductMain = () => {
       setImpresion(impresionRes.data.data || []);
     } catch (error) {
       console.error("Error fetching products:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -106,32 +109,35 @@ const ProductMain = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="mx-auto max-w-[1200px] rounded bg-white px-6 py-10 shadow-three dark:bg-dark sm:p-[60px]">
-                <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
-                  PRODUCTOS DISPONIBLES
-                </h3>
-                <div className="mb-11 text-center text-base font-medium text-body-color">
-                  Estos son todos los productos ingresados y disponibles en la
-                  página.
-                  <br /> ¿Deseas añadir uno nuevo?
-                  <Link
-                    href="/newProduct"
-                    className="text-primary hover:underline"
-                  >
-                    Añadir producto
-                  </Link>
+              {loading ? (
+                <p>Cargando...</p>
+              ) : (
+                <div className="mx-auto max-w-[1200px] rounded bg-white px-6 py-10 shadow-three dark:bg-dark sm:p-[60px]">
+                  <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
+                    PRODUCTOS DISPONIBLES
+                  </h3>
+                  <div className="mb-11 text-center text-base font-medium text-body-color">
+                    Estos son todos los productos ingresados y disponibles en la
+                    página.
+                    <br /> ¿Deseas añadir uno nuevo?
+                    <Link
+                      href="/newProduct"
+                      className="text-primary hover:underline"
+                    >
+                      Añadir producto
+                    </Link>
+                  </div>
+                  {renderProducts(trophies, "Trofeos", "trophies")}
+                  {renderProducts(
+                    recognitions,
+                    "Reconocimientos",
+                    "recognitions",
+                  )}
+                  {renderProducts(promotional, "Promocionales", "promotional")}
+                  {renderProducts(medals, "Medallas", "medals")}
+                  {renderProducts(impresion, "Impresiones", "impresion")}
                 </div>
-
-                {renderProducts(trophies, "Trofeos", "trophies")}
-                {renderProducts(
-                  recognitions,
-                  "Reconocimientos",
-                  "recognitions",
-                )}
-                {renderProducts(promotional, "Promocionales", "promotional")}
-                {renderProducts(medals, "Medallas", "medals")}
-                {renderProducts(impresion, "Impresiones", "impresion")}
-              </div>
+              )}
             </div>
           </div>
         </div>
