@@ -7,6 +7,19 @@ const NewBlog = () => {
   const [preview, setPreview] = useState(null);
   const fileInputRef = useRef(null);
 
+  const categorias = [
+    { value: "", label: "Elegir Categoria", href: "" },
+    { value: "medals", label: "Medallas", href: "/medals" },
+    {
+      value: "recognitions",
+      label: "Reconocimientos",
+      href: "/recognitions",
+    },
+    { value: "trophies", label: "Trofeos y Copas", href: "/trophiesAndCups" },
+    { value: "promotionals", label: "Promocionales", href: "/promotional" },
+    { value: "prints", label: "Impresiones", href: "/impression" },
+  ];
+
   const handleFileChange = (event) => {
     const file = event.target.files[0];
 
@@ -100,6 +113,16 @@ const NewBlog = () => {
                     />
                   </div>
                 )}
+                <select
+                  name="category"
+                  className="border-stroke mb-8 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
+                >
+                  {categorias.map((categoria) => (
+                    <option key={categoria.value} value={categoria.value}>
+                      {categoria.label}
+                    </option>
+                  ))}
+                </select>
 
                 <div className="mb-8">
                   <label
@@ -141,7 +164,6 @@ const NewBlog = () => {
                   </label>
                   <input
                     required
-                    maxLength={100}
                     type="text"
                     name="additionalTitle"
                     placeholder="Ingresa un título para la información adicional"

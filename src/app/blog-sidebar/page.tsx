@@ -17,6 +17,9 @@ const BlogSidebarPage = () => {
 
   const listItems =
     blog && typeof blog.list === "string" ? blog.list.split(",") : [];
+  {
+    /*"https://repsell-international-backend.onrender.com/blogs",*/
+  }
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -56,6 +59,17 @@ const BlogSidebarPage = () => {
     );
     setBlog(selectedBlog);
     setSelectedBlogId(selectedId);
+  };
+
+  const getCategoryUrl = (category) => {
+    const categoryMap = {
+      medals: "/medals",
+      recognitions: "/recognitions",
+      trophies: "/trophiesAndCups",
+      promotionals: "/promotional",
+      prints: "/impression",
+    };
+    return categoryMap[category] || "/";
   };
 
   return (
@@ -112,10 +126,10 @@ const BlogSidebarPage = () => {
                       </div>
                       <div className="mb-5">
                         <a
-                          href="https://wa.link/26xce4"
+                          href={getCategoryUrl(blog.category)}
                           className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                         >
-                          Contacto
+                          {blog.category}
                         </a>
                       </div>
                     </div>
@@ -154,6 +168,16 @@ const BlogSidebarPage = () => {
                         <p className="text-center text-base font-medium italic text-body-color">
                           {blog.phrase}
                         </p>
+                        <div className="flex flex-row items-center  gap-3">
+                          <p>Producto:</p>
+
+                          <a
+                            href={getCategoryUrl(blog.category)}
+                            className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                          >
+                            {blog.category}
+                          </a>
+                        </div>
                         <span className="absolute left-0 top-0 z-[-1]">
                           <svg
                             width="132"

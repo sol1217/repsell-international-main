@@ -28,7 +28,8 @@ const SignIn = () => {
     console.log(resultado);
 
     if (response.ok) {
-      window.location.href = "http://localhost:3000/admin";
+      window.location.href =
+        "https://repsell-international-backend.onrender.com/admin";
     } else {
       setErrorMessage(resultado.message || "Usuario o contraseña incorrectos.");
     }

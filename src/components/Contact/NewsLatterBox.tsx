@@ -5,7 +5,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaWaze } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-import { useRef } from "react";
+import { FaInstagramSquare } from "react-icons/fa";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
@@ -55,7 +55,7 @@ const NewsLatterBox = () => {
               rel="noopener noreferrer"
               className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
             >
-              <MdEmail fontSize={40} color=" dark:text-black" />
+              <FaInstagramSquare fontSize={40} color=" dark:text-black" />
             </a>
 
             <a

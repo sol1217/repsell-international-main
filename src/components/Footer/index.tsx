@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MdEmail } from "react-icons/md";
-import { FaFacebookF, FaWaze } from "react-icons/fa";
+import { FaFacebookF, FaInstagramSquare, FaWaze } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { GiConcentrationOrb } from "react-icons/gi";
 
@@ -64,7 +64,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    <MdEmail fontSize={20} color=" dark:text-black" />
+                    <FaInstagramSquare fontSize={18} color=" dark:text-black" />
                   </a>
 
                   <a
