@@ -2,6 +2,8 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
 import blogData from "./blogData";
 
+//on app/blog-sidebar are all funcionalities
+
 const Blog = () => {
   return (
     <section
