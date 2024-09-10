@@ -8,8 +8,6 @@ const Impression = () => {
       <Breadcrumb
         pageName="Impresión Gran Formato"
         description="La impresión en gran formato es ideal para dar vida a tus ideas en una escala mayor. Perfecta para banners, vallas publicitarias, pósters, y más, esta técnica garantiza imágenes de alta calidad y colores vibrantes."
-        adm="Perfil Administrador"
-        href="/signin"
       />
 
       <section className="pb-[120px] pt-[120px]">

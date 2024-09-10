@@ -8,8 +8,6 @@ const TrophiesAndCups = () => {
       <Breadcrumb
         pageName="Trofeos y copas"
         description="Los trofeos y copas que ofrecemos son más que simples galardones; son emblemas de triunfo y dedicación. Con una amplia variedad de estilos y acabados, encontrarás la opción perfecta para honrar a los ganadores y destacar su esfuerzo."
-        adm="Perfil Administrador"
-        href="/signin"
       />
 
       <section className="pb-[120px] pt-[120px]">

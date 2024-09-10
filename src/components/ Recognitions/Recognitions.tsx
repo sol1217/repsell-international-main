@@ -8,8 +8,6 @@ const Recognitions = () => {
       <Breadcrumb
         pageName="Reconocimientos "
         description="Los reconocimientos que ofrecemos capturan la esencia del mérito y la excelencia. Con una variedad de estilos y acabados, estos galardones son perfectos para celebrar hitos importantes y destacar el esfuerzo y la dedicación de quienes los reciben."
-        adm="Perfil Administrador"
-        href="/signin"
       />
 
       <section className="pb-[120px] pt-[120px]">

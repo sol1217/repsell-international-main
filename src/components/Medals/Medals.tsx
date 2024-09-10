@@ -9,8 +9,6 @@ const Medals = () => {
       <Breadcrumb
         pageName="Medallas"
         description="Las Medallas Repsell International destacan por su artesanía superior y su diseño distintivo. Perfectas para premiar a los mejores en cualquier competencia, estas medallas reflejan el prestigio y la dedicación que define a los ganadores."
-        adm="Perfil Administrador"
-        href="/signin"
       />
 
       <section className="pb-[120px] pt-[120px]">
