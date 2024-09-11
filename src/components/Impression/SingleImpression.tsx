@@ -76,7 +76,7 @@ const SingleImpression = () => {
                   <div className="mr-5 flex flex-col items-center gap-3 border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5"></div>
                   <div className="flex flex-col items-center gap-3">
                     <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                      Altura: {imp.height}
+                      Tamaño: {imp.height}
                     </h4>
                     <button
                       onClick={() => handleAddImpression(imp)}

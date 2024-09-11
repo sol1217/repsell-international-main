@@ -26,7 +26,7 @@ const testimonialData: Testimonial[] = [
     name: "Lethium Frenci",
     designation: "Founder @Lineicons",
     content:
-      "Roller Up de alta calidad: Impresión Full Color, estructura de aluminio y bolso para transporte, Perfectos para eventos, promociones y más.",
+      "Roller Up de alta calidad: Impresión Full Color, estructura de aluminio y bolso para transporte. Perfectos para eventos, promociones y más.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -37,7 +37,7 @@ const Testimonials = () => {
     <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title=" la dedicación guía todas nuestras operaciones."
+          title=" La dedicación guía todas nuestras operaciones."
           paragraph="Cada detalle cuenta. En Repsell Internacional, la calidad no es solo un objetivo, es nuestra promesa. "
           center
         />

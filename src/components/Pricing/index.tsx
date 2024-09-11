@@ -22,7 +22,7 @@ const Pricing = () => {
             packageName="Lite"
             price={isMonthly ? "sol" : "luna"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Impacta desde la primera impresión !! Contamos con todo en impresión digital !!"
+            subtitle="¡Impacta desde la primera impresión! Contamos con tecnología de punta en impresión digital"
           >
             <OfferList text="Somos fabricantes 100% ticos" status="active" />
             <OfferList

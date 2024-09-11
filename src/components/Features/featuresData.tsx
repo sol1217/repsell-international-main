@@ -1,6 +1,6 @@
 import { Feature } from "@/types/feature";
 import Image from "next/image";
-import resina from "../../../public/images/products/resina.png";
+import resina from "../../../public/images/products/glove.png";
 import medals from "../../../public/images/products/medals.png";
 import cup from "../../../public/images/products/cup.png";
 import crystals from "../../../public/images/products/crystal.png";
