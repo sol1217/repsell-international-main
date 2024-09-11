@@ -19,6 +19,7 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
+            image="/images/hero/3.jpg"
             packageName="Lite"
             price={isMonthly ? "sol" : "luna"}
             duration={isMonthly ? "mo" : "yr"}
@@ -47,6 +48,7 @@ const Pricing = () => {
             />
           </PricingBox>
           <PricingBox
+            image="/images/hero/2.jpg"
             packageName="Basic"
             price={isMonthly ? "399" : "789"}
             duration={isMonthly ? "mo" : "yr"}
@@ -66,6 +68,7 @@ const Pricing = () => {
             <OfferList text="Lanyards con su diseño" status="active" />
           </PricingBox>
           <PricingBox
+            image="/images/hero/1.jpg"
             packageName="Plus"
             price={isMonthly ? "589" : "999"}
             duration={isMonthly ? "mo" : "yr"}

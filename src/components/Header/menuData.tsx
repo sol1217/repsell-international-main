@@ -26,7 +26,7 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 41,
-        title: "Trofeos y copas ",
+        title: "Copas y Trofeos",
         path: "/trophiesAndCups",
         newTab: false,
       },

@@ -6,7 +6,7 @@ const TrophiesAndCups = () => {
   return (
     <div>
       <Breadcrumb
-        pageName="Trofeos y copas"
+        pageName="Copas y Trofeos"
         description="Los trofeos y copas que ofrecemos son más que simples galardones; son emblemas de triunfo y dedicación. Con una amplia variedad de estilos y acabados, encontrarás la opción perfecta para honrar a los ganadores y destacar su esfuerzo."
       />
 
