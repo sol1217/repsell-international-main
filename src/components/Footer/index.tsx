@@ -24,11 +24,11 @@ const Footer = () => {
                   Repsell International
                 </div>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  🕗 Horario de atención 🏆 Lunes a viernes de 8:15am a 5:00pm
+                  Horario de atención Lunes a viernes de 8:15am a 5:00pm
                 </p>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  📍 Nos ubicamos en Barrio corazón de Jesús de las antiguas
-                  bodegas de la Yanber 200 sur, San José, 10108 🏆
+                  Nos ubicamos en Barrio corazón de Jesús de las antiguas
+                  bodegas de la Yanber 200 sur, San José, 10108
                 </p>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   info@gruposelley.com

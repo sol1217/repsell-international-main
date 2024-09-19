@@ -7,7 +7,7 @@ const TrophiesAndCups = () => {
     <div>
       <Breadcrumb
         pageName="Copas y Trofeos"
-        description="Los trofeos y copas que ofrecemos son más que simples galardones; son emblemas de triunfo y dedicación. Con una amplia variedad de estilos y acabados, encontrarás la opción perfecta para honrar a los ganadores y destacar su esfuerzo."
+        description="Las Copas y Trofeos que ofrecemos son galardones; son emblemas de triunfo y dedicación. Con una amplia variedad de estilos y acabados, encontrarás la opción perfecta para honrar a los ganadores y destacar su esfuerzo."
       />
 
       <section className="pb-[120px] pt-[120px]">

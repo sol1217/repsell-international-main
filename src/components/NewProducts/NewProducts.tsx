@@ -36,6 +36,7 @@ const NewProduct = () => {
     { value: "LONAS", label: "LONAS" },
     { value: "STICKERS", label: "STICKERS" },
     { value: "GRÁFICAS", label: "Graficas" },
+    { value: "Madera", label: "Madera" },
   ];
 
   const endpoints = {

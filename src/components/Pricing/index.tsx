@@ -48,7 +48,7 @@ const Pricing = () => {
             />
           </PricingBox>
           <PricingBox
-            image="/images/hero/2.jpg"
+            image="/images/hero/2.jpeg"
             packageName="Basic"
             price={isMonthly ? "399" : "789"}
             duration={isMonthly ? "mo" : "yr"}

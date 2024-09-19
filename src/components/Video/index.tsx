@@ -26,10 +26,10 @@ const Video = () => {
               className="mx-auto max-w-[770px] overflow-hidden rounded-md"
               data-wow-delay=".15s"
             >
-              <div className="relative aspect-[70/50] items-center justify-center">
+              <div className="relative aspect-[90/50] items-center justify-center">
                 <Image
-                  className="rounded-3xl"
-                  src="/images/hero/staff.jpg"
+                  className="rounded-2xl"
+                  src="/images/hero/staff.png"
                   alt="video image"
                   fill
                 />

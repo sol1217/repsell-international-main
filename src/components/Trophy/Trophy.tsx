@@ -7,7 +7,7 @@ const Trophy = () => {
     <section className="bg-gray-light p-24 dark:bg-bg-color-dark">
       <SectionTitle
         title="PREMIAMOS TU ESFUERZO"
-        paragraph="En Repsell Internacional nos dedicamos a ofrecer los productos de la más alta calidad en el mercado ¡Compruébalo!."
+        paragraph="En Repsell Internacional ofrecemos los productos de la más alta calidad en el mercado ¡Compruébelo!"
         center
       />
       <div className="container">
@@ -23,9 +23,8 @@ const Trophy = () => {
                 Líder en Premiciaciones
               </h2>
               <div className="custom-description lg:w-[600px] ">
-                Hay que innovar, y en Repsell Internacional lo sabemos. Por eso,
-                somos líderes en premiaciones y reconocimientos, porque vamos de
-                la mano con las nuevas tendencias y productos
+                Somos líderes en premiaciones y reconocimientos, porque vamos de
+                la mano con las nuevas tendencias y productos.
               </div>
               <a
                 href="/trophiesAndCups"

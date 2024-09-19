@@ -33,11 +33,7 @@ const Admin = () => {
                   <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                     <div className="flex flex-wrap items-center gap-3">
                       <div className="products-names mb-5 mr-10 flex items-center gap-3">
-                        <TagButton text="Medallas" href="/newProduct" />
-                        <TagButton text="Reconocimientos" href="/newProduct" />
-                        <TagButton text="Trofeos y Copas" href="/newProduct" />
-                        <TagButton text="Promocionales" href="/newProduct" />
-                        <TagButton text="Impresion" href="/newProduct" />
+                        <TagButton text="Nuevo Producto" href="/newProduct" />
                       </div>
                       <div className="mb-5 flex items-center"></div>
                     </div>
@@ -95,13 +91,6 @@ const Admin = () => {
                       </a>
                     </div>
                   </div>
-
-                  <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Quis enim lobortis scelerisque fermentum. Neque
-                    sodales ut etiam sit amet. Ligula ullamcorper
-                  </p>
 
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">

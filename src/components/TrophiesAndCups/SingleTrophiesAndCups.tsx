@@ -6,7 +6,7 @@ import axios from "axios";
 import { colorMapping } from "@/utils/colorMapping";
 import { FaCheckCircle } from "react-icons/fa";
 import error from "../../../public/images/hero/error.png";
-import white from "../../../public/images/products/color/white.jpeg";
+import gold from "../../../public/images/products/color/golden.jpeg";
 
 const SingleTrophiesAndCups = () => {
   const [trophies, setTrophies] = useState([]);
@@ -78,39 +78,46 @@ const SingleTrophiesAndCups = () => {
                     <div className="mr-5 flex flex-col items-center gap-3 border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
                       <div className="w-full">
                         <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                          Colores Disponibles:
+                          Altura: {trophy.height}
                         </h4>
-                      </div>
-                      <div className="mr-4 flex flex-row flex-wrap gap-3">
-                        {(trophy.color || "").split(",").map((color, index) => {
-                          const colorKey = color.trim().toLowerCase();
-                          const imageSrc = colorMapping[colorKey] || white;
-
-                          return (
-                            <div
-                              key={index}
-                              className="flex items-center gap-2"
-                            >
-                              <Image
-                                src={imageSrc}
-                                alt={color.trim()}
-                                width={24}
-                                height={24}
-                                className="rounded-full border-body-color dark:border-white"
-                                style={{ width: "24px", height: "24px" }}
-                              />
-                              <span className="text-xs font-bold text-dark dark:text-white">
-                                {color.trim()}
-                              </span>
-                            </div>
-                          );
-                        })}
                       </div>
                     </div>
                     <div className="flex flex-col items-center gap-3">
-                      <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                        Altura: {trophy.height}
-                      </h4>
+                      <div className="flex flex-row">
+                        <div className="w-full">
+                          <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
+                            Colores:
+                          </h4>
+                        </div>
+                        <div className="mr-4 flex  flex-wrap gap-3">
+                          {(trophy.color || "")
+                            .split(",")
+                            .map((color, index) => {
+                              const colorKey = color.trim().toLowerCase();
+                              const imageSrc = colorMapping[colorKey] || gold;
+
+                              return (
+                                <div
+                                  key={index}
+                                  className="flex items-center gap-2"
+                                >
+                                  <Image
+                                    src={imageSrc}
+                                    alt={color.trim()}
+                                    width={24}
+                                    height={24}
+                                    className="rounded-full border-body-color dark:border-white"
+                                    style={{ width: "24px", height: "24px" }}
+                                  />
+                                  <span className="text-xs font-bold text-dark dark:text-white">
+                                    {color.trim()}
+                                  </span>
+                                </div>
+                              );
+                            })}
+                        </div>
+                      </div>
+
                       <button
                         onClick={() => handleAddTrophy(trophy)}
                         className="rounded-sm bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"

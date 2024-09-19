@@ -1,6 +1,5 @@
 import repsell from "../../../public/images/hero/repsell-name.png";
 import Image from "next/image";
-import repsellImage from "../../../public/images/repsell-1.jpg";
 
 const Hero = () => {
   return (

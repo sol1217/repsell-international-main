@@ -1,5 +1,5 @@
 import Image from "next/image";
-import trofeo from "../../../public/images/products/repsell-3.jpg";
+import trofeo from "../../../public/images/products/repsell-3.jpeg";
 
 const AboutSectionTwo = () => {
   return (

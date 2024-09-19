@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
-import trofeo from "../../../public/images/products/repsell-2.jpg";
+import trofeo from "../../../public/images/products/repsell-2.jpeg";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -34,8 +34,8 @@ const AboutSectionOne = () => {
                 className="mb-12 max-w-[570px] lg:mb-0"
                 data-wow-delay=".15s"
               >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                <div className="mx-[-12px] flex flex-wrap items-center justify-center">
+                  <div className="flex w-full flex-col items-center justify-center px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="Calidad Superior en Productos y Servicios" />
                     <List text="Personalización y Creatividad" />
                     <List text="Entrega Puntual y Fiable" />

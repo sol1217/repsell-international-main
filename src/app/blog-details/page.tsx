@@ -51,7 +51,7 @@ const BlogDetailsPage = () => {
                     continuar con el legado de nuestro fundador Pal Z Selley
                     Gyaraki.
                   </p>
-                  <div className="repsell-img-box">
+                  <div className="repsell-img-box mb-8">
                     <div className="grid grid-cols-2 gap-3">
                       <div className="grid grid-rows-1 gap-3">
                         <div className="repsell-img relative aspect-[7/60] w-full gap-3 sm:aspect-[97/44]">
@@ -119,6 +119,7 @@ const BlogDetailsPage = () => {
                     diferentes y no tradicionales, los cuales tuvieron y siguen
                     teniendo gran acogida por nuestros clientes.
                   </p>
+
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     A través de los conocimientos modernos del ING Pal Selley
                     González, adquiridos gracias a su educación en las mejores
@@ -129,6 +130,62 @@ const BlogDetailsPage = () => {
                     Inclusive, para el ICODER, son las medallas estrella de
                     premiaciones deportivas en la actualidad.
                     <br />
+                    <div className="repsell-img-box mt-6">
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-rows-1 gap-3">
+                          <div className="repsell-img relative aspect-[7/60] w-full gap-3 sm:aspect-[97/44]">
+                            <Image
+                              src="/images/hero/st-4.jpeg"
+                              alt="image 1"
+                              fill
+                              className=" object-cover object-center"
+                            />
+                          </div>
+                          <div className="relative aspect-[97/80] w-full sm:aspect-[97/44]">
+                            <Image
+                              src="/images/hero/st-1.jpeg"
+                              alt="image 2"
+                              fill
+                              className="object-cover object-center"
+                            />
+                          </div>
+                        </div>
+                        <div className=" relative h-[50] w-full sm:aspect-[97/90]">
+                          <Image
+                            src="/images/hero/st-5.jpeg"
+                            alt="image 3"
+                            fill
+                            className="object-cover object-center"
+                          />
+                        </div>
+                      </div>
+                      <div className="mt-3 grid grid-cols-3 gap-3">
+                        <div className="relative aspect-[97/44] h-[50] w-full">
+                          <Image
+                            src="/images/hero/st-3.jpeg"
+                            alt="image 3"
+                            fill
+                            className="object-cover object-center"
+                          />
+                        </div>
+                        <div className="relative aspect-[97/44] h-[50] w-full">
+                          <Image
+                            src="/images/hero/st-4.jpeg"
+                            alt="image 3"
+                            fill
+                            className="object-cover object-center"
+                          />
+                        </div>
+                        <div className="relative w-[40]">
+                          <Image
+                            src="/images/hero/st-2.jpeg"
+                            alt="image 3"
+                            fill
+                            className="object-cover object-center"
+                          />
+                        </div>
+                      </div>
+                    </div>
                     <br />
                     Una característica que nos destaca es que utilizamos
                     materiales resistentes y amigables con el medio ambiente
