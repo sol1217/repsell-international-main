@@ -214,9 +214,10 @@ const NewProduct = () => {
                       htmlFor="height"
                       className="mb-3 block text-sm text-dark dark:text-white"
                     >
-                      Altura: (opcional)
+                      Altura/Tamaño: (opcional)
                     </label>
                     <input
+                      maxLength={20}
                       type="text"
                       name="height"
                       placeholder="Ingresa la altura en centimetros"

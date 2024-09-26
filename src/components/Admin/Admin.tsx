@@ -60,12 +60,15 @@ const Admin = () => {
                       </div>
                       <div className="mb-5 flex items-center"></div>
                     </div>
+                    <div className="products-names mb-5 mr-10 flex items-center gap-3">
+                      <TagButton text="Nuevo Blog" href="/newBlog" />
+                    </div>
                     <div className="mb-5">
                       <a
-                        href="/newBlog"
+                        href="/checkBlog"
                         className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                       >
-                        Nuevo Blog
+                        Ver Blogs
                       </a>
                     </div>
                   </div>

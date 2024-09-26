@@ -87,8 +87,8 @@ const Cart = () => {
               Productos Seleccionados:
             </h3>
             <p className="text-red-black border-b border-body-color border-opacity-25 text-center text-base leading-relaxed dark:border-white dark:border-opacity-25">
-              🏆 Cotiza todo tipo de Reconocimientos, Promocionales y<br />
-              Impresiones a gran formato. con nosotros. 🏆
+              Cotiza todo tipo de Reconocimientos, Promocionales y<br />
+              Impresiones a gran formato. con nosotros.
             </p>
             {cartItems.length > 0 ? (
               <form ref={form} onSubmit={sendEmail}>

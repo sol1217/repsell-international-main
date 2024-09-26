@@ -16,7 +16,7 @@ const NewsLatterBox = () => {
         Horario de atención
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        🕗 Lunes a viernes de 8:15am a 5:00pm 🏆
+        Lunes a viernes de 8:15am a 5:00pm
       </p>
 
       <div>
@@ -80,8 +80,8 @@ const NewsLatterBox = () => {
           </div>
 
           <p className=" mt-10 text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
-            📍 Nos ubicamos en Barrio corazón de Jesús de las antiguas bodegas
-            de la Yanber 200 sur, San José, 10108 🏆
+            Nos ubicamos en Barrio corazón de Jesús de las antiguas bodegas de
+            la Yanber 200 sur, San José, 10108
           </p>
 
           <p className="mt-9 text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">

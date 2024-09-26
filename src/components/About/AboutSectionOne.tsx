@@ -35,7 +35,7 @@ const AboutSectionOne = () => {
                 data-wow-delay=".15s"
               >
                 <div className="mx-[-12px] flex flex-wrap items-center justify-center">
-                  <div className="flex w-full flex-col items-center justify-center px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="Calidad Superior en Productos y Servicios" />
                     <List text="Personalización y Creatividad" />
                     <List text="Entrega Puntual y Fiable" />

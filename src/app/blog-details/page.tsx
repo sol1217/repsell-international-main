@@ -130,61 +130,49 @@ const BlogDetailsPage = () => {
                     Inclusive, para el ICODER, son las medallas estrella de
                     premiaciones deportivas en la actualidad.
                     <br />
-                    <div className="repsell-img-box mt-6">
-                      <div className="grid grid-cols-2 gap-3">
-                        <div className="grid grid-rows-1 gap-3">
-                          <div className="repsell-img relative aspect-[7/60] w-full gap-3 sm:aspect-[97/44]">
-                            <Image
-                              src="/images/hero/st-4.jpeg"
-                              alt="image 1"
-                              fill
-                              className=" object-cover object-center"
-                            />
-                          </div>
-                          <div className="relative aspect-[97/80] w-full sm:aspect-[97/44]">
-                            <Image
-                              src="/images/hero/st-1.jpeg"
-                              alt="image 2"
-                              fill
-                              className="object-cover object-center"
-                            />
-                          </div>
-                        </div>
-                        <div className=" relative h-[50] w-full sm:aspect-[97/90]">
-                          <Image
-                            src="/images/hero/st-5.jpeg"
-                            alt="image 3"
-                            fill
-                            className="object-cover object-center"
-                          />
-                        </div>
-                      </div>
-                      <div className="mt-3 grid grid-cols-3 gap-3">
-                        <div className="relative aspect-[97/44] h-[50] w-full">
-                          <Image
-                            src="/images/hero/st-3.jpeg"
-                            alt="image 3"
-                            fill
-                            className="object-cover object-center"
-                          />
-                        </div>
-                        <div className="relative aspect-[97/44] h-[50] w-full">
-                          <Image
-                            src="/images/hero/st-4.jpeg"
-                            alt="image 3"
-                            fill
-                            className="object-cover object-center"
-                          />
-                        </div>
-                        <div className="relative w-[40]">
-                          <Image
-                            src="/images/hero/st-2.jpeg"
-                            alt="image 3"
-                            fill
-                            className="object-cover object-center"
-                          />
-                        </div>
-                      </div>
+                    <div className="mt-7 grid grid-cols-3 gap-5">
+                      <Image
+                        src="/images/hero/st-5.jpeg"
+                        alt=""
+                        width={300}
+                        height={100}
+                        className="h-[180px] w-full object-cover"
+                      />
+                      <Image
+                        src="/images/hero/st-3.jpeg"
+                        alt=""
+                        width={300}
+                        height={100}
+                        className="h-[180px] w-full object-cover"
+                      />
+                      <Image
+                        src="/images/hero/st-1.jpeg"
+                        alt=""
+                        width={300}
+                        height={100}
+                        className="h-[180px] w-full object-cover"
+                      />
+                      <Image
+                        src="/images/hero/st-2.jpeg"
+                        alt=""
+                        width={300}
+                        height={100}
+                        className="h-[180px] w-full object-cover"
+                      />
+                      <Image
+                        src="/images/hero/st-4.jpeg"
+                        alt=""
+                        width={300}
+                        height={100}
+                        className="h-[180px] w-full object-cover"
+                      />
+                      <Image
+                        src="/images/hero/st-5.jpeg"
+                        alt=""
+                        width={300}
+                        height={100}
+                        className="h-[180px] w-full object-cover"
+                      />
                     </div>
                     <br />
                     Una característica que nos destaca es que utilizamos

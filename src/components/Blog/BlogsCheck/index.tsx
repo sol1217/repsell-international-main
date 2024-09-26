@@ -1,58 +1,34 @@
 "use client";
-import Link from "next/link";
-import { FaRegTrashAlt } from "react-icons/fa";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 
-const ProductMain = () => {
-  const [trophies, setTrophies] = useState([]);
-  const [recognitions, setRecognitions] = useState([]);
-  const [promotional, setPromotional] = useState([]);
-  const [medals, setMedals] = useState([]);
-  const [impresion, setImpresion] = useState([]);
+import React, { Fragment, useEffect, useState } from "react";
+import Link from "next/link";
+import axios from "axios";
+import { FaRegTrashAlt } from "react-icons/fa";
+
+const BlogsCheck = () => {
+  const [blog, setBlog] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchProducts();
+    fetchBlogs();
   }, []);
 
-  const fetchProducts = async () => {
+  const fetchBlogs = async () => {
     try {
-      const [
-        trophiesRes,
-        recognitionsRes,
-        promotionalRes,
-        medalsRes,
-        impresionRes,
-      ] = await Promise.all([
-        axios.get(
-          "https://repsell-international-backend.onrender.com/trophies",
-        ),
-        axios.get(
-          "https://repsell-international-backend.onrender.com/recognitions",
-        ),
-        axios.get(
-          "https://repsell-international-backend.onrender.com/promotional",
-        ),
-        axios.get("https://repsell-international-backend.onrender.com/medals"),
-        axios.get(
-          "https://repsell-international-backend.onrender.com/impresion",
-        ),
+      const [blogs] = await Promise.all([
+        axios.get("https://repsell-international-backend.onrender.com/blogs"),
       ]);
 
-      setTrophies(trophiesRes.data.data || []);
-      setRecognitions(recognitionsRes.data.data || []);
-      setPromotional(promotionalRes.data.data || []);
-      setMedals(medalsRes.data.data || []);
-      setImpresion(impresionRes.data.data || []);
+      console.log("Datos recibidos:");
+      setBlog(blogs || []);
     } catch (error) {
-      console.error("Error fetching products:", error);
+      console.error("Error fetching Blogs:", error);
     } finally {
       setLoading(false);
     }
   };
 
-  const deleteProduct = async (id, category) => {
+  /*const deleteProduct = async (id, category) => {
     try {
       const response = await axios.delete(
         "https://repsell-international-backend.onrender.com/delete-product",
@@ -62,7 +38,6 @@ const ProductMain = () => {
       );
       if (response.status === 200) {
         alert("Producto eliminado correctamente.");
-        // Refrescar la lista de productos después de eliminar
         fetchProducts();
       } else {
         alert("Error al eliminar el producto.");
@@ -71,45 +46,38 @@ const ProductMain = () => {
       console.error("Error eliminando el producto:", error);
       alert("Error en el servidor.");
     }
-  };
+  };*/
 
-  const renderProducts = (products, title, category) => (
+  const renderBlogs = (blogs, title, category) => (
     <>
       <h2 className="mb-8 text-center" style={{ fontSize: "26px" }}>
         {title}
       </h2>
       <div>
-        {products.length > 0 ? (
-          products.map((product) => (
+        {blogs.length > 0 ? (
+          blogs.map((product) => (
             <div
               key={product.id}
               className="mb-6 flex flex-col items-center justify-center gap-3"
             >
               <div className="border-stroke flex w-full justify-between rounded-sm border border-primary bg-[#f8f8f8] bg-primary/5 px-6 py-3 text-base outline-none transition-all duration-300 dark:border-primary dark:border-transparent dark:bg-[#2C303B] dark:bg-primary/5 dark:text-body-color-dark dark:text-primary dark:shadow-two dark:hover:shadow-none">
-                {product.name || "No Name"}
-
-                <div className="flex flex-row items-center justify-center gap-3">
-                  <button
-                    className="cursor-pointer"
-                    onClick={() => deleteProduct(product.id, category)}
-                  >
-                    <FaRegTrashAlt fontSize={20} color="white dark:b-primary" />
-                  </button>
-                  <a href="/editProducts">Editar</a>
-                </div>
+                {product.title || "No Name"}
+                <button className="cursor-pointer">
+                  <FaRegTrashAlt fontSize={20} color="white dark:b-primary" />
+                </button>
               </div>
             </div>
           ))
         ) : (
-          <p className="text-center">No hay productos disponibles.</p>
+          <p className="text-center">No hay blogs disponibles.</p>
         )}
       </div>
     </>
   );
 
   return (
-    <>
-      <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[10px]">
+    <Fragment>
+      <section className="relative z-10 mt-[200px] overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[10px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
@@ -118,28 +86,20 @@ const ProductMain = () => {
               ) : (
                 <div className="mx-auto max-w-[1200px] rounded bg-white px-6 py-10 shadow-three dark:bg-dark sm:p-[60px]">
                   <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
-                    PRODUCTOS DISPONIBLES
+                    BLOGS PUBLICADOS
                   </h3>
                   <div className="mb-11 text-center text-base font-medium text-body-color">
-                    Estos son todos los productos ingresados y disponibles en la
+                    Estos son todos los blogs ingresados y publicados en la
                     página.
                     <br /> ¿Deseas añadir uno nuevo?
                     <Link
-                      href="/newProduct"
+                      href="/newBlog"
                       className="text-primary hover:underline"
                     >
-                      Añadir producto
+                      Añadir Blog
                     </Link>
                   </div>
-                  {renderProducts(trophies, "Trofeos", "trophies")}
-                  {renderProducts(
-                    recognitions,
-                    "Reconocimientos",
-                    "recognitions",
-                  )}
-                  {renderProducts(promotional, "Promocionales", "promotional")}
-                  {renderProducts(medals, "Medallas", "medals")}
-                  {renderProducts(impresion, "Impresiones", "impresion")}
+                  {renderBlogs(blog, "Blogs Publicados", "blogs")}
                 </div>
               )}
             </div>
@@ -203,8 +163,8 @@ const ProductMain = () => {
           </svg>
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 
-export default ProductMain;
+export default BlogsCheck;
