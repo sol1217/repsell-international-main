@@ -29,6 +29,7 @@ const EditProducts = () => {
           image: "",
         },
       );
+      console.log(product)
       setEditNombre(product.name);
       setEditDescripcion(product.description);
       setEditDescripcion(product.height);
@@ -53,11 +54,24 @@ const EditProducts = () => {
     setter(false);
   };
 
-  const updateValues = async () => {
-    const resp = await axios.put(
-      `http://localhost:3001/product/`,
-      dataSelected,
-    );
+  const handleSubmit = async (e) => {
+    const formData = new FormData(e.target);
+    formData.append("image",dataSelected.image);
+    formData.append("category",data.get("category"));
+    try {
+      const response = await fetch(`https://repsell-international-backend.onrender.com/product/${data.get("id")}/${data.get("category")}`, {
+        method: "PUT",
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("Producto enviado correctamente.");
+      } else {
+        alert("Error al enviar el producto.");
+      }
+    } catch (error) {
+      alert("Error en la conexión.");
+    }
   };
 
   return (
@@ -75,7 +89,7 @@ const EditProducts = () => {
                   producto
                 </p>
 
-                <form className="flex flex-col gap-3">
+                <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
                   {dataSelected ? (
                     <div className=" m-2 flex flex-row items-center justify-evenly ">
                       <input
@@ -96,7 +110,7 @@ const EditProducts = () => {
                           <input
                             type="text"
                             name="nombre"
-                            value={
+                            defaultValue={
                               dataSelected.name
                                 ? dataSelected.name
                                 : "Nuevo Nombre"
@@ -119,7 +133,7 @@ const EditProducts = () => {
                           <input
                             type="text"
                             name="descripcion"
-                            value={
+                            defaultValue={
                               dataSelected.description
                                 ? dataSelected.description
                                 : "Nueva Descripcion"
@@ -142,7 +156,7 @@ const EditProducts = () => {
                           <input
                             type="text"
                             name="tamaño"
-                            value={
+                            defaultValue={
                               dataSelected.height
                                 ? dataSelected.height
                                 : "Nuevo tamaño"
@@ -162,7 +176,7 @@ const EditProducts = () => {
                           <input
                             type="text"
                             name="color"
-                            value={
+                            defaultValue={
                               dataSelected.color
                                 ? dataSelected.color
                                 : "Nuevo color"
@@ -177,6 +191,14 @@ const EditProducts = () => {
                       )}
                     </div>
                   </div>
+                  <div className="mt-6 flex items-center justify-center">
+                    <button
+                      className="inline-flex w-[100px] items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                      type="submit"
+                    >
+                      Guardar
+                    </button>
+                  </div>
                 </form>
 
                 <p className="mt-6 text-center text-base font-medium text-body-color">
@@ -185,14 +207,7 @@ const EditProducts = () => {
                     Productos
                   </a>
                 </p>
-                <div className="mt-6 flex items-center justify-center">
-                  <button
-                    className="inline-flex w-[100px] items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
-                    onClick={() => updateValues()}
-                  >
-                    Guardar
-                  </button>
-                </div>
+                
               </div>
             </div>
           </div>
