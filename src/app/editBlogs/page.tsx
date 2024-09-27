@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
-/*
 
 const EditBlogs = () => {
   const [editNombre, setEditNombre] = useState(false);
@@ -62,6 +61,7 @@ const EditBlogs = () => {
 
   return (
     <>
+      {/*
       <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap ">
@@ -241,9 +241,9 @@ const EditBlogs = () => {
           </div>
         </div>
       </section>
+      */}
     </>
   );
 };
 
 export default EditBlogs;
-*/
