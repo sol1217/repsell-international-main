@@ -3,7 +3,7 @@ import axios from "axios";
 import { Metadata } from "next";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const EditProducts = () => {
   const [editNombre, setEditNombre] = useState(false);
@@ -12,6 +12,7 @@ const EditProducts = () => {
   const [editColor, setEditColor] = useState(false);
   const [dataSelected, setDataSelected] = useState(null);
   const data = useSearchParams();
+
   const fetchProduct = async () => {
     try {
       const product = (
@@ -40,7 +41,7 @@ const EditProducts = () => {
 
   useEffect(() => {
     fetchProduct();
-  });
+  }, [data]);
 
   const handleEditClick = (setter) => (e) => {
     e.preventDefault();
@@ -60,7 +61,7 @@ const EditProducts = () => {
   };
 
   return (
-    <>
+    <Suspense>
       <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap ">
@@ -197,7 +198,7 @@ const EditProducts = () => {
           </div>
         </div>
       </section>
-    </>
+    </Suspense>
   );
 };
 

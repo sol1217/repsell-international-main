@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
+/*
 
 const EditBlogs = () => {
   const [editNombre, setEditNombre] = useState(false);
@@ -245,3 +246,4 @@ const EditBlogs = () => {
 };
 
 export default EditBlogs;
+*/
