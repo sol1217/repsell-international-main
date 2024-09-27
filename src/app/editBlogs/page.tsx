@@ -1,12 +1,11 @@
 "use client";
-import { Metadata } from "next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
 
 const EditBlogs = () => {
-  const [editNombre, setEditNombre] = useState(false);
+  /*const [editNombre, setEditNombre] = useState(false);
   const [editDescripcion, setEditDescripcion] = useState(false);
   const [editImage, setEditImage] = useState(false);
   const [editColor, setEditColor] = useState(false);
@@ -57,7 +56,7 @@ const EditBlogs = () => {
       `http://localhost:3001/product/`,
       dataSelected,
     );
-  };
+  };*/
 
   return (
     <>
