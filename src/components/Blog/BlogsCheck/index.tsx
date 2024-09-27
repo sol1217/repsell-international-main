@@ -15,38 +15,30 @@ const BlogsCheck = () => {
 
   const fetchBlogs = async () => {
     try {
-      const [blogs] = await Promise.all([
-        axios.get("https://repsell-international-backend.onrender.com/blogs"),
-      ]);
-
-      console.log("Datos recibidos:");
-      setBlog(blogs || []);
+      const blogs = ((await axios.get("https://repsell-international-backend.onrender.com/blogs")) as any).data.data;
+      console.log(blogs)
+      setBlog(blogs);
     } catch (error) {
       console.error("Error fetching Blogs:", error);
+      setBlog([]);
     } finally {
       setLoading(false);
     }
   };
 
-  /*const deleteProduct = async (id, category) => {
+  const deleteBlog = async (id) => {
     try {
-      const response = await axios.delete(
-        "https://repsell-international-backend.onrender.com/delete-product",
-        {
-          data: { id, category },
-        },
-      );
+      const response = await axios.delete(`https://repsell-international-backend.onrender.com/delete-blog/${id}`);
       if (response.status === 200) {
         alert("Producto eliminado correctamente.");
-        fetchProducts();
+        fetchBlogs();
       } else {
         alert("Error al eliminar el producto.");
       }
     } catch (error) {
-      console.error("Error eliminando el producto:", error);
       alert("Error en el servidor.");
     }
-  };*/
+  };
 
   const renderBlogs = (blogs, title, category) => (
     <>
@@ -62,7 +54,7 @@ const BlogsCheck = () => {
             >
               <div className="border-stroke flex w-full justify-between rounded-sm border border-primary bg-[#f8f8f8] bg-primary/5 px-6 py-3 text-base outline-none transition-all duration-300 dark:border-primary dark:border-transparent dark:bg-[#2C303B] dark:bg-primary/5 dark:text-body-color-dark dark:text-primary dark:shadow-two dark:hover:shadow-none">
                 {product.title || "No Name"}
-                <button className="cursor-pointer">
+                <button className="cursor-pointer" onClick={() => deleteBlog(product.id)}>
                   <FaRegTrashAlt fontSize={20} color="white dark:b-primary" />
                 </button>
               </div>

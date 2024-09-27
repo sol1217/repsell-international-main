@@ -1,14 +1,35 @@
 "use client";
+import axios from "axios";
 import { Metadata } from "next";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const EditProducts = () => {
   const [editNombre, setEditNombre] = useState(false);
   const [editDescripcion, setEditDescripcion] = useState(false);
   const [editTamaño, setEditTamaño] = useState(false);
   const [editColor, setEditColor] = useState(false);
+  const [dataSelected,setDataSelected] = useState(null);
+  const data = useSearchParams();
+  const fetchProduct = async () => {
+    try {
+      const product = (await axios.get(`https://repsell-international-backend.onrender.com/product/${data.get("id")}/${data.get("category")}`)).data.data[0]
+      setDataSelected(product || {name:"",description:"",height:"",color:""})
+      setEditNombre(product.name);
+      setEditDescripcion(product.description);
+      setEditDescripcion(product.height);
+      setEditColor(product.color);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
+  
+  useEffect(() => {
+    fetchProduct();
+  });
 
+  
   const handleEditClick = (setter) => (e) => {
     e.preventDefault();
     setter(true);
@@ -18,6 +39,10 @@ const EditProducts = () => {
     e.preventDefault();
     setter(false);
   };
+
+  const updateValues = async ()=>{
+    const resp = await axios.put(`http://localhost:3001/product/`,dataSelected)
+  }
 
   return (
     <>
@@ -42,12 +67,12 @@ const EditProducts = () => {
                 <form className="flex flex-col gap-3">
                   <div className="rounded-3xl p-2 ">
                     <div className="flex w-full flex-row items-center justify-around gap-3 ">
-                      {editNombre ? (
+                      {dataSelected ? (
                         <>
                           <input
                             type="text"
                             name="nombre"
-                            defaultValue="Nuevo Nombre"
+                            value={dataSelected.name ? dataSelected.name :"Nuevo Nombre"}
                             className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                           />
                           <button
@@ -77,12 +102,12 @@ const EditProducts = () => {
 
                   <div className="rounded-3xl p-2 ">
                     <div className="flex w-full flex-row items-center justify-around gap-3 ">
-                      {editDescripcion ? (
+                      {dataSelected ? (
                         <>
                           <input
                             type="text"
                             name="descripcion"
-                            defaultValue="Nueva Descripción"
+                            value={dataSelected.description ? dataSelected.description :"Nueva Descripcion"}
                             className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                           />
                           <button
@@ -115,12 +140,12 @@ const EditProducts = () => {
 
                   <div className="rounded-3xl p-2 ">
                     <div className="flex w-full flex-row items-center justify-around gap-3 ">
-                      {editTamaño ? (
+                      {dataSelected ? (
                         <>
                           <input
                             type="text"
                             name="tamaño"
-                            defaultValue="Nuevo Tamaño"
+                            value={dataSelected.height ? dataSelected.height :"Nuevo tamaño"}
                             className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                           />
                           <button
@@ -149,12 +174,12 @@ const EditProducts = () => {
                   </div>
                   <div className="rounded-3xl p-2 ">
                     <div className="flex w-full flex-row items-center justify-around gap-3 ">
-                      {editColor ? (
+                      {dataSelected ? (
                         <>
                           <input
                             type="text"
                             name="color"
-                            defaultValue="Nuevos Colores"
+                            value={dataSelected.color ? dataSelected.color :"Nuevo color"}
                             className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                           />
                           <button
@@ -189,10 +214,18 @@ const EditProducts = () => {
                     Blogs
                   </a>
                 </p>
+                <button
+                  className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                  onClick={()=>updateValues()}
+                >
+                  Guardar
+                </button>
               </div>
             </div>
           </div>
+          
         </div>
+        
       </section>
     </>
   );
