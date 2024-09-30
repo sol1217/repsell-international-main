@@ -12,7 +12,7 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Repsell Internacional"
-          paragraph="Únete a nosotros en este emocionante viaje mientras continuamos celebrando logros junto a ustedes."
+          paragraph="Únase a nosotros en este emocionante viaje mientras continuamos celebrando logros junto a ustedes."
           center
           width="665px"
         />

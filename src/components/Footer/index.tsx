@@ -14,14 +14,14 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
-                <div className=" mb-8 inline-block">
+                <div className=" mb-8  flex flex-col gap-3">
                   <Image
                     src="/images/hero/logo-repsell-icono.png"
                     alt="logo"
                     width={30}
                     height={40}
                   />
-                  Repsell International
+                  <p>Repsell International</p>
                 </div>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   Horario de atención Lunes a viernes de 8:15am a 5:00pm
@@ -186,7 +186,7 @@ const Footer = () => {
           <div className="py-8">
             <span className="mb-1 flex items-center justify-center  gap-3 text-base font-medium text-body-color">
               <GiConcentrationOrb fontSize={25} color="white" />
-              <span className="border-b-2 font-serif text-2xl">
+              <span className="border-b-2 font-serif text-3xl">
                 Más allá de la medalla
               </span>
             </span>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import trophy from "../../../public/images/products/trophy.png";
+import resina from "../../../public/images/products/trophy-product.png";
 import SectionTitle from "@/components/Common/SectionTitle";
 
 const Trophy = () => {
@@ -20,11 +21,11 @@ const Trophy = () => {
             />
             <div className="flex flex-col gap-10">
               <h2 className="w-full" style={{ fontSize: "40px" }}>
-                Líder en Premiciaciones
+                Somos líderes en premiaciones
+                <br /> y reconodimientos
               </h2>
               <div className="custom-description lg:w-[600px] ">
-                Somos líderes en premiaciones y reconocimientos, porque vamos de
-                la mano con las nuevas tendencias y productos.
+                Al ir de la mano con nuevas tendencias y productos
               </div>
               <a
                 href="/trophiesAndCups"
@@ -33,6 +34,11 @@ const Trophy = () => {
                 Trofeos y Copas
               </a>
             </div>
+            <Image
+              className="custom-img-size h-auto w-[600px] sm:w-[300px]"
+              src={resina}
+              alt=""
+            />
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import { colorMapping } from "@/utils/colorMapping";
 import white from "../../../public/images/products/color/white.jpeg";
 import Image from "next/image";
 import recognitions from "@/components/ Recognitions/Recognitions";
+import gold from "../../../public/images/products/color/golden.jpeg";
 
 const SingleImpression = () => {
   const [impressions, setImpressions] = useState([]);
@@ -48,7 +49,7 @@ const SingleImpression = () => {
           impressions.map((imp) => (
             <div
               key={imp.id}
-              className="product-main h group relative mb-8 h-[660px] w-[400px] flex-wrap overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark"
+              className="product-main h group relative mb-8 h-[710px] w-[400px] flex-wrap overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark"
             >
               <div className="relative block aspect-[37/22] w-full">
                 <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold capitalize text-white">
@@ -71,33 +72,64 @@ const SingleImpression = () => {
                   {imp.description}
                 </p>
                 <div className="flex items-center">
-                  <div className="mr-5 flex flex-col items-center gap-3 border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5"></div>
-                  <div className="flex flex-col items-center gap-3">
-                    <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                      Tamaño: {imp.height}
-                    </h4>
-                    <div className="mr-4 flex  flex-wrap gap-3">
-                      {(imp.color || "").split(",").map((color, index) => {
-                        const colorKey = color.trim().toLowerCase();
-                        const imageSrc = colorMapping[colorKey] || white;
+                  <div className="mr-5 flex flex-col items-center gap-3 border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
+                    <div className="w-full">
+                      <div className="mb-1 text-sm font-medium text-dark dark:text-white">
+                        Tamaño:
+                        <br />
+                        <br />
+                        {(imp.height || "").split(",").map((height, index) => {
+                          const heightKey = height.trim().toLowerCase();
 
-                        return (
-                          <div key={index} className="flex items-center gap-2">
-                            <Image
-                              src={imageSrc}
-                              alt={color.trim()}
-                              width={24}
-                              height={24}
-                              className="rounded-full border-body-color dark:border-white"
-                              style={{ width: "24px", height: "24px" }}
-                            />
-                            <span className="text-xs font-bold text-dark dark:text-white">
-                              {color.trim()}
-                            </span>
-                          </div>
-                        );
-                      })}
+                          return (
+                            <div
+                              key={index}
+                              className="flex items-center gap-2"
+                            >
+                              <span className="text-xs font-bold text-dark dark:text-white">
+                                {height.trim()}
+                              </span>
+                            </div>
+                          );
+                        })}
+                        <b className="border-b-2">Aproximadamente</b>
+                      </div>
                     </div>
+                  </div>
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="flex flex-row">
+                      <div className="w-full">
+                        <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
+                          Colores:
+                        </h4>
+                      </div>
+                      <div className="mr-4 flex  flex-wrap gap-3">
+                        {(imp.color || "").split(",").map((color, index) => {
+                          const colorKey = color.trim().toLowerCase();
+                          const imageSrc = colorMapping[colorKey] || gold;
+
+                          return (
+                            <div
+                              key={index}
+                              className="flex items-center gap-2"
+                            >
+                              <Image
+                                src={imageSrc}
+                                alt={color.trim()}
+                                width={24}
+                                height={24}
+                                className="rounded-full border-body-color dark:border-white"
+                                style={{ width: "24px", height: "24px" }}
+                              />
+                              <span className="text-xs font-bold text-dark dark:text-white">
+                                {color.trim()}
+                              </span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
                     <button
                       onClick={() => handleAddImpression(imp)}
                       className="rounded-sm bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"

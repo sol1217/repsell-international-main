@@ -97,6 +97,7 @@ const SingleTrophiesAndCups = () => {
                                 </div>
                               );
                             })}
+                          <b className="border-b-2">Aproximadamente</b>
                         </div>
                       </div>
                     </div>

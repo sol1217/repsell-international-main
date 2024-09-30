@@ -115,9 +115,10 @@ const SingleMedals = () => {
                       </div>
                     </div>
                     <div className="flex flex-col items-center gap-3">
-                      <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                        Tamaño: {medal.height} CM
-                      </h4>
+                      <div className="mb-1 text-sm font-medium text-dark dark:text-white">
+                        <p>Tamaño: {medal.height} CM</p>
+                        <b className="border-b-2">Aproximadamentei</b>
+                      </div>
                       <button
                         onClick={() => handleAddToLocalStorage(medal)}
                         className="rounded-sm bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"

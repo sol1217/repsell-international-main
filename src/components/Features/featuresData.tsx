@@ -16,7 +16,7 @@ const featuresData: Feature[] = [
   },
   {
     id: 1,
-    icon: <Image src={trophy} alt="trophy" width={100} height={100} />,
+    icon: <Image src={trophy} alt="trophy" width={120} height={120} />,
     title: "Trofeos",
     paragraph:
       "Los trofeos de REPSELL INTERNACIONAL son un símbolo duradero de excelencia. Disponemos de una amplia gama de diseños y tamaños, todos personalizables, para que cada trofeo se ajuste a la magnitud del logro que representa.",
@@ -33,14 +33,14 @@ const featuresData: Feature[] = [
     icon: <Image src={resina} alt="" height={200} width={200} />,
     title: "Resinas",
     paragraph:
-      "Nuestras figuras y trofeos en resina son altamente personalizables y versátiles. Ofrecen la posibilidad de crear formas detalladas y únicas, perfectas para premiaciones temáticas o específicas, manteniendo siempre la calidad y el detalle que nos caracterizan.",
+      "Nuestras figuras y trofeos en resina son altamente personalizables y versátiles. Ofrecen la posibilidad en formas detalladas y únicas, perfectas para premiaciones temáticas o específicas, manteniendo siempre la calidad y el detalle que nos caracterizan.",
   },
   {
     id: 1,
     icon: <Image src={crystals} alt="crystals" width={100} height={100} />,
     title: "Cristales Grabados",
     paragraph:
-      "Si buscas un acabado más moderno y refinado, nuestros reconocimientos en cristal grabado destacan por su claridad y belleza. El grabado en cristal permite detalles precisos y elegantes, transformando cada pieza en una verdadera obra de arte.",
+      "Si busca un acabado más moderno y refinado, nuestros reconocimientos en cristal grabado destacan por su claridad y belleza. El grabado en cristal permite detalles precisos y elegantes, transformando cada pieza en una verdadera obra de arte.",
   },
   {
     id: 1,

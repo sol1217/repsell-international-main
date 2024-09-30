@@ -40,10 +40,10 @@ const Contact = () => {
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div className="mb-12 h-[670px] rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Nuestro equipo está aquí para ayudarte
+                Nuestro equipo está aquí para ayudarle
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                ¿Tienes alguna pregunta o necesitas asistencia con nuestros
+                ¿Tienes alguna consulta o necesitas asesoría sobre nuestros
                 productos?
               </p>
               <form ref={form} onSubmit={sendEmail}>
@@ -59,7 +59,7 @@ const Contact = () => {
                       <input
                         name="from_name"
                         type="text"
-                        placeholder="Escribe tu Nombre"
+                        placeholder="Escriba su nombre"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -75,7 +75,7 @@ const Contact = () => {
                       <input
                         type="email"
                         name="email"
-                        placeholder="Escribe tu Correo"
+                        placeholder="Escriba su correo"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -91,7 +91,7 @@ const Contact = () => {
                       <textarea
                         name="message"
                         rows={5}
-                        placeholder="Escribe el mensaje"
+                        placeholder="Escribanos ¿Cómo le podemos ayudar?"
                         className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       ></textarea>
                     </div>

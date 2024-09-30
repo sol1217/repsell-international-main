@@ -50,7 +50,7 @@ const SinglePromotional = () => {
             promotionals.map((promotional) => (
               <div
                 key={promotional.id}
-                className="product-main group relative mb-8 h-[650px] w-[400px] flex-wrap overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark"
+                className="product-main group relative mb-8 h-[680px] w-[400px] flex-wrap overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark"
               >
                 <div className="relative block aspect-[37/22] w-full">
                   <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold capitalize text-white">
@@ -84,9 +84,10 @@ const SinglePromotional = () => {
                       </div>
                     </div>
                     <div className="flex flex-col items-center gap-3">
-                      <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                        Tamaño: {promotional.height}
-                      </h4>
+                      <div className="mb-1 text-sm font-medium text-dark dark:text-white">
+                        <p>Tamaño: {promotional.height}</p>
+                        <b className="border-b-2">Aproximadamente</b>
+                      </div>
                       <button
                         onClick={() => handleAddToLocalStorage(promotional)}
                         className="rounded-sm bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"

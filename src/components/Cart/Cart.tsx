@@ -78,7 +78,7 @@ const Cart = () => {
     <div className="flex flex-col gap-10 p-7 ">
       <Breadcrumb
         pageName="Repsell International (Cotización)"
-        description="Cotiza Reconocimientos, Promocionales y Impresiones a gran formato."
+        description="Cotice sus reconocimientos, promocionales e impresión a gran formato"
       />
       <div>
         <div className="cart-main flex flex-row items-start justify-center gap-32 ">
@@ -87,8 +87,8 @@ const Cart = () => {
               Productos Seleccionados:
             </h3>
             <p className="text-red-black border-b border-body-color border-opacity-25 text-center text-base leading-relaxed dark:border-white dark:border-opacity-25">
-              Cotiza todo tipo de Reconocimientos, Promocionales y<br />
-              Impresiones a gran formato. con nosotros.
+              Cotice todo tipo de reconocimientos, promocionales
+              <br /> e impresiones a gran formato con nosotros
             </p>
             {cartItems.length > 0 ? (
               <form ref={form} onSubmit={sendEmail}>
@@ -152,8 +152,8 @@ const Cart = () => {
             )}
 
             <p className="text-red-black text-center text-base leading-relaxed dark:border-white dark:border-opacity-25">
-              Uno de nuestros operadores pronto estará disponible para brindarte
-              la información de tu cotización.
+              Una de nuestras agentes de ventas pronto se contactará con usted
+              para brindarle la información solicitada
             </p>
           </div>
           <NewsLatterBox />

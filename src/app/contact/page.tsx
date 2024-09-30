@@ -14,8 +14,8 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Contáctanos"
-        description="También puedes llenar el formulario de contacto a continuación y nos pondremos en contacto contigo lo antes posible. ¡Estamos aquí para ayudarte con todas tus necesidades de premiación y reconocimiento!"
+        pageName="Contáctenos"
+        description="Llene el formulario a continuación y nos pondremos en contacto con usted lo antes posible. ¡Estamos aquí para ayudarle con su evento y premiación!"
       />
 
       <Contact />

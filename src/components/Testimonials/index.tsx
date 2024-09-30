@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Musharof Chy",
     designation: "Founder @TailGrids",
     content:
-      "En Repsell, convertimos tus ideas en obras maestras de gran formato. Desde murales impresionantes hasta banners impactantes 🚀.",
+      "Repsell, convertió nuestras ideas en obras maestras y en gran formato. Desde murales impresionantes hasta banners impactantes 🚀.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Devid Weilium",
     designation: "Founder @UIdeck",
     content:
-      "Llevamos la calidad y la excelencia a un nivel superior en cada trofeo, medalla, impresión y material promocional que ofrecemos. ",
+      "Repsell: Llevo la calidad y la excelencia a un nivel superior en cada trofeo, medalla, impresión y material promocional. ",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -26,7 +26,7 @@ const testimonialData: Testimonial[] = [
     name: "Lethium Frenci",
     designation: "Founder @Lineicons",
     content:
-      "Roller Up de alta calidad: Impresión Full Color, estructura de aluminio y bolso para transporte. Perfectos para eventos, promociones y más.",
+      "Pude encontrar en Repsell una Impresión Full Color perfecta para eventos, promociones y más.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
