@@ -67,7 +67,7 @@ const BlogsCheck = () => {
                   >
                     <FaRegTrashAlt fontSize={20} color="white dark:b-primary" />
                   </button>
-                  <a href="/editBlogs" className="cursor-pointer">
+                  <a href={`/editBlogs?id=${product.id}`} className="cursor-pointer">
                     Editar
                   </a>
                 </div>

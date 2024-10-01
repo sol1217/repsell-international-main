@@ -29,7 +29,7 @@ const EditProducts = () => {
           image: "",
         },
       );
-      console.log(product)
+      console.log(product);
       setEditNombre(product.name);
       setEditDescripcion(product.description);
       setEditDescripcion(product.height);
@@ -56,18 +56,21 @@ const EditProducts = () => {
 
   const handleSubmit = async (e) => {
     const formData = new FormData(e.target);
-    formData.append("image",dataSelected.image);
-    formData.append("category",data.get("category"));
+    formData.append("image", dataSelected.image);
+    formData.append("category", data.get("category"));
     try {
-      const response = await fetch(`https://repsell-international-backend.onrender.com/product/${data.get("id")}/${data.get("category")}`, {
-        method: "PUT",
-        body: formData,
-      });
+      const response = await fetch(
+        `https://repsell-international-backend.onrender.com/product/${data.get("id")}/${data.get("category")}`,
+        {
+          method: "PUT",
+          body: formData,
+        },
+      );
 
       if (response.ok) {
-        alert("Producto enviado correctamente.");
+        alert("Producto actualizado correctamente.");
       } else {
-        alert("Error al enviar el producto.");
+        alert("Error al actualizar el producto.");
       }
     } catch (error) {
       alert("Error en la conexión.");
@@ -94,7 +97,7 @@ const EditProducts = () => {
                     <div className=" m-2 flex flex-row items-center justify-evenly ">
                       <input
                         type="file"
-                        name="Cambiar"
+                        name="image"
                         className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
                       />
                     </div>
@@ -109,7 +112,7 @@ const EditProducts = () => {
                         <>
                           <input
                             type="text"
-                            name="nombre"
+                            name="name"
                             defaultValue={
                               dataSelected.name
                                 ? dataSelected.name
@@ -132,7 +135,7 @@ const EditProducts = () => {
                         <>
                           <input
                             type="text"
-                            name="descripcion"
+                            name="description"
                             defaultValue={
                               dataSelected.description
                                 ? dataSelected.description
@@ -155,7 +158,7 @@ const EditProducts = () => {
                         <>
                           <input
                             type="text"
-                            name="tamaño"
+                            name="height"
                             defaultValue={
                               dataSelected.height
                                 ? dataSelected.height
@@ -207,7 +210,6 @@ const EditProducts = () => {
                     Productos
                   </a>
                 </p>
-                
               </div>
             </div>
           </div>
