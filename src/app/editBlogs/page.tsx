@@ -2,36 +2,31 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import axios from "axios";
+import axios, { formToJSON } from "axios";
 
 const EditBlogs = () => {
-  /*const [editNombre, setEditNombre] = useState(false);
-  const [editDescripcion, setEditDescripcion] = useState(false);
-  const [editImage, setEditImage] = useState(false);
-  const [editColor, setEditColor] = useState(false);
+
   const [dataSelected, setDataSelected] = useState(null);
   const data = useSearchParams();
   const fetchProduct = async () => {
     try {
       const product = (
         await axios.get(
-          `https://repsell-international-backend.onrender.com/product/${data.get("id")}/${data.get("category")}`,
+          `https://repsell-international-backend.onrender.com/blog/${data.get("id")}`,
         )
       ).data.data[0];
       setDataSelected(
         product || {
-          name: "",
+          title: "",
           description: "",
-          height: "",
-          color: "",
+          additionalText: "",
+          list: "",
+          phrase: "",
+          additionalTitle: "",
           image: "",
+          category: "",
         },
       );
-      setEditNombre(product.name);
-      setEditDescripcion(product.description);
-      setEditDescripcion(product.height);
-      setEditColor(product.color);
-      setEditImage(product.image);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -51,16 +46,29 @@ const EditBlogs = () => {
     setter(false);
   };
 
-  const updateValues = async () => {
-    const resp = await axios.put(
-      `http://localhost:3001/product/`,
-      dataSelected,
-    );
-  };*/
 
+  const handleSubmit = async (e) => {
+    const formData = new FormData(e.target);
+    formData.append("image",dataSelected.image);
+    try {
+      console.log(formToJSON(formData))
+      const response = await fetch(`https://repsell-international-backend.onrender.com/update-blog/${data.get("id")}`, {
+        method: "PUT",
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("Producto enviado correctamente.");
+      } else {
+        alert("Error al enviar el producto.");
+      }
+    } catch (error) {
+      alert("Error en la conexión.");
+    }
+  };
   return (
     <>
-      {/*
+      {
       <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap ">
@@ -73,12 +81,12 @@ const EditBlogs = () => {
                   Proceda a ingresar los nuevos datos correspondientes al Blog
                 </p>
 
-                <form className="flex flex-col gap-3">
+                <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
                   {dataSelected ? (
                     <div className=" m-2 flex flex-row items-center justify-evenly ">
                       <input
                         type="file"
-                        name="Cambiar"
+                        name="image"
                         className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
                       />
                     </div>
@@ -93,10 +101,10 @@ const EditBlogs = () => {
                         <>
                           <input
                             type="text"
-                            name="nombre"
-                            value={
-                              dataSelected.name
-                                ? dataSelected.name
+                            name="title"
+                            defaultValue={
+                              dataSelected.title
+                                ? dataSelected.title
                                 : "Nuevo Titulo"
                             }
                             className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -116,8 +124,8 @@ const EditBlogs = () => {
                         <>
                           <input
                             type="text"
-                            name="descripcion"
-                            value={
+                            name="description"
+                            defaultValue={
                               dataSelected.description
                                 ? dataSelected.description
                                 : "Nueva Descripcion"
@@ -132,6 +140,7 @@ const EditBlogs = () => {
                       )}
                     </div>
                   </div>
+                  
 
                   <div className="rounded-3xl p-2 ">
                     <div className="flex w-full flex-row items-center justify-around gap-3 ">
@@ -139,10 +148,10 @@ const EditBlogs = () => {
                         <>
                           <input
                             type="text"
-                            name="tamaño"
-                            value={
-                              dataSelected.height
-                                ? dataSelected.height
+                            name="additionalText"
+                            defaultValue={
+                              dataSelected.additionalText
+                                ? dataSelected.additionalText
                                 : "Nuevo Titulo Secundario"
                             }
                             className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -159,10 +168,10 @@ const EditBlogs = () => {
                         <>
                           <input
                             type="text"
-                            name="color"
-                            value={
-                              dataSelected.color
-                                ? dataSelected.color
+                            name="list"
+                            defaultValue={
+                              dataSelected.list
+                                ? dataSelected.list
                                 : "Nueva descripcion secundaria"
                             }
                             className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -181,10 +190,10 @@ const EditBlogs = () => {
                         <>
                           <input
                             type="text"
-                            name="color"
-                            value={
-                              dataSelected.color
-                                ? dataSelected.color
+                            name="phrase"
+                            defaultValue={
+                              dataSelected.phrase
+                                ? dataSelected.phrase
                                 : "Nueva Frase"
                             }
                             className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -203,10 +212,10 @@ const EditBlogs = () => {
                         <>
                           <input
                             type="text"
-                            name="color"
-                            value={
-                              dataSelected.color
-                                ? dataSelected.color
+                            name="additionalTitle"
+                            defaultValue={
+                              dataSelected.additionalTitle
+                                ? dataSelected.additionalTitle
                                 : "Nueva Lista"
                             }
                             className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -219,6 +228,36 @@ const EditBlogs = () => {
                       )}
                     </div>
                   </div>
+                  <div className="rounded-3xl p-2 ">
+                    <div className="flex w-full flex-row items-center justify-around gap-3 ">
+                      {dataSelected ? (
+                        <>
+                          <input
+                            type="text"
+                            name="category"
+                            defaultValue={
+                              dataSelected.category
+                                ? dataSelected.category
+                                : "Nueva Lista"
+                            }
+                            className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <p></p>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                  <div className="mt-6 flex items-center justify-center">
+                  <button
+                    className="inline-flex w-[100px] items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                    type="submit"
+                  >
+                    Guardar
+                  </button>
+                </div>
                 </form>
 
                 <p className="mt-6 text-center text-base font-medium text-body-color">
@@ -227,20 +266,13 @@ const EditBlogs = () => {
                     Blogs
                   </a>
                 </p>
-                <div className="mt-6 flex items-center justify-center">
-                  <button
-                    className="inline-flex w-[100px] items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
-                    onClick={() => updateValues()}
-                  >
-                    Guardar
-                  </button>
-                </div>
+                
               </div>
             </div>
           </div>
         </div>
       </section>
-      */}
+      }
     </>
   );
 };

@@ -55,7 +55,7 @@ const ProductMain = () => {
   const deleteProduct = async (id, category) => {
     try {
       const response = await axios.delete(
-        "http://localhost:3001/delete-product",
+        "https://repsell-international-backend.onrender.com/delete-product",
         {
           data: { id, category },
         },
