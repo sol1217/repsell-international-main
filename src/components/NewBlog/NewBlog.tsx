@@ -136,7 +136,7 @@ const NewBlog = () => {
                     required
                     type="text"
                     name="title"
-                    placeholder="Ingresa un título detallado"
+                    placeholder="Ingresa un título"
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   />
                 </div>
@@ -145,13 +145,13 @@ const NewBlog = () => {
                     htmlFor="description"
                     className="mb-3 block text-sm text-dark dark:text-white"
                   >
-                    Descripción Completa:
+                    Introducción:
                   </label>
                   <textarea
-                    maxLength={1000}
+                    maxLength={5000}
                     required
                     name="description"
-                    placeholder="Ingresa una descripción completa del blog"
+                    placeholder="Ingresa una Introducción"
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   ></textarea>
                 </div>
@@ -160,13 +160,13 @@ const NewBlog = () => {
                     htmlFor="additionalTitle"
                     className="mb-3 block text-sm text-dark dark:text-white"
                   >
-                    Título de la Información Adicional:
+                    Subtítulo 1:
                   </label>
                   <input
                     required
                     type="text"
                     name="additionalTitle"
-                    placeholder="Ingresa un título para la información adicional"
+                    placeholder="Ingresa un Subtitulo"
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   />
                 </div>
@@ -175,12 +175,12 @@ const NewBlog = () => {
                     htmlFor="additionalText"
                     className="mb-3 block text-sm text-dark dark:text-white"
                   >
-                    Información Adicional:
+                    Párrafo:
                   </label>
                   <textarea
-                    maxLength={1000}
+                    maxLength={5000}
                     name="additionalText"
-                    placeholder="Ingresa cualquier información adicional"
+                    placeholder="Ingresa un párrafo"
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   ></textarea>
                 </div>
@@ -189,13 +189,13 @@ const NewBlog = () => {
                     htmlFor="important-points"
                     className="mb-3 block text-sm text-dark dark:text-white"
                   >
-                    Puntos Clave:
+                    Conclusión (Subtítulos 3):
                   </label>
                   <input
                     name="list"
                     maxLength={700}
                     required
-                    placeholder="Ingresa puntos importantes"
+                    placeholder="Ingresa Conclusiones"
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   />
                 </div>
@@ -205,13 +205,13 @@ const NewBlog = () => {
                     htmlFor="phrase"
                     className="mb-3 block text-sm text-dark dark:text-white"
                   >
-                    Frase o Cita Inspiradora:
+                    Párrafo:
                   </label>
                   <textarea
                     required
                     maxLength={700}
                     name="phrase"
-                    placeholder="Ingresa una frase o cita inspiradora"
+                    placeholder="Ingresa un párrafo"
                     className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   ></textarea>
                 </div>

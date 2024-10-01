@@ -63,11 +63,11 @@ const BlogSidebarPage = () => {
 
   const getCategoryUrl = (category) => {
     const categoryMap = {
-      medals: "/medals",
-      recognitions: "/recognitions",
-      trophies: "/trophiesAndCups",
-      promotionals: "/promotional",
-      prints: "/impression",
+      medallas: "/medals",
+      Reconogimientos: "/recognitions",
+      Trofeos: "/trophiesAndCups",
+      Promocionales: "/promotional",
+      Impresiones: "/impression",
     };
     return categoryMap[category] || "/";
   };
@@ -144,20 +144,40 @@ const BlogSidebarPage = () => {
                           />
                         </div>
                       </div>
-                      <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"></p>
+                      <div>
+                        {blog.description
+                          .split(/\.([ \t\n]*|$)/)
+                          .map((paragraph, index) => (
+                            <p
+                              key={index}
+                              className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
+                            >
+                              {paragraph.trim()}
+                            </p>
+                          ))}
+                      </div>
 
                       <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                         {blog.additionalTitle}
                       </h3>
-                      <p className="mb-10  text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                        {blog.additionalText}
-                      </p>
+                      <div>
+                        {blog.additionalText
+                          .split(/\.([ \t\n]*|$)/)
+                          .map((paragraph, index) => (
+                            <p
+                              key={index}
+                              className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
+                            >
+                              {paragraph.trim()}
+                            </p>
+                          ))}
+                      </div>
                       <ul className="mt-24">
                         {listItems.map((item, index) => (
                           <li
                             key={index}
                             onClick={() => handleBlogClick(item)}
-                            className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg"
+                            className=" mb-2 text-base font-medium  sm:text-lg lg:text-base xl:text-lg"
                           >
                             * {item.trim()}{" "}
                           </li>
@@ -165,19 +185,19 @@ const BlogSidebarPage = () => {
                       </ul>
 
                       <div className=" relative z-10 mb-10 mt-20 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
-                        <p className="text-center text-base font-medium italic text-body-color">
-                          {blog.phrase}
-                        </p>
-                        <div className="flex flex-row items-center  gap-3">
-                          <p>Producto:</p>
-
-                          <a
-                            href={getCategoryUrl(blog.category)}
-                            className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
-                          >
-                            {blog.category}
-                          </a>
+                        <div className="text-center text-base font-medium italic text-body-color">
+                          {blog.additionalText
+                            .split(/\.([ \t\n]*|$)/)
+                            .map((paragraph, index) => (
+                              <p
+                                key={index}
+                                className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
+                              >
+                                {paragraph.trim()}
+                              </p>
+                            ))}
                         </div>
+
                         <span className="absolute left-0 top-0 z-[-1]">
                           <svg
                             width="132"
@@ -319,6 +339,16 @@ const BlogSidebarPage = () => {
                           </svg>
                         </span>
                       </div>
+                      <div className="flex flex-row items-center justify-center gap-3">
+                        <p>Enlace:</p>
+
+                        <a
+                          href={getCategoryUrl(blog.category)}
+                          className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                        >
+                          {blog.category}
+                        </a>
+                      </div>
                       <div className="items-center justify-between sm:flex">
                         <div className="mb-5">
                           <h4 className="mb-3 text-sm font-medium text-body-color">
@@ -341,14 +371,6 @@ const BlogSidebarPage = () => {
                   </div>
                 </div>
                 <div className="w-full px-4 lg:w-4/12">
-                  <div className="mb-10 mt-12  cursor-pointer rounded-sm bg-primary p-6 shadow-three lg:mt-0">
-                    <a
-                      href="/signin"
-                      className="flex items-center justify-center text-center"
-                    >
-                      Crear un nuevo Blog
-                    </a>
-                  </div>
                   <div className="mb-10 rounded-sm bg-white shadow-three dark:bg-gray-dark dark:shadow-none">
                     <h3 className="dark:border-text-red-700 border-b border-body-color border-opacity-10 px-8 py-4 text-lg  font-semibold dark:border-opacity-10 dark:text-white">
                       Todos los blogs:

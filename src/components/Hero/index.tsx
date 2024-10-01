@@ -33,7 +33,7 @@ const Hero = () => {
             alt="dark"
             width={850}
             height={850}
-            className="block dark:hidden"
+            className="repsell-name  transition-transform duration-300 ease-in-out hover:scale-110 dark:block dark:hidden"
           />
           <div className="border-b-2  font-serif text-3xl ">
             Más allá de la medalla

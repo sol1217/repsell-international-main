@@ -55,7 +55,7 @@ const ProductMain = () => {
   const deleteProduct = async (id, category) => {
     try {
       const response = await axios.delete(
-        "http://localhost:3001/delete-product",
+        "https://repsell-international-backend.onrender.com/delete-product",
         {
           data: { id, category },
         },
@@ -95,7 +95,11 @@ const ProductMain = () => {
                   >
                     <FaRegTrashAlt fontSize={20} color="white dark:b-primary" />
                   </button>
-                  <a href={`/editProducts?id=${product.id}&category=${category}`}>Editar</a>
+                  <a
+                    href={`/editProducts?id=${product.id}&category=${category}`}
+                  >
+                    Editar
+                  </a>
                 </div>
               </div>
             </div>
