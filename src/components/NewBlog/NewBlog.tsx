@@ -49,7 +49,7 @@ const NewBlog = () => {
       formDataPost.append("image", preview);
 
       const response = await fetch(
-        "http://localhost:3001/blogs",
+        "https://repsell-international-backend.onrender.com/blogs",
         {
           method: "POST",
           body: formDataPost,
