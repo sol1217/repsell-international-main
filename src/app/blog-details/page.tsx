@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Historia Repsell",
   description:
-    " La Historia de Repsell: Un Camino Forjado con Pasión,Dedicación y Excelencia.",
+    " La Historia de Repsell: Un Camino Forjado con pasión,dedicación y excelencia.",
   keywords: "exitos, repsell, excelencia, medallas, trofeos",
 };
 
@@ -113,8 +113,8 @@ const BlogDetailsPage = () => {
                     la Licda. Katty Selley González, y nuestra aliada
                     estratégica a cargo de importaciones, MBA. Sara Méndez
                     Esquivel. Incluimos maquinaria de alta tecnología,
-                    posicionándonos como la primera empresa de Premiaciones y
-                    Reconocimientos del país y Centroamérica. Iniciando una
+                    posicionándonos como la primera empresa de premiaciones y
+                    reconocimientos del país y Centroamérica. Iniciando una
                     nueva era de cambio con catálogos impresos, artículos
                     diferentes y no tradicionales, los cuales tuvieron y siguen
                     teniendo gran acogida por nuestros clientes.
@@ -125,8 +125,8 @@ const BlogDetailsPage = () => {
                     González, adquiridos gracias a su educación en las mejores
                     universidades de Estados Unidos IIT Chicago, Bradley
                     University, y su gran visión desde hace más de 22 años, se
-                    crean en el 2002 las medallas acrílicas Grabadas a Laser y
-                    con Sublimación, convirtiéndose en un éxito rotundo.
+                    crean en el 2002 las medallas acrílicas grabadas a Láser y
+                    con sublimación, convirtiéndose en un éxito rotundo.
                     Inclusive, para el ICODER, son las medallas estrella de
                     premiaciones deportivas en la actualidad.
                     <br />
@@ -196,10 +196,10 @@ const BlogDetailsPage = () => {
                   </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Utilizamos materiales resistentes
+                      Utilizamos materiales resistentes.
                     </li>
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Materiales amigables con el medio ambiente
+                      Materiales amigables con el medio ambiente.
                     </li>
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
                       Consumo nacional y extranjero.

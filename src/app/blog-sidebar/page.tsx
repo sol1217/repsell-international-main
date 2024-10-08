@@ -15,17 +15,22 @@ const BlogSidebarPage = () => {
   const [blogsList, setBlogsList] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const categoryTranslationMap = {
+    medals: "Medallas",
+    recognitions: "Reconocimientos",
+    trophiesAndCups: "Trofeos",
+    promotional: "Promocionales",
+    impression: "Impresiones",
+  };
+
   const listItems =
     blog && typeof blog.list === "string" ? blog.list.split(",") : [];
-  {
-    /*"https://repsell-international-backend.onrender.com/blogs",*/
-  }
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          "https://repsell-international-backend.onrender.com/blogs",
+          "https://repsell-international-backend.onrender.com//blogs",
         );
         const uniqueBlogs = response.data.data.filter(
           (blog, index, self) =>
@@ -63,13 +68,17 @@ const BlogSidebarPage = () => {
 
   const getCategoryUrl = (category) => {
     const categoryMap = {
-      medallas: "/medals",
-      Reconogimientos: "/recognitions",
-      Trofeos: "/trophiesAndCups",
-      Promocionales: "/promotional",
-      Impresiones: "/impression",
+      medals: "/medals",
+      recognitions: "/recognitions",
+      trophiesAndCups: "/trophiesAndCups",
+      promotional: "/promotional",
+      impression: "/impression",
     };
     return categoryMap[category] || "/";
+  };
+
+  const getTranslatedCategory = (category) => {
+    return categoryTranslationMap[category] || category;
   };
 
   return (
@@ -91,7 +100,12 @@ const BlogSidebarPage = () => {
                         <div className="mb-5 mr-10 flex items-center">
                           <div className="mr-4">
                             <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                              <Image src={logo} alt="author" fill />
+                              <Image
+                                src={logo}
+                                alt="author"
+                                width={200}
+                                height={200}
+                              />
                             </div>
                           </div>
                           <div className="w-full">
@@ -126,22 +140,37 @@ const BlogSidebarPage = () => {
                       </div>
                       <div className="mb-5">
                         <a
-                          href={getCategoryUrl(blog.category)}
+                          href={getTranslatedCategory(blog.category)}
                           className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                         >
-                          {blog.category}
+                          {getTranslatedCategory(blog.category)}
                         </a>
                       </div>
                     </div>
                     <div>
                       <div className="mb-10 w-full overflow-hidden rounded">
                         <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                          <Image
-                            src={blog.image}
-                            alt="image"
-                            fill
-                            className="h-full w-full object-cover object-center"
-                          />
+                          {blog?.image ? (
+                            <Image
+                              src={
+                                blog.image.startsWith("http")
+                                  ? blog.image
+                                  : `/${blog.image}`
+                              }
+                              alt={blog.title || "Blog image"}
+                              width={200}
+                              height={200}
+                              className="h-full w-full object-cover object-center"
+                            />
+                          ) : (
+                            <Image
+                              src="/images/hero/logo-repsell-icono.png"
+                              alt="default image"
+                              width={200}
+                              height={200}
+                              className="h-full w-full object-cover object-center"
+                            />
+                          )}
                         </div>
                       </div>
                       <div>
@@ -343,10 +372,10 @@ const BlogSidebarPage = () => {
                         <p>Enlace:</p>
 
                         <a
-                          href={getCategoryUrl(blog.category)}
+                          href={getTranslatedCategory(blog.category)}
                           className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                         >
-                          {blog.category}
+                          {getTranslatedCategory(blog.category)}
                         </a>
                       </div>
                       <div className="items-center justify-between sm:flex">

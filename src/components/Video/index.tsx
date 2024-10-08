@@ -14,8 +14,8 @@ const Video = () => {
     <section className=" relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Nuestro personal está siempre dispuesto a ayudarte"
-          paragraph="Nuestras asesoras están para ayudarte en cada paso a elegir el reconocimiento perfecto. Nuestro equipo altamente capacitado está a su disposición para asegurar que su experiencia con nosotros sea excepcional."
+          title="Nuestro personal está siempre dispuesto a ayudarle"
+          paragraph="Nuestras asesoras están para ayudarle en cada paso a elegir el reconocimiento perfecto. Nuestro equipo altamente capacitado está a su disposición para asegurar que su experiencia con nosotros sea excepcional."
           center
           mb="80px"
         />

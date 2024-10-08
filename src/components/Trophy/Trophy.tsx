@@ -7,7 +7,7 @@ const Trophy = () => {
   return (
     <section className="bg-gray-light p-24 dark:bg-bg-color-dark">
       <SectionTitle
-        title="PREMIAMOS TU ESFUERZO"
+        title="PREMIAMOS SU ESFUERZO"
         paragraph="En Repsell Internacional ofrecemos los productos de la más alta calidad en el mercado ¡Compruébelo!"
         center
       />

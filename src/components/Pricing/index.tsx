@@ -27,7 +27,7 @@ const Pricing = () => {
           >
             <OfferList text="Somos fabricantes 100% ticos" status="active" />
             <OfferList
-              text="Nuestros Trofeos son obras de arte"
+              text="Nuestros trofeos son obras de arte"
               status="active"
             />
             <OfferList
@@ -39,7 +39,7 @@ const Pricing = () => {
               status="active"
             />
             <OfferList
-              text="Materiales para sus placas conmemorativas."
+              text="Materiales para sus placas conmemorativas"
               status="active"
             />
             <OfferList
@@ -55,7 +55,7 @@ const Pricing = () => {
             subtitle="Hemos estado trabajando arduamente para llevar la calidad y la excelencia."
           >
             <OfferList
-              text="Impresión en UV, opción para chip, "
+              text="Impresión en UV, opción para chip "
               status="active"
             />
             <OfferList text="Promocionales" status="active" />
@@ -76,7 +76,7 @@ const Pricing = () => {
           >
             <OfferList text="Diseño y Calidad" status="active" />
             <OfferList text="Premiaciones" status="active" />
-            <OfferList text="Personalizado." status="active" />
+            <OfferList text="Personalizado" status="active" />
             <OfferList text="Medallas" status="active" />
             <OfferList text="Somos fabricantes de placas " status="active" />
             <OfferList

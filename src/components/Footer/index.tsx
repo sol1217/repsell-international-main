@@ -24,7 +24,7 @@ const Footer = () => {
                   <p>Repsell International</p>
                 </div>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Horario de atención Lunes a viernes de 8:15am a 5:00pm
+                  Horario de atención Lunes a viernes de 8:30am a 5:00pm
                 </p>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   Nos ubicamos en Barrio corazón de Jesús de las antiguas

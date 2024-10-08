@@ -14,6 +14,7 @@ const Hero = () => {
             className=" h-full w-full object-cover opacity-20"
             autoPlay
             loop
+            playsInline
             muted
           >
             <source src="/images/video/repsell.mp4" type="video/mp4" />

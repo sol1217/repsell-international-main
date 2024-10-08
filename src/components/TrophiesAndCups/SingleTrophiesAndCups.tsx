@@ -6,7 +6,7 @@ import axios from "axios";
 import { colorMapping } from "@/utils/colorMapping";
 import { FaCheckCircle } from "react-icons/fa";
 import error from "../../../public/images/hero/error.png";
-import gold from "../../../public/images/products/color/golden.jpeg";
+import transp from "../../../public/images/products/color/transparent.png";
 
 const SingleTrophiesAndCups = () => {
   const [trophies, setTrophies] = useState([]);
@@ -113,7 +113,7 @@ const SingleTrophiesAndCups = () => {
                             .split(",")
                             .map((color, index) => {
                               const colorKey = color.trim().toLowerCase();
-                              const imageSrc = colorMapping[colorKey] || gold;
+                              const imageSrc = colorMapping[colorKey] || transp;
 
                               return (
                                 <div
