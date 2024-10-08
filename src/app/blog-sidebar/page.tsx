@@ -62,6 +62,7 @@ const BlogSidebarPage = () => {
     const selectedBlog = blogsList.find(
       (blog) => blog.id === parseInt(selectedId),
     );
+    console.log(selectedBlog.image)
     setBlog(selectedBlog);
     setSelectedBlogId(selectedId);
   };
@@ -150,27 +151,15 @@ const BlogSidebarPage = () => {
                     <div>
                       <div className="mb-10 w-full overflow-hidden rounded">
                         <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                          {blog?.image ? (
-                            <Image
-                              src={
-                                blog.image.startsWith("http")
-                                  ? blog.image
-                                  : `/${blog.image}`
-                              }
-                              alt={blog.title || "Blog image"}
-                              width={200}
-                              height={200}
-                              className="h-full w-full object-cover object-center"
-                            />
-                          ) : (
-                            <Image
-                              src="/images/hero/logo-repsell-icono.png"
-                              alt="default image"
-                              width={200}
-                              height={200}
-                              className="h-full w-full object-cover object-center"
-                            />
-                          )}
+                          <img
+                            src={
+                              blog.image.startsWith("http")
+                                ? blog.image
+                                : `${blog.image}`
+                            }
+                            alt="image"
+                            className="h-full w-full object-cover object-center"
+                          />
                         </div>
                       </div>
                       <div>
