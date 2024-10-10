@@ -206,7 +206,7 @@ const EditProducts = () => {
 
                 <p className="mt-6 text-center text-base font-medium text-body-color">
                   Volver a productos
-                  <a href="/checkBlog" className="text-primary hover:underline">
+                  <a href="/products" className="text-primary hover:underline">
                     Productos
                   </a>
                 </p>

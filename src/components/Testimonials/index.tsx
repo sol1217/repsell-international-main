@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Devid Weilium",
     designation: "Founder @UIdeck",
     content:
-      "Repsell: Llevo la calidad y la excelencia a un nivel superior en cada trofeo, medalla, impresión y material promocional. ",
+      "Repsell: Llevó la calidad y la excelencia a un nivel superior en cada trofeo, medalla, impresión y material promocional. ",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },

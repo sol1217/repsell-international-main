@@ -89,7 +89,7 @@ const BlogDetailsPage = () => {
                           className="object-cover object-center"
                         />
                       </div>
-                      <div className="relative aspect-[97/44] h-[50] w-full">
+                      <div className="relative aspect-[97/44] h-[50] w-full ">
                         <Image
                           src="/images/hero/story-4.jpeg"
                           alt="image 3"
@@ -136,42 +136,42 @@ const BlogDetailsPage = () => {
                         alt=""
                         width={300}
                         height={100}
-                        className="h-[180px] w-full object-cover"
+                        className="history-img h-[180px] w-full object-cover"
                       />
                       <Image
                         src="/images/hero/st-3.jpeg"
                         alt=""
                         width={300}
                         height={100}
-                        className="h-[180px] w-full object-cover"
+                        className="history-img h-[180px] w-full object-cover"
                       />
                       <Image
                         src="/images/hero/st-1.jpeg"
                         alt=""
                         width={300}
                         height={100}
-                        className="h-[180px] w-full object-cover"
+                        className="history-img h-[180px] w-full object-cover"
                       />
                       <Image
                         src="/images/hero/st-2.jpeg"
                         alt=""
                         width={300}
                         height={100}
-                        className="h-[180px] w-full object-cover"
+                        className="history-img h-[180px] w-full object-cover"
                       />
                       <Image
                         src="/images/hero/st-4.jpeg"
                         alt=""
                         width={300}
                         height={100}
-                        className="h-[180px] w-full object-cover"
+                        className="history-img h-[180px] w-full object-cover"
                       />
                       <Image
                         src="/images/hero/st-5.jpeg"
                         alt=""
                         width={300}
                         height={100}
-                        className="h-[180px] w-full object-cover"
+                        className="history-img h-[180px] w-full object-cover"
                       />
                     </div>
                     <br />

@@ -58,10 +58,7 @@
 }
 
 @media (max-width: 673px) {
-  .custom-description {
-    width: 80%;
-    margin-right: 50px;
-  }
+
 }
 
 @media (max-width: 991px) {
@@ -71,8 +68,15 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .products-box {
+@media (max-width: 767px) {
+  .history-img{
+    height: 100px;
+  }
+}
+
+@media (max-width: 430px) {
+  .history-img{
+    height: 70px;
   }
 }
 
@@ -169,5 +173,23 @@
 @media (min-width: 800px) {
   .bumbles-edition{
     display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .title-lidership{
+    width: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-form{
+    height: 750px;
+  }
+}
+
+@media (max-width: 800px) {
+  .img-{
+    height: 750px;
   }
 }

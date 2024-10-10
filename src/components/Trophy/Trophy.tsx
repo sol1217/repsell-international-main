@@ -19,19 +19,18 @@ const Trophy = () => {
               src={trophy}
               alt=""
             />
-            <div className="flex flex-col gap-10">
-              <h2 className="w-full" style={{ fontSize: "40px" }}>
-                Somos líderes en premiaciones
-                <br /> y reconodimientos
+            <div className="title-lidership flex flex-col gap-10">
+              <h2 className="w-full text-center" style={{ fontSize: "30px" }}>
+                Somos líderes en premiaciones y reconocimientos
               </h2>
-              <div className="custom-description lg:w-[600px] ">
+              <div className=" text-center lg:w-[700px] ">
                 Al ir de la mano con nuevas tendencias y productos
               </div>
               <a
                 href="/trophiesAndCups"
                 className="rounded-sm bg-[#e11b24] px-9 py-4 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
               >
-                Trofeos y Copas
+                Copas y trofeos
               </a>
             </div>
             <Image

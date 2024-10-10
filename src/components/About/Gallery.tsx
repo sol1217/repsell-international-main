@@ -21,7 +21,7 @@ const GalleryAbout = () => {
   return (
     <div className="">
       <SectionTitle
-        title="GALERIA"
+        title="GALERÍA"
         paragraph="En Repsell Internacional, convertimos sus ideas en obras maestras de gran formato. Desde murales impresionantes hasta banners impactantes, nuestra impresión de gran formato eleva su visión al siguiente nivel. "
         center
       />

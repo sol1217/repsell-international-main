@@ -10,6 +10,8 @@ import { FaTrashAlt } from "react-icons/fa";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [isEmailSent, setIsEmailSent] = useState(false); // Controla si el correo fue enviado correctamente
+  const [emailError, setEmailError] = useState(false); // Controla si hubo un error al enviar el correo
 
   const form = useRef();
 
@@ -23,9 +25,13 @@ const Cart = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          setIsEmailSent(true); // Actualizar el estado si el correo fue enviado exitosamente
+          setEmailError(false); // Asegurar que no haya un mensaje de error si fue exitoso
         },
         (error) => {
           console.log("FAILED...", error.text);
+          setEmailError(true); // Si falla, activar el estado de error
+          setIsEmailSent(false); // Asegurarse de que no muestre el mensaje de éxito
         },
       );
   };
@@ -91,59 +97,71 @@ const Cart = () => {
               <br /> e impresiones a gran formato con nosotros
             </p>
             {cartItems.length > 0 ? (
-              <form ref={form} onSubmit={sendEmail}>
-                {cartItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className="cart-product border-opacity-8 flex flex-row items-center justify-center gap-8 border-b border-body-color p-16 pb-5 pt-2"
-                  >
-                    <Image
-                      className="rounded-full"
-                      src={item.image || "/default-image.png"}
-                      alt={item.name || "Product Image"}
-                      width={100}
-                      height={100}
+              <>
+                {!isEmailSent && !emailError ? ( // Verificar si ya se ha enviado el correo y no hay errores
+                  <form ref={form} onSubmit={sendEmail}>
+                    {cartItems.map((item, index) => (
+                      <div
+                        key={index}
+                        className="cart-product border-opacity-8 flex flex-row items-center justify-center gap-8 border-b border-body-color p-16 pb-5 pt-2"
+                      >
+                        <Image
+                          className="rounded-full"
+                          src={item.image || "/default-image.png"}
+                          alt={item.name || "Product Image"}
+                          width={100}
+                          height={100}
+                        />
+                        <p>{item.name || `Código #${item.id}`}</p>
+
+                        <button
+                          onClick={() => handleRemoveItem(item.id)}
+                          className="text-red-600"
+                        >
+                          <FaTrashAlt color="white" fontSize={24} />
+                        </button>
+                      </div>
+                    ))}
+                    <input
+                      type="number"
+                      maxLength={8}
+                      required
+                      placeholder="Ingresa un numero de telefono para enviar la cotización"
+                      name="number"
+                      className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
                     />
-                    <p>{item.name || `Código #${item.id}`}</p>
+                    <input
+                      type="email"
+                      required
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      placeholder="Ingresa tu correo electronico"
+                      name="email"
+                      className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
+                    />
+                    <input
+                      type="hidden"
+                      name="product_names"
+                      value={cartItems
+                        .map((item) => item.name || `Código #${item.id}`)
+                        .join(", ")}
+                    />
 
-                    <button
-                      onClick={() => handleRemoveItem(item.id)}
-                      className="text-red-600"
-                    >
-                      <FaTrashAlt color="white" fontSize={24} />
-                    </button>
-                  </div>
-                ))}
-                <input
-                  type="number"
-                  maxLength={8}
-                  required
-                  placeholder="Ingresa un numero de telefono para enviar la cotización"
-                  name="number"
-                  className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
-                />
-                <input
-                  type="email"
-                  required
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                  placeholder="Ingresa tu correo electronico"
-                  name="email"
-                  className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
-                />
-                <input
-                  type="hidden"
-                  name="product_names"
-                  value={cartItems
-                    .map((item) => item.name || `Código #${item.id}`)
-                    .join(", ")}
-                />
-
-                <input
-                  type="submit"
-                  value="Cotizar Productos"
-                  className="flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
-                />
-              </form>
+                    <input
+                      type="submit"
+                      value="Cotizar Productos"
+                      className="flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
+                    />
+                  </form>
+                ) : isEmailSent ? (
+                  <p className="text-center text-base font-medium text-green-500">
+                    ¡Enviado correctamente!
+                  </p>
+                ) : emailError ? (
+                  <p className="text-black-500 bg-blue-950 text-center text-base font-medium">
+                    No se pudo enviar la cotización. Inténtalo nuevamente.
+                  </p>
+                ) : null}
+              </>
             ) : (
               <div className="flex flex-col items-center justify-center gap-8">
                 <BsFillCartXFill fontSize={100} />

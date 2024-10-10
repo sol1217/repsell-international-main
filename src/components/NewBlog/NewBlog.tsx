@@ -186,6 +186,35 @@ const NewBlog = () => {
                 </div>
                 <div className="mb-8">
                   <label
+                    htmlFor="subtitleTwo"
+                    className="mb-3 block text-sm text-dark dark:text-white"
+                  >
+                    Subtítulo 2:
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    name="subtitleTwo"
+                    placeholder="Ingresa un Subtitulo"
+                    className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                  />
+                </div>
+                <div className="mb-8">
+                  <label
+                    htmlFor="paragraph"
+                    className="mb-3 block text-sm text-dark dark:text-white"
+                  >
+                    Párrafo 2:
+                  </label>
+                  <textarea
+                    maxLength={5000}
+                    name="paragraph"
+                    placeholder="Ingresa un párrafo"
+                    className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                  ></textarea>
+                </div>
+                <div className="mb-8">
+                  <label
                     htmlFor="important-points"
                     className="mb-3 block text-sm text-dark dark:text-white"
                   >

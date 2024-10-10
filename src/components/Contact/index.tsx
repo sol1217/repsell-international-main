@@ -27,7 +27,7 @@ const Contact = () => {
           },
           (error) => {
             console.error("FAILED...", error.text);
-            setButtonText("Enviar Mensaje");
+            setButtonText("Error al enviar mensaje");
           },
         );
     }
@@ -38,7 +38,7 @@ const Contact = () => {
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
-            <div className="mb-12 h-[670px] rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
+            <div className="contact-form mb-12 h-[670px] rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 Nuestro equipo está aquí para ayudarle
               </h2>
@@ -99,7 +99,7 @@ const Contact = () => {
                   <div className="w-full px-4">
                     <button
                       className="rounded-sm bg-[#e11b24] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b26]/90 dark:shadow-submit-dark"
-                      disabled={isSent} // Disable the button after sending the message
+                      disabled={isSent}
                     >
                       {buttonText}
                     </button>

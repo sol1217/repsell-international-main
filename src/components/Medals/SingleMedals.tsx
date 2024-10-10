@@ -117,7 +117,7 @@ const SingleMedals = () => {
                     <div className="flex flex-col items-center gap-3">
                       <div className="mb-1 text-sm font-medium text-dark dark:text-white">
                         <p>Tamaño: {medal.height} CM</p>
-                        <b className="border-b-2">Aproximadamentei</b>
+                        <b className="border-b-2">Aproximadamente</b>
                       </div>
                       <button
                         onClick={() => handleAddToLocalStorage(medal)}

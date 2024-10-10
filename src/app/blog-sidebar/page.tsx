@@ -30,7 +30,7 @@ const BlogSidebarPage = () => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          "https://repsell-international-backend.onrender.com//blogs",
+          "https://repsell-international-backend.onrender.com/blogs",
         );
         const uniqueBlogs = response.data.data.filter(
           (blog, index, self) =>
@@ -62,7 +62,7 @@ const BlogSidebarPage = () => {
     const selectedBlog = blogsList.find(
       (blog) => blog.id === parseInt(selectedId),
     );
-    console.log(selectedBlog.image)
+    console.log(selectedBlog.image);
     setBlog(selectedBlog);
     setSelectedBlogId(selectedId);
   };
@@ -86,7 +86,7 @@ const BlogSidebarPage = () => {
     <>
       <section className="overflow-hidden pb-[120px] pt-[180px]">
         {loading ? (
-          <p>Cargando...</p>
+          <p className="m-20">Cargando...</p>
         ) : (
           <div className="container">
             {blog ? (
