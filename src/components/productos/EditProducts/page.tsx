@@ -55,6 +55,7 @@ const EditProducts = () => {
   };
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
     const formData = new FormData(e.target);
     formData.append("image", dataSelected.image);
     formData.append("category", data.get("category"));

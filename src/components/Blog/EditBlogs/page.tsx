@@ -47,10 +47,11 @@ const EditBlogs = () => {
   };
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
     const formData = new FormData(e.target);
     formData.append("image", dataSelected.image);
     try {
-      console.log(formToJSON(formData));
+      
       const response = await fetch(
         `https://repsell-international-backend.onrender.com/update-blog/${data.get("id")}`,
         {
@@ -256,7 +257,6 @@ const EditBlogs = () => {
                       <button
                         className="inline-flex w-[100px] items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                         type="submit"
-                        onClick={handleSubmit}
                       >
                         Guardar
                       </button>
