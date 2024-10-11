@@ -12,6 +12,9 @@ import silver from "../../public/images/products/color/silver.jpeg";
 import white from "../../public/images/products/color/white.jpeg";
 import yellow from "../../public/images/products/color/yellow.jpeg";
 import bluePastel from "../../public/images/products/color/blue-pastel.png";
+import beige from "../../public/images/products/color/beige.png";
+import nogal from "../../public/images/products/color/nogal.jpg";
+import fullColor from "../../public/images/products/color/full-color.jpg";
 
 export const colorMapping = {
   verde: green,
@@ -28,4 +31,7 @@ export const colorMapping = {
   blanco: white,
   amarillo: yellow,
   "blue pastel": bluePastel,
+  nogal: nogal,
+  beige: beige,
+  "full color": fullColor,
 };

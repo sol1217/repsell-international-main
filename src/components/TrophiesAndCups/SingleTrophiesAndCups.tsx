@@ -102,8 +102,8 @@ const SingleTrophiesAndCups = () => {
                       </div>
                     </div>
                     <div className="flex flex-col items-center gap-3">
-                      <div className="flex flex-row">
-                        <div className="w-full">
+                      <div className="flex flex-col gap-3">
+                        <div className="w-full ">
                           <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
                             Colores:
                           </h4>
@@ -118,7 +118,7 @@ const SingleTrophiesAndCups = () => {
                               return (
                                 <div
                                   key={index}
-                                  className="flex items-center gap-2"
+                                  className="flex flex-wrap items-center gap-2"
                                 >
                                   <Image
                                     src={imageSrc}
@@ -139,7 +139,7 @@ const SingleTrophiesAndCups = () => {
 
                       <button
                         onClick={() => handleAddTrophy(trophy)}
-                        className="rounded-sm bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
+                        className="-sm mt-3 rounded bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
                       >
                         Añadir
                       </button>

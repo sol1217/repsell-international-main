@@ -57,8 +57,16 @@
   }
 }
 
-@media (max-width: 673px) {
+@media (max-width: 1200px) {
+  .medals-colors{
+   height: 980px;
+  }
+}
 
+@media (max-width: 990px) {
+  .medals-colors{
+    height: auto;
+  }
 }
 
 @media (max-width: 991px) {
@@ -95,7 +103,7 @@
 
 @media (max-width: 380px) {
   .product-main {
-    width: 300px;
+    width: 330px;
   }
 }
 

@@ -11,9 +11,7 @@ const EditBlogs = () => {
   const fetchProduct = async () => {
     try {
       const product = (
-        await axios.get(
-          `https://repsell-international-backend.onrender.com/blog/${data.get("id")}`,
-        )
+        await axios.get(`http://localhost:3001/blog/${data.get("id")}`)
       ).data.data[0];
       setDataSelected(
         product || {
@@ -23,6 +21,8 @@ const EditBlogs = () => {
           list: "",
           phrase: "",
           additionalTitle: "",
+          subtitle: "",
+          paragraph: "",
           image: "",
           category: "",
         },
@@ -51,9 +51,8 @@ const EditBlogs = () => {
     const formData = new FormData(e.target);
     formData.append("image", dataSelected.image);
     try {
-      
       const response = await fetch(
-        `https://repsell-international-backend.onrender.com/update-blog/${data.get("id")}`,
+        `http://localhost:3001/update-blog/${data.get("id")}`,
         {
           method: "PUT",
           body: formData,
@@ -144,7 +143,28 @@ const EditBlogs = () => {
                         )}
                       </div>
                     </div>
-
+                    <div className="rounded-3xl p-2 ">
+                      <div className="flex w-full flex-row items-center justify-around gap-3 ">
+                        {dataSelected ? (
+                          <>
+                            <input
+                              type="text"
+                              name="additionalTitle"
+                              defaultValue={
+                                dataSelected.additionalTitle
+                                  ? dataSelected.additionalTitle
+                                  : "Nueva Lista"
+                              }
+                              className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                            />
+                          </>
+                        ) : (
+                          <>
+                            <p></p>
+                          </>
+                        )}
+                      </div>
+                    </div>
                     <div className="rounded-3xl p-2 ">
                       <div className="flex w-full flex-row items-center justify-around gap-3 ">
                         {dataSelected ? (
@@ -162,6 +182,50 @@ const EditBlogs = () => {
                           </>
                         ) : (
                           <p>Cargando datos del producto...</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="rounded-3xl p-2 ">
+                      <div className="flex w-full flex-row items-center justify-around gap-3 ">
+                        {dataSelected ? (
+                          <>
+                            <input
+                              type="text"
+                              name="subtitle"
+                              defaultValue={
+                                dataSelected.subtitle
+                                  ? dataSelected.subtitle
+                                  : "Nuevo Subtitulo"
+                              }
+                              className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                            />
+                          </>
+                        ) : (
+                          <>
+                            <p></p>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                    <div className="rounded-3xl p-2 ">
+                      <div className="flex w-full flex-row items-center justify-around gap-3 ">
+                        {dataSelected ? (
+                          <>
+                            <input
+                              type="text"
+                              name="paragraph"
+                              defaultValue={
+                                dataSelected.paragraph
+                                  ? dataSelected.paragraph
+                                  : "Nueva parrafo"
+                              }
+                              className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                            />
+                          </>
+                        ) : (
+                          <>
+                            <p></p>
+                          </>
                         )}
                       </div>
                     </div>
@@ -209,28 +273,7 @@ const EditBlogs = () => {
                         )}
                       </div>
                     </div>
-                    <div className="rounded-3xl p-2 ">
-                      <div className="flex w-full flex-row items-center justify-around gap-3 ">
-                        {dataSelected ? (
-                          <>
-                            <input
-                              type="text"
-                              name="additionalTitle"
-                              defaultValue={
-                                dataSelected.additionalTitle
-                                  ? dataSelected.additionalTitle
-                                  : "Nueva Lista"
-                              }
-                              className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                            />
-                          </>
-                        ) : (
-                          <>
-                            <p></p>
-                          </>
-                        )}
-                      </div>
-                    </div>
+
                     <div className="rounded-3xl p-2 ">
                       <div className="flex w-full flex-row items-center justify-around gap-3 ">
                         {dataSelected ? (

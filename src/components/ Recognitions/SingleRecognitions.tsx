@@ -104,14 +104,14 @@ const SingleRecognitions = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="flex flex-row">
+                    <div className="flex flex-col items-start gap-3">
+                      <div className="flex flex-col gap-3 ">
                         <div className="w-full">
                           <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
                             Colores:
                           </h4>
                         </div>
-                        <div className="mr-4 flex  flex-wrap gap-3">
+                        <div className="mr-4 flex flex-wrap gap-3">
                           {(recognition.color || "")
                             .split(",")
                             .map((color, index) => {
@@ -142,7 +142,7 @@ const SingleRecognitions = () => {
 
                       <button
                         onClick={() => handleAddRecognition(recognition)}
-                        className="rounded-sm bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
+                        className="mt-3 rounded-sm bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
                       >
                         Añadir
                       </button>

@@ -164,7 +164,7 @@ const BlogSidebarPage = () => {
                       </div>
                       <div>
                         {blog.description
-                          .split(/\.([ \t\n]*|$)/)
+                          .split(/;([ \t\n]*|$)/)
                           .map((paragraph, index) => (
                             <p
                               key={index}
@@ -180,7 +180,7 @@ const BlogSidebarPage = () => {
                       </h3>
                       <div>
                         {blog.additionalText
-                          .split(/\.([ \t\n]*|$)/)
+                          .split(/;([ \t\n]*|$)/)
                           .map((paragraph, index) => (
                             <p
                               key={index}
@@ -190,6 +190,10 @@ const BlogSidebarPage = () => {
                             </p>
                           ))}
                       </div>
+                      <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                        {blog.subtitle}
+                      </h3>
+                      <div>{blog.paragraph}</div>
                       <ul className="mt-24">
                         {listItems.map((item, index) => (
                           <li
@@ -205,7 +209,7 @@ const BlogSidebarPage = () => {
                       <div className=" relative z-10 mb-10 mt-20 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                         <div className="text-center text-base font-medium italic text-body-color">
                           {blog.additionalText
-                            .split(/\.([ \t\n]*|$)/)
+                            .split(/;([ \t\n]*|$)/)
                             .map((paragraph, index) => (
                               <p
                                 key={index}
