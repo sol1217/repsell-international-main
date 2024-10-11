@@ -6,7 +6,7 @@ import axios, { formToJSON } from "axios";
 
 const EditBlogs = () => {
   const [dataSelected, setDataSelected] = useState(null);
-
+  const [preview, setPreview] = useState(null);
   const data = useSearchParams();
   const fetchProduct = async () => {
     try {
@@ -27,6 +27,7 @@ const EditBlogs = () => {
           category: "",
         },
       );
+      setPreview(product.image)
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -36,20 +37,26 @@ const EditBlogs = () => {
     fetchProduct();
   });
 
-  const handleEditClick = (setter) => (e) => {
-    e.preventDefault();
-    setter(true);
-  };
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
 
-  const handleAcceptClick = (setter) => (e) => {
-    e.preventDefault();
-    setter(false);
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onloadend = () => {
+        const base64Image = reader.result;
+        setPreview(base64Image);
+      };
+
+      reader.readAsDataURL(file);
+      console.log("convertida en base 64");
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    formData.append("image", dataSelected.image);
+    formData.append("image", preview);
     try {
       const response = await fetch(
         `http://localhost:3001/update-blog/${data.get("id")}`,
@@ -90,6 +97,7 @@ const EditBlogs = () => {
                         <input
                           type="file"
                           name="image"
+                          onChange={handleFileChange}
                           className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
                         />
                       </div>
