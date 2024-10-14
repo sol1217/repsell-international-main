@@ -1,4 +1,4 @@
-import Link from "next/link";
+"use client";
 
 const Breadcrumb = ({
   pageName,
@@ -11,6 +11,10 @@ const Breadcrumb = ({
   adm?: string;
   href?: string;
 }) => {
+  const goBack = () => {
+    window.history.back();
+  };
+
   const buttonClass = adm
     ? "mt-5 rounded-md bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
     : "";
@@ -38,12 +42,12 @@ const Breadcrumb = ({
               <div className="text-end">
                 <ul className="flex items-center md:justify-end">
                   <li className="flex items-center">
-                    <Link
-                      href="/"
+                    <button
                       className="pr-1 text-base font-medium text-body-color hover:text-primary"
+                      onClick={goBack}
                     >
-                      Home
-                    </Link>
+                      Regresar
+                    </button>
                     <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
                   </li>
                   <li className="text-base font-medium text-primary">

@@ -71,10 +71,6 @@ const BlogSidebarPage = () => {
     return categoryTranslationMap[category]?.translated || category;
   };
 
-  const getCategoryHref = (category) => {
-    return categoryTranslationMap[category]?.href || "#";
-  };
-
   return (
     <>
       <section className="overflow-hidden pb-[120px] pt-[180px]">
@@ -134,7 +130,7 @@ const BlogSidebarPage = () => {
                       </div>
                       <div className="mb-5">
                         <a
-                          href={`/${getCategoryHref(blog.category)}`}
+                          href={href}
                           className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                         >
                           {getTranslatedCategory(blog.category)}
@@ -186,22 +182,42 @@ const BlogSidebarPage = () => {
                       <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                         {blog.subtitle}
                       </h3>
-                      <div>{blog.paragraph}</div>
+                      <div>
+                        {blog.paragraph
+                          .split(/;([ \t\n]*|$)/)
+                          .map((paragraph, index) => (
+                            <p
+                              key={index}
+                              className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
+                            >
+                              {paragraph.trim()}
+                            </p>
+                          ))}
+                      </div>
+
                       <ul className="mt-24">
-                        {listItems.map((item, index) => (
-                          <li
-                            key={index}
-                            onClick={() => handleBlogClick(item)}
-                            className=" mb-2 text-base font-medium  sm:text-lg lg:text-base xl:text-lg"
-                          >
-                            * {item.trim()}{" "}
-                          </li>
-                        ))}
+                        {listItems
+                          .join(";")
+                          .split(/;([ \t\n]*|$)/)
+                          .map((item, index) => {
+                            const cleanedItem = item
+                              .trim()
+                              .replace(/[*"]/g, "");
+                            return (
+                              <li
+                                key={index}
+                                onClick={() => handleBlogClick(cleanedItem)}
+                                className="mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg"
+                              >
+                                {cleanedItem}
+                              </li>
+                            );
+                          })}
                       </ul>
 
                       <div className=" relative z-10 mb-10 mt-20 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                         <div className="text-center text-base font-medium italic text-body-color">
-                          {blog.additionalText
+                          {blog.phrase
                             .split(/;([ \t\n]*|$)/)
                             .map((paragraph, index) => (
                               <p
@@ -358,10 +374,10 @@ const BlogSidebarPage = () => {
                         <p>Enlace:</p>
 
                         <a
-                          href={getTranslatedCategory(blog.category)}
+                          href=""
                           className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                         >
-                          {getTranslatedCategory(blog.category)}
+                          medlas
                         </a>
                       </div>
                       <div className="items-center justify-between sm:flex">
@@ -426,7 +442,7 @@ const BlogSidebarPage = () => {
                           href="/impression"
                           className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
                         >
-                          Impressiones
+                          Impresión Gran Formato
                         </a>
                       </li>
                       <li>
@@ -450,7 +466,7 @@ const BlogSidebarPage = () => {
                           href="/trophiesAndCups"
                           className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
                         >
-                          Trofeos y copas
+                          Copas y Trofeos
                         </a>
                       </li>
                     </ul>

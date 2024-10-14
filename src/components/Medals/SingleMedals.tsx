@@ -82,11 +82,23 @@ const SingleMedals = () => {
                     {medal.description}
                   </p>
                   <div className="flex items-center">
-                    <div className="mr-5 flex flex-col items-center gap-3 border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
+                    <div className=" mr-5 flex flex-col items-center gap-3 border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
                       <div className="w-full">
-                        <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                          Colores Disponibles:
-                        </h4>
+                        <div className="mb-1 text-sm font-medium text-dark dark:text-white">
+                          <p>Tamaño: {medal.height} CM</p>
+                          <b className="border-b-2">Aproximadamente</b>
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => handleAddToLocalStorage(medal)}
+                        className="rounded-sm bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
+                      >
+                        Añadir
+                      </button>
+                    </div>
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="mb-1 w-full text-sm font-medium text-dark dark:text-white">
+                        Colores:
                       </div>
                       <div className="mr-4 flex w-full flex-row  flex-wrap gap-5">
                         {(medal.color || "").split(",").map((color, index) => {
@@ -113,18 +125,7 @@ const SingleMedals = () => {
                           );
                         })}
                       </div>
-                    </div>
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="mb-1 text-sm font-medium text-dark dark:text-white">
-                        <p>Tamaño: {medal.height} CM</p>
-                        <b className="border-b-2">Aproximadamente</b>
-                      </div>
-                      <button
-                        onClick={() => handleAddToLocalStorage(medal)}
-                        className="rounded-sm bg-[#e11b24] px-9 py-2 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
-                      >
-                        Añadir
-                      </button>
+
                       {addedMedalId === medal.id && (
                         <p className="mt-2 flex flex-col items-center justify-center gap-3 text-center text-sm font-medium text-green-600">
                           Añadido correctamente

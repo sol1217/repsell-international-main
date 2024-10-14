@@ -66,7 +66,7 @@ const NewsLatterBox = () => {
               className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
             ></a>
             <a
-              href="https://maps.app.goo.gl/C2hsXGhVWgTZgGs28"
+              href="https://www.google.com/maps/place/WWG4%2BG3H/data=!4m6!3m5!1s0x8fa0e344d5124fcf:0xdf4aa0d630748421!8m2!3d9.9263125!4d-84.0947656!19sIiY6JAoKDZWi6gUVOCjgzRALGhQKEgnPTxLVROOgjxHNrtPF7IsjGw?authuser=0&hl=es&rclk=1"
               aria-label="social-link"
               target="_blank"
               rel="noopener noreferrer"

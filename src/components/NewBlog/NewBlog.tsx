@@ -9,19 +9,19 @@ const NewBlog = () => {
 
   const categorias = [
     { value: "", label: "Elegir Categoria", href: "" },
-    { value: "Medallas", label: "Medallas", href: "/medals" },
+    { value: "medals", label: "Medallas", href: "/medals" },
     {
-      value: "Reconocimientos",
+      value: "recognitions",
       label: "Reconocimientos",
       href: "/recognitions",
     },
     {
-      value: "Trofeos y Copas",
+      value: "trophiesAndCups",
       label: "Trofeos y Copas",
       href: "/trophiesAndCups",
     },
-    { value: "Promocionales", label: "Promocionales", href: "/promotional" },
-    { value: "Impresiones", label: "Impresiones", href: "/impression" },
+    { value: "promotional", label: "Promocionales", href: "/promotional" },
+    { value: "impression", label: "Impresiones", href: "/impression" },
   ];
 
   const handleFileChange = (event) => {

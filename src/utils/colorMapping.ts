@@ -14,7 +14,7 @@ import yellow from "../../public/images/products/color/yellow.jpeg";
 import bluePastel from "../../public/images/products/color/blue-pastel.png";
 import beige from "../../public/images/products/color/beige.png";
 import nogal from "../../public/images/products/color/nogal.jpg";
-import fullColor from "../../public/images/products/color/full-color.jpg";
+import fullColor from "../../public/images/products/color/full-color.png";
 import transparent from "../../public/images/products/color/transparent.png";
 
 export const colorMapping = {
