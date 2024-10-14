@@ -16,11 +16,11 @@ const BlogSidebarPage = () => {
   const [loading, setLoading] = useState(true);
 
   const categoryTranslationMap = {
-    medals: "Medallas",
-    recognitions: "Reconocimientos",
-    trophiesAndCups: "Trofeos",
-    promotional: "Promocionales",
-    impression: "Impresiones",
+    medals: { translated: "Medallas", href: "medals" },
+    recognitions: { translated: "Reconocimientos", href: "recognitions" },
+    trophiesAndCups: { translated: "Trofeos y Copas", href: "trophiesAndCups" },
+    promotional: { translated: "Promocionales", href: "promotional" },
+    impression: { translated: "Impresiones", href: "impression" },
   };
 
   const listItems =
@@ -67,19 +67,12 @@ const BlogSidebarPage = () => {
     setSelectedBlogId(selectedId);
   };
 
-  const getCategoryUrl = (category) => {
-    const categoryMap = {
-      medals: "/medals",
-      recognitions: "/recognitions",
-      trophiesAndCups: "/trophiesAndCups",
-      promotional: "/promotional",
-      impression: "/impression",
-    };
-    return categoryMap[category] || "/";
+  const getTranslatedCategory = (category) => {
+    return categoryTranslationMap[category]?.translated || category;
   };
 
-  const getTranslatedCategory = (category) => {
-    return categoryTranslationMap[category] || category;
+  const getCategoryHref = (category) => {
+    return categoryTranslationMap[category]?.href || "#";
   };
 
   return (
@@ -141,7 +134,7 @@ const BlogSidebarPage = () => {
                       </div>
                       <div className="mb-5">
                         <a
-                          href={getTranslatedCategory(blog.category)}
+                          href={`/${getCategoryHref(blog.category)}`}
                           className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                         >
                           {getTranslatedCategory(blog.category)}

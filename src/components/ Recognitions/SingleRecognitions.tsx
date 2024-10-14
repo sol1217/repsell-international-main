@@ -87,8 +87,6 @@ const SingleRecognitions = () => {
                           {(recognition.height || "")
                             .split(",")
                             .map((height, index) => {
-                              const heightKey = height.trim().toLowerCase();
-
                               return (
                                 <div
                                   key={index}

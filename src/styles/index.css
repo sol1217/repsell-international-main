@@ -45,11 +45,10 @@
 
 /* additional media queries  */
 
-@media (max-width: 1132px) {
-  .custom-img-size {
+
+  .hero-video {
 
   }
-}
 
 @media (max-width: 1132px) {
   .trophy-box {

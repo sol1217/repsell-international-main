@@ -11,7 +11,7 @@ const Hero = () => {
       >
         <div className="video-repsell absolute inset-0 z-0 h-[2000px] ">
           <video
-            className=" h-full w-full object-cover opacity-20"
+            className=" h-full w-full object-cover opacity-60 dark:opacity-15"
             autoPlay
             loop
             playsInline

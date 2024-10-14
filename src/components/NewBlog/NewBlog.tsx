@@ -9,15 +9,19 @@ const NewBlog = () => {
 
   const categorias = [
     { value: "", label: "Elegir Categoria", href: "" },
-    { value: "medals", label: "Medallas", href: "/medals" },
+    { value: "Medallas", label: "Medallas", href: "/medals" },
     {
-      value: "recognitions",
+      value: "Reconocimientos",
       label: "Reconocimientos",
       href: "/recognitions",
     },
-    { value: "trophies", label: "Trofeos y Copas", href: "/trophiesAndCups" },
-    { value: "promotionals", label: "Promocionales", href: "/promotional" },
-    { value: "prints", label: "Impresiones", href: "/impression" },
+    {
+      value: "Trofeos y Copas",
+      label: "Trofeos y Copas",
+      href: "/trophiesAndCups",
+    },
+    { value: "Promocionales", label: "Promocionales", href: "/promotional" },
+    { value: "Impresiones", label: "Impresiones", href: "/impression" },
   ];
 
   const handleFileChange = (event) => {
