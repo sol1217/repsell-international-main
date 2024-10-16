@@ -9,7 +9,7 @@ const NewBlog = () => {
 
   const categorias = [
     { value: "", label: "Elegir Categoria", href: "" },
-    { value: "medals", label: "Medallas", href: "/medals" },
+    { value: "medals", label: "medallas", href: "/medals" },
     {
       value: "recognitions",
       label: "Reconocimientos",

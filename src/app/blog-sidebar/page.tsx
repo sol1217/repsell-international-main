@@ -16,11 +16,14 @@ const BlogSidebarPage = () => {
   const [loading, setLoading] = useState(true);
 
   const categoryTranslationMap = {
-    medals: { translated: "Medallas", href: "medals" },
-    recognitions: { translated: "Reconocimientos", href: "recognitions" },
-    trophiesAndCups: { translated: "Trofeos y Copas", href: "trophiesAndCups" },
-    promotional: { translated: "Promocionales", href: "promotional" },
-    impression: { translated: "Impresiones", href: "impression" },
+    medals: { translated: "Medallas", href: "/medals" },
+    recognitions: { translated: "Reconocimientos", href: "/recognitions" },
+    trophiesAndCups: {
+      translated: "Trofeos y Copas",
+      href: "/trophiesAndCups",
+    },
+    promotional: { translated: "Promocionales", href: "/promotional" },
+    impression: { translated: "Impresiones", href: "/impression" },
   };
 
   const listItems =
@@ -69,6 +72,10 @@ const BlogSidebarPage = () => {
 
   const getTranslatedCategory = (category) => {
     return categoryTranslationMap[category]?.translated || category;
+  };
+
+  const getHref = (category) => {
+    return categoryTranslationMap[category]?.href || "/not-found";
   };
 
   return (
@@ -130,7 +137,7 @@ const BlogSidebarPage = () => {
                       </div>
                       <div className="mb-5">
                         <a
-                          href={href}
+                          href={getHref(blog.category)}
                           className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                         >
                           {getTranslatedCategory(blog.category)}
@@ -372,12 +379,11 @@ const BlogSidebarPage = () => {
                       </div>
                       <div className="flex flex-row items-center justify-center gap-3">
                         <p>Enlace:</p>
-
                         <a
-                          href=""
+                          href={getHref(blog.category)}
                           className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                         >
-                          medlas
+                          {getTranslatedCategory(blog.category)}
                         </a>
                       </div>
                       <div className="items-center justify-between sm:flex">
