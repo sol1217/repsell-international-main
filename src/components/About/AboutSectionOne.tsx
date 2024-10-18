@@ -10,12 +10,12 @@ const checkIcon = (
 
 const AboutSectionOne = () => {
   const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[50px] items-center justify-center rounded-md text-red-700">
+    <div className="mb-5 flex text-lg font-medium text-body-color">
+      <span className="mr-4 flex items-center justify-center rounded-md text-red-700">
         {checkIcon}
       </span>
-      {text}
-    </p>
+      <p>{text}</p>
+    </div>
   );
 
   return (
@@ -34,7 +34,7 @@ const AboutSectionOne = () => {
                 className="mb-12 max-w-[570px] lg:mb-0"
                 data-wow-delay=".15s"
               >
-                <div className="mx-[-12px] flex flex-wrap items-center justify-center">
+                <div className=" mx-[-12px] flex flex-wrap items-center justify-center ">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="Calidad Superior en Productos y Servicios" />
                     <List text="Personalización y Creatividad" />

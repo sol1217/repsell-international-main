@@ -80,9 +80,9 @@ const Admin = () => {
                     <div className="flex flex-wrap items-center gap-3">
                       <div className="mb-5 mr-10 flex items-center gap-3">
                         <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                          Contacto de Sol Calderón desarrolladora web
+                          Sol Calderón Romero
                           <br />
-                          Correo: Sol Calderón
+                          Correo: solc0275@gmail.com
                           <br />
                           Número: 6043-0566
                         </p>

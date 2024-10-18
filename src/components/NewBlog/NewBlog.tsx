@@ -9,7 +9,7 @@ const NewBlog = () => {
 
   const categorias = [
     { value: "", label: "Elegir Categoria", href: "" },
-    { value: "medals", label: "medallas", href: "/medals" },
+    { value: "medallas", label: "medallas", href: "/medals" },
     {
       value: "recognitions",
       label: "Reconocimientos",
@@ -20,7 +20,7 @@ const NewBlog = () => {
       label: "Trofeos y Copas",
       href: "/trophiesAndCups",
     },
-    { value: "promotional", label: "Promocionales", href: "/promotional" },
+    { value: "promotional", label: "Promocionales", href: "/promotiona´" },
     { value: "impression", label: "Impresiones", href: "/impression" },
   ];
 
