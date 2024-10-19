@@ -183,12 +183,12 @@ const Footer = () => {
           </div>
 
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-8">
+          <div className="py-8 ">
             <span className="mb-1 flex items-center justify-center  gap-3 text-base font-medium text-body-color">
               <GiConcentrationOrb fontSize={25} color="white" />
-              <span className="border-b-2 font-serif text-3xl">
-                Más allá de la medalla
-              </span>
+              <div className=" font-serif text-3xl">
+                <p className="text-center">Más allá de la medalla</p>
+              </div>
             </span>
           </div>
         </div>
