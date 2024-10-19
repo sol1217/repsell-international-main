@@ -15,8 +15,6 @@ export const metadata: Metadata = {
   title: "Repsell Internacional – Líder en Premiaciones y Reconocimientos",
   description:
     "Repsell Internacional es el líder en la venta de trofeos, medallas y reconocimientos personalizados. Innovación en premiaciones y cristales en Costa Rica.",
-  keywords:
-    "Repsell, premiaciones, trofeos, medallas, reconocimientos, cristales, trofeos personalizados, innovación en trofeos, San José, Costa Rica, tienda de trofeos, galardones, premios, productos de calidad, servicio personalizado",
 };
 
 export default function Home() {
