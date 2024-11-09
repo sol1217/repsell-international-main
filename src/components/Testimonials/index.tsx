@@ -8,8 +8,8 @@ const testimonialData: Testimonial[] = [
     name: "Musharof Chy",
     designation: "Founder @TailGrids",
     content:
-      "Repsell, convertió nuestras ideas en obras maestras y en gran formato. Desde murales impresionantes hasta banners impactantes 🚀.",
-    image: "/images/testimonials/auth-01.png",
+      "Está demasiado lindo el trofeo 🏆. Normalmente doy medallas al campeón, es la primera vez que daré también trofeo y sé que les va a gustar",
+    imagePerson: "/images/hero/person-2.jpg",
     star: 5,
   },
   {
@@ -17,8 +17,8 @@ const testimonialData: Testimonial[] = [
     name: "Devid Weilium",
     designation: "Founder @UIdeck",
     content:
-      "Repsell: Llevó la calidad y la excelencia a un nivel superior en cada trofeo, medalla, impresión y material promocional. ",
-    image: "/images/testimonials/auth-02.png",
+      "El cristal quedó perfecto muchas gracias y muchas gracias también por el excelente servicio ",
+    imagePerson: "/images/hero/person-1.jpg",
     star: 5,
   },
   {
@@ -26,8 +26,8 @@ const testimonialData: Testimonial[] = [
     name: "Lethium Frenci",
     designation: "Founder @Lineicons",
     content:
-      "Pude encontrar en Repsell una Impresión Full Color perfecta para eventos, promociones y más.",
-    image: "/images/testimonials/auth-03.png",
+      "Esperamos el otro año volver a trabajar con ustedes, el trabajo quedó muy bien y ha gustado mucho. Gracias.",
+    imagePerson: "/images/hero/person-3.jpg",
     star: 5,
   },
 ];
@@ -38,9 +38,12 @@ const Testimonials = () => {
       <div className="container">
         <SectionTitle
           title=" La dedicación guía todas nuestras operaciones."
-          paragraph="Cada detalle cuenta. En Repsell Internacional, la calidad no es solo un objetivo, es nuestra promesa. "
+          paragraph="En Repsell Internacional, la calidad no es solo un objetivo, es nuestra promesa. "
           center
         />
+        <div className="mb-9 flex items-center justify-center font-serif text-3xl caret-body-color-dark">
+          Cada detalle cuenta
+        </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonialData.map((testimonial) => (

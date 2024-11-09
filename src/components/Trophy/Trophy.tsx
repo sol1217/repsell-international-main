@@ -15,26 +15,48 @@ const Trophy = () => {
         <div className=" ">
           <div className="trophy-box flex items-center justify-center gap-10">
             <Image
-              className="custom-img-size h-auto w-[600px] sm:w-[300px]"
+              className="custom-img-size custom-img-animation h-auto w-[580px] shadow-red-700 sm:w-[300px]"
               src={trophy}
               alt=""
             />
             <div className="title-lidership flex flex-col gap-10">
-              <h2 className="w-full text-center" style={{ fontSize: "30px" }}>
-                Somos líderes en premiaciones y reconocimientos
-              </h2>
-              <div className=" text-center lg:w-[700px] ">
-                Al ir de la mano con nuevas tendencias y productos
-              </div>
+              <span
+                className="w-full text-center"
+                style={{ fontSize: "30px", textShadow: "2px 2px 4px red" }}
+              >
+                <b
+                  style={{
+                    width: "20px",
+                    fontSize: "36px",
+                    fontFamily: "cursive",
+                    borderBottomWidth: "2px",
+                  }}
+                >
+                  SOMOS LIDER
+                </b>
+              </span>
+              <p
+                className="delete-text  text-center lg:w-[700px]"
+                style={{
+                  fontSize: "18px",
+                  color: "white",
+                }}
+              >
+                En premiaciones y reconocimientos con nuevas tendencias y
+                productos. <br />
+                Al ir de la mano con nuevas tendencias y productos, nos
+                aseguramos de integrar lo último en innovación y diseño para
+                ofrecer una experiencia única a nuestros clientes.
+              </p>
               <a
                 href="/trophiesAndCups"
-                className="rounded-sm bg-[#e11b24] px-9 py-4 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
+                className="rounded-full bg-[#e11b24] px-9 py-4 text-center text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b25]/90 dark:shadow-submit-dark"
               >
                 Copas y trofeos
               </a>
             </div>
             <Image
-              className="custom-img-size h-auto w-[600px] sm:w-[300px]"
+              className="custom-img-size custom-img-animation  h-auto w-[460px] sm:w-[250px]"
               src={resina}
               alt=""
             />
@@ -174,27 +196,3 @@ const Trophy = () => {
 };
 
 export default Trophy;
-
-{
-  /*<div className="flex h-[50rem] items-center justify-center">
-      <div className="flex items-center gap-40 ">
-        <Image src={trophy} alt="" width={400} height={400} />
-        <div className="flex flex-col items-center gap-10">
-          <h2 className="w-full text-center" style={{ fontSize: "30px" }}>
-            Repsell International Líder en Premiciaciones
-          </h2>
-          <div
-            className="text-center"
-            style={{ width: "600px", fontSize: "18px" }}
-          >
-            Hay que innovar, y REPSELL INTERNACIONAL, líder en premiaciones y
-            reconocimientos, también va de la mano con las nuevas tendencias y
-            productos.
-          </div>
-          <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-            Enviar Mensaje
-          </button>
-        </div>
-      </div>
-    </div>*/
-}

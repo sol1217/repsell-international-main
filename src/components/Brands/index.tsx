@@ -6,7 +6,7 @@ import SectionTitle from "@/components/Common/SectionTitle";
 
 const Brands = () => {
   return (
-    <section className="m-16 pt-16">
+    <section className="m-16  pt-16">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <SectionTitle
@@ -15,7 +15,7 @@ const Brands = () => {
             center
           />
           <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center rounded-sm bg-gray-light dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px] xl:p-[50px] 2xl:px-[70px] 2xl:py-[60px]">
+            <div className="flex flex-wrap items-center justify-center rounded-sm bg-gray-light dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px]">
               {brandsData.map((brand) => (
                 <SingleBrand key={brand.id} brand={brand} />
               ))}
@@ -33,24 +33,14 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, imageLight, name } = brand;
 
   return (
-    <div className="flex w-1/2 items-center justify-center px-3 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
-      <div
-        rel="nofollow noreferrer"
-        className="relative flex w-full items-center justify-center opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
-      >
+    <div className="flex flex-row items-center justify-center xl:w-1/5">
+      <div rel="nofollow noreferrer" className="relative  transition  ">
         <Image
           src={imageLight}
           alt={name}
           width={100}
           height={100}
           className="hidden dark:block"
-        />
-        <Image
-          src={image}
-          alt={name}
-          width={100}
-          height={100}
-          className="block dark:hidden"
         />
       </div>
     </div>

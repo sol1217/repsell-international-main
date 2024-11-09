@@ -8,33 +8,49 @@ import ModalVideo from "react-modal-video";
 import SingleTestimonial from "@/components/Testimonials/SingleTestimonial";
 
 const Video = () => {
-  const [isOpen, setOpen] = useState(false);
-
   return (
     <section className=" relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Nuestro personal está siempre dispuesto a ayudarle"
-          paragraph="Nuestras asesoras están para ayudarle en cada paso a elegir el reconocimiento perfecto. Nuestro equipo altamente capacitado está a su disposición para asegurar que su experiencia con nosotros sea excepcional."
+          paragraph="Nuestro equipo altamente capacitado está a su disposición para ayudarle a elegir el reconocimiento perfecto y asegurar que su experiencia con nosotros sea excepcional."
           center
           mb="80px"
         />
 
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div
-              className="mx-auto max-w-[770px] overflow-hidden rounded-md"
-              data-wow-delay=".15s"
-            >
-              <div className="relative aspect-[90/50] items-center justify-center">
-                <Image
-                  className="rounded-2xl"
-                  src="/images/hero/staff.png"
-                  alt="video image"
-                  fill
-                />
-                <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center"></div>
-              </div>
+        <div
+          className="-mx-4 flex flex-wrap items-center justify-center "
+          style={{ height: "400px" }}
+        >
+          <div className="flex h-full w-full items-center justify-center gap-10 px-4">
+            <div className="">
+              <Image
+                className="repsell-staff custom-img-animation rounded-2xl"
+                src="/images/hero/staff.jpg"
+                alt="video image"
+                width={300}
+                height={200}
+              />
+            </div>
+            <div className="">
+              <Image
+                className="staff custom-img-center rounded-2xl"
+                src="/images/hero/staff-2.jpg"
+                alt="video image"
+                width={300}
+                height={200}
+              />
+              <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center"></div>
+            </div>
+            <div className="">
+              <Image
+                className="staff custom-img-animation rounded-2xl"
+                src="/images/hero/staff-3.jpg"
+                alt="video image"
+                width={300}
+                height={200}
+              />
+              <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center"></div>
             </div>
           </div>
         </div>

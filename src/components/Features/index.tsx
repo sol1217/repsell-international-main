@@ -4,10 +4,11 @@ import featuresData from "./featuresData";
 
 const Features = () => {
   return (
-    <>
+    <div className="bg-white ">
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
+            titleColor="text-[#191e2a]"
             title="Productos"
             paragraph="En REPSELL INTERNACIONAL, nos especializamos en ofrecer una amplia gama de productos diseñados para celebrar y reconocer los logros de manera única y memorable."
             center
@@ -20,7 +21,7 @@ const Features = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

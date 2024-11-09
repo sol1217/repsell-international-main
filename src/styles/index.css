@@ -43,16 +43,65 @@
   box-shadow: 0px 8px 20px rgb(197, 197, 206);
 }
 
+/* animaciones*/
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounceTwo {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+.custom-img-animation {
+  animation: bounce 2s infinite;
+}
+
+.custom-img-center {
+  animation: bounceTwo 2s infinite;
+}
+
+
 /* additional media queries  */
 
-
-  .hero-video {
-
-  }
 
 @media (max-width: 1132px) {
   .trophy-box {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .imgs-staff{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .staff{
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .repsell-staff{
+    width: 300px;
+  }
+}
+
+@media (max-width: 1132px) {
+  .delete-text {
+    display: none;
   }
 }
 

@@ -168,9 +168,6 @@ const Header = () => {
                 >
                   Blog
                 </Link>
-                <div>
-                  <ThemeToggler />
-                </div>
               </div>
             </div>
           </div>

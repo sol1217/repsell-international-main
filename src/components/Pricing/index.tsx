@@ -8,13 +8,17 @@ const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
-    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section
+      id="pricing"
+      className="relative z-10 bg-white py-16 md:py-20 lg:py-28"
+    >
       <div className="container">
         <SectionTitle
           title="Repsell Internacional"
           paragraph="Únase a nosotros en este emocionante viaje mientras continuamos celebrando logros junto a ustedes."
           center
           width="665px"
+          titleColor="text-[#191e2a]"
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
@@ -25,27 +29,21 @@ const Pricing = () => {
             duration={isMonthly ? "mo" : "yr"}
             subtitle="¡Impacta desde la primera impresión! Contamos con tecnología de punta en impresión digital"
           >
-            <OfferList text="Somos fabricantes 100% ticos" status="active" />
+            <OfferList text="Fabricantes 100% costarricenses" status="active" />
+            <OfferList text="Amplia gama de productos" status="active" />
+            <OfferList text="Calidad y Durabilidad" status="active" />
+            <OfferList text="Personalización" status="active" />
+            <OfferList text="Flexibilidad y Variedad" status="active" />
             <OfferList
-              text="Nuestros trofeos son obras de arte"
+              text="Orientación a la atención al cliente"
               status="active"
             />
             <OfferList
-              text="Tenemos todo en impresión digital"
+              text="Pines (Sublimados o con impresión full color)"
               status="active"
             />
-            <OfferList
-              text="Contamos con variedad de diseños"
-              status="active"
-            />
-            <OfferList
-              text="Materiales para sus placas conmemorativas"
-              status="active"
-            />
-            <OfferList
-              text="Continuamos celebrando logros junto a ustedes"
-              status="active"
-            />
+            <OfferList text="Cristales grabados a láser" status="active" />
+            <OfferList text="Maderas con placa sublimada" status="active" />
           </PricingBox>
           <PricingBox
             image="/images/hero/2.jpeg"
@@ -54,18 +52,19 @@ const Pricing = () => {
             duration={isMonthly ? "mo" : "yr"}
             subtitle="Hemos estado trabajando arduamente para llevar la calidad y la excelencia."
           >
+            <OfferList text="Trofeos (Metal y Polímeros)" status="active" />
+            <OfferList text="Copas (Metal y Polímeros)" status="active" />
+            <OfferList text="Resinas" status="active" />
             <OfferList
-              text="Impresión en UV, opción para chip "
+              text="Medallas (Metal fundido, Acrílicas y Ecológicas)"
               status="active"
             />
-            <OfferList text="Promocionales" status="active" />
-            <OfferList text="Variedad en estilos de placas" status="active" />
+            <OfferList text="Dorsales (números deportivos)" status="active" />
             <OfferList
-              text="Somos soluciones para sus eventos deportivos"
+              text="Pines (Sublimados o con impresión full color)"
               status="active"
             />
-            <OfferList text="Reconocimientos Corporativos" status="active" />
-            <OfferList text="Lanyards con su diseño" status="active" />
+            <OfferList text="Maderas grabadas a láser" status="active" />
           </PricingBox>
           <PricingBox
             image="/images/hero/1.jpg"
@@ -81,6 +80,11 @@ const Pricing = () => {
             <OfferList text="Somos fabricantes de placas " status="active" />
             <OfferList
               text="Creamos Medallas con diferentes materiales y diseños"
+              status="active"
+            />
+            <OfferList
+              text="Acrílicos con impresión full color y  grabados a láser
+"
               status="active"
             />
           </PricingBox>
