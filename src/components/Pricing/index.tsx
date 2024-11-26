@@ -3,6 +3,8 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import Image from "next/image";
+import repsell from "../../../public/images/hero/Repsell Internacional.png";
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
@@ -13,8 +15,10 @@ const Pricing = () => {
       className="relative z-10 bg-white py-16 md:py-20 lg:py-28"
     >
       <div className="container">
+        <div className="mb-10 flex items-center justify-center">
+          <Image src={repsell} alt="" height={650} width={650} />
+        </div>
         <SectionTitle
-          title="Repsell Internacional"
           paragraph="Únase a nosotros en este emocionante viaje mientras continuamos celebrando logros junto a ustedes."
           center
           width="665px"
