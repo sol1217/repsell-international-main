@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const SectionTitle = ({
   title,
   paragraph,
@@ -5,13 +7,15 @@ const SectionTitle = ({
   center,
   mb = "100px",
   titleColor = "text-white",
+  img = "../../../public/images/hero/products-text.png",
 }: {
-  title: string;
+  title?: string;
   paragraph: string;
   width?: string;
   center?: boolean;
   mb?: string;
   titleColor?: string;
+  img?: string;
 }) => {
   return (
     <>

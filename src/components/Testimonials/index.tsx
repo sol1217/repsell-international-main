@@ -1,6 +1,8 @@
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import Image from "next/image";
+import detail from "../../../public/images/hero/Cada-detalle-cuenta.png";
 
 const testimonialData: Testimonial[] = [
   {
@@ -42,7 +44,13 @@ const Testimonials = () => {
           center
         />
         <div className="mb-9 flex items-center justify-center font-serif text-3xl caret-body-color-dark">
-          Cada detalle cuenta
+          <Image
+            src={detail}
+            alt="cada detalle cuenta"
+            width={400}
+            height={400}
+            className="m-6"
+          />
         </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">

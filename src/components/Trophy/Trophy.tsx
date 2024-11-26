@@ -2,6 +2,7 @@ import Image from "next/image";
 import trophy from "../../../public/images/products/trophy.png";
 import resina from "../../../public/images/products/trophy-product.png";
 import SectionTitle from "@/components/Common/SectionTitle";
+import slogan from "../../../public/images/hero/SOMOS-LÍDER.png";
 
 const Trophy = () => {
   return (
@@ -19,21 +20,18 @@ const Trophy = () => {
               src={trophy}
               alt=""
             />
-            <div className="title-lidership flex flex-col gap-10">
+            <div className="title-lidership flex  flex-col gap-10">
               <span
-                className="w-full text-center"
+                className="flex w-full items-center justify-center text-center "
                 style={{ fontSize: "30px", textShadow: "2px 2px 4px red" }}
               >
-                <b
-                  style={{
-                    width: "20px",
-                    fontSize: "36px",
-                    fontFamily: "cursive",
-                    borderBottomWidth: "2px",
-                  }}
-                >
-                  SOMOS LIDER
-                </b>
+                <Image
+                  src={slogan}
+                  alt="somos lideres slogan"
+                  className="p-20"
+                  width={600}
+                  height={600}
+                />
               </span>
               <p
                 className="delete-text  text-center lg:w-[700px]"
