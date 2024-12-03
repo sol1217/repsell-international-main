@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 const PromotionalPage = () => {
   return (
-    <>
+    <div className="bg-white">
       <Promotional />
-    </>
+    </div>
   );
 };
 

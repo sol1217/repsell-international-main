@@ -3,9 +3,9 @@ import BlogSidebarPage from "@/app/blog-sidebar/page";
 
 const BlogPage = () => {
   return (
-    <Fragment>
+    <div className="bg-white">
       <BlogSidebarPage />
-    </Fragment>
+    </div>
   );
 };
 

@@ -81,7 +81,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="flex flex-col gap-10 p-7 ">
+    <div className="flex flex-col gap-10 bg-white p-7 ">
       <Breadcrumb
         pageName="Repsell International (Cotización)"
         description="Cotice sus reconocimientos, promocionales e impresión a gran formato"
@@ -123,11 +123,27 @@ const Cart = () => {
                       </div>
                     ))}
                     <input
+                      type="name"
+                      required
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      placeholder="Ingresa tu nombre completo"
+                      name="name"
+                      className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
+                    />
+                    <input
                       type="number"
                       maxLength={8}
                       required
-                      placeholder="Ingresa un numero de telefono para enviar la cotización"
+                      placeholder="Ingresa un numero de telefono"
                       name="number"
+                      className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
+                    />
+                    <input
+                      type="id"
+                      required
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      placeholder="Ingresa tu correo electronico"
+                      name="id"
                       className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
                     />
                     <input
@@ -138,6 +154,15 @@ const Cart = () => {
                       name="email"
                       className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
                     />
+                    <input
+                      type="adress"
+                      required
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      placeholder="Ingresa tu correo electronico"
+                      name="adress"
+                      className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
+                    />
+
                     <input
                       type="hidden"
                       name="product_names"

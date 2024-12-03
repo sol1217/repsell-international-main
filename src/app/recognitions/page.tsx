@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 const RecognitionsPage = () => {
   return (
-    <>
+    <div className="bg-white">
       <Recognitions />
-    </>
+    </div>
   );
 };
 

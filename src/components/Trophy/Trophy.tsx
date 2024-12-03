@@ -6,8 +6,9 @@ import slogan from "../../../public/images/hero/SOMOS-LÍDER.png";
 
 const Trophy = () => {
   return (
-    <section className="bg-gray-light p-24 dark:bg-bg-color-dark">
+    <section className="border-2 bg-white p-24">
       <SectionTitle
+        titleColor="text-[#000000]"
         title="PREMIAMOS SU ESFUERZO"
         paragraph="En Repsell Internacional ofrecemos los productos de la más alta calidad en el mercado ¡Compruébelo!"
         center
@@ -22,7 +23,7 @@ const Trophy = () => {
             />
             <div className="title-lidership flex  flex-col gap-10">
               <span
-                className="flex w-full items-center justify-center text-center "
+                className="flex w-full items-center justify-center text-center text-black"
                 style={{ fontSize: "30px", textShadow: "2px 2px 4px red" }}
               >
                 <Image
@@ -37,7 +38,7 @@ const Trophy = () => {
                 className="delete-text  text-center lg:w-[700px]"
                 style={{
                   fontSize: "18px",
-                  color: "white",
+                  color: "black",
                 }}
               >
                 En premiaciones y reconocimientos con nuevas tendencias y

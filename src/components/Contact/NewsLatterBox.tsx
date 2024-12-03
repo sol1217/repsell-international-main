@@ -11,7 +11,7 @@ const NewsLatterBox = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="relative z-10 flex flex-col items-center justify-center rounded-sm bg-white p-8 text-center shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+    <div className="relative z-10 flex h-[720px] flex-col items-center justify-center rounded-sm bg-white p-8 text-center shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
         Horario de atención
       </h3>
@@ -34,7 +34,7 @@ const NewsLatterBox = () => {
               aria-label="social-link"
               target="_blank"
               rel="noopener noreferrer"
-              className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+              className="mr-6 text-body-color duration-300 hover:text-red-700"
             >
               <FaFacebookF fontSize={40} color=" dark:text-black" />
             </a>
@@ -44,7 +44,7 @@ const NewsLatterBox = () => {
               aria-label="social-link"
               target="_blank"
               rel="noopener noreferrer"
-              className="mr-6 cursor-pointer text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+              className="mr-6 cursor-pointer text-body-color duration-300  hover:text-red-700"
             >
               <IoLogoWhatsapp fontSize={40} color=" dark:text-black" />
             </a>
@@ -53,7 +53,7 @@ const NewsLatterBox = () => {
               aria-label="social-link"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+              className="text-body-color duration-300  hover:text-red-700"
             >
               <FaInstagramSquare fontSize={40} color=" dark:text-black" />
             </a>
@@ -63,14 +63,14 @@ const NewsLatterBox = () => {
               aria-label="social-link"
               target="_blank"
               rel="noopener noreferrer"
-              className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+              className="mr-6 text-body-color duration-300  hover:text-red-700"
             ></a>
             <a
               href="https://www.google.com/maps/place/WWG4%2BG3H/data=!4m6!3m5!1s0x8fa0e344d5124fcf:0xdf4aa0d630748421!8m2!3d9.9263125!4d-84.0947656!19sIiY6JAoKDZWi6gUVOCjgzRALGhQKEgnPTxLVROOgjxHNrtPF7IsjGw?authuser=0&hl=es&rclk=1"
               aria-label="social-link"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+              className="text-body-color duration-300 hover:text-red-700"
             >
               <FaWaze fontSize={40} color=" dark:text-black" />
             </a>

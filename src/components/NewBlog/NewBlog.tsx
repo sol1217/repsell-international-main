@@ -249,7 +249,7 @@ const NewBlog = () => {
                 </div>
 
                 <div className="mb-6">
-                  <button className="flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                  <button className="flex w-full items-center justify-center rounded-sm bg-red-700 px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-red-800/90 dark:shadow-submit-dark">
                     Publicar Blog
                   </button>
                 </div>

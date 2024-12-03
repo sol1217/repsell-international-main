@@ -18,7 +18,7 @@ const BlogDetailsPage = () => {
           <div className="-flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h2 className="mb-8 text-3xl font-bold leading-tight text-[#1e242e] sm:text-4xl sm:leading-tight">
                   La Historia de Repsell: Un Camino Forjado con Pasión,
                   Dedicación y Excelencia.
                 </h2>
@@ -28,7 +28,7 @@ const BlogDetailsPage = () => {
                       <div className="mr-4"></div>
                       <div className="w-full">
                         <span className="mb-1 flex items-center justify-center  gap-3 text-base font-medium text-body-color">
-                          <GiConcentrationOrb fontSize={25} color="white" />
+                          <GiConcentrationOrb fontSize={25} color="red" />
                           <span className="border-b-2 font-serif text-2xl">
                             Somos Repsell Internacional.
                           </span>

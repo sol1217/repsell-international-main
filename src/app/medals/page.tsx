@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 const MedalsPage = () => {
   return (
-    <>
+    <div className="bg-white">
       <Medals />
-    </>
+    </div>
   );
 };
 

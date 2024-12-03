@@ -49,9 +49,9 @@ const SingleImpression = () => {
           impressions.map((imp) => (
             <div
               key={imp.id}
-              className="product-main h group relative mb-8 h-[710px] w-[400px] flex-wrap overflow-hidden rounded-sm rounded-b-2xl bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark"
+              className="product-main h group relative mb-8 h-[710px] w-[400px] flex-wrap overflow-hidden rounded-sm rounded-b-2xl bg-dark shadow-one duration-300 "
             >
-              <div className="relative block aspect-[37/22] w-full rounded-t-2xl bg-white">
+              <div className="relative block aspect-[37/22] w-full rounded-t-2xl bg-dark">
                 <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-blue-950 px-4 py-2 text-sm font-semibold capitalize text-white">
                   {imp.category}
                 </span>
@@ -62,19 +62,19 @@ const SingleImpression = () => {
                   style={{ width: "300px", height: "300px" }}
                 />
               </div>
-              <div className=" h-full bg-white p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+              <div className=" h-full bg-dark p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
                 <h3>
-                  <div className="mb-4 block text-xl font-bold text-black dark:hover:text-primary sm:text-2xl">
+                  <div className="mb-4 block text-xl font-bold text-white dark:hover:text-primary sm:text-2xl">
                     {imp.name}
                   </div>
                 </h3>
-                <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
+                <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 font-medium text-white">
                   {imp.description}
                 </p>
                 <div className="flex items-center">
                   <div className="mr-5 flex flex-col items-center gap-3 border-r border-body-color border-opacity-60 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
                     <div className="w-full">
-                      <div className="mb-1 text-sm font-medium text-black">
+                      <div className="mb-1 text-sm font-medium text-white">
                         Tamaño:
                         <br />
                         <br />
@@ -86,7 +86,7 @@ const SingleImpression = () => {
                               key={index}
                               className="flex items-center gap-2"
                             >
-                              <span className="text-xs font-bold text-black">
+                              <span className="text-xs font-bold text-white">
                                 {height.trim()}
                               </span>
                             </div>
@@ -148,7 +148,7 @@ const SingleImpression = () => {
             </div>
           ))
         ) : (
-          <p>No se encontraron impresiones.</p>
+          <p className="text-dark">No se encontraron impresiones.</p>
         )}
       </div>
     </div>

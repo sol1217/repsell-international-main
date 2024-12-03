@@ -4,7 +4,7 @@ import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 import Image from "next/image";
-import repsell from "../../../public/images/hero/Repsell Internacional.png";
+import repsell from "../../../public/images/hero/RepselInternacional.png";
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
@@ -14,16 +14,35 @@ const Pricing = () => {
       id="pricing"
       className="relative z-10 bg-white py-16 md:py-20 lg:py-28"
     >
+      <div className="video-repsell absolute inset-0 z-0 flex h-full w-full items-center justify-center">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          loop
+          playsInline
+          muted
+        >
+          <source src="/images/video/voleibol.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div className="container">
         <div className="mb-10 flex items-center justify-center">
-          <Image src={repsell} alt="" height={650} width={650} />
+          <Image
+            className="z-10"
+            src={repsell}
+            alt=""
+            height={650}
+            width={650}
+          />
         </div>
-        <SectionTitle
-          paragraph="Únase a nosotros en este emocionante viaje mientras continuamos celebrando logros junto a ustedes."
-          center
-          width="665px"
-          titleColor="text-[#191e2a]"
-        />
+        <div className="relative">
+          <SectionTitle
+            paragraph="Únase a nosotros en este emocionante viaje mientras continuamos celebrando logros junto a ustedes."
+            center
+            titleColor="text-[#ffffff]"
+            width="665px"
+          />
+        </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox

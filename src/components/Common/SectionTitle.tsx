@@ -20,7 +20,7 @@ const SectionTitle = ({
   return (
     <>
       <div
-        className={`w-full ${center ? "mx-auto text-center" : ""}`}
+        className={`w-full ${center ? "mx-auto text-center" : ""} `}
         style={{ maxWidth: width, marginBottom: mb }}
       >
         <h2
@@ -28,7 +28,9 @@ const SectionTitle = ({
         >
           {title}
         </h2>
-        <p className="text-base !leading-relaxed text-body-color md:text-lg">
+        <p
+          className={`text-base !leading-relaxed text-body-color md:text-lg  ${titleColor}`}
+        >
           {paragraph}
         </p>
       </div>

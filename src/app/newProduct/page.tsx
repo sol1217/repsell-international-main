@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const NewProductPage = () => {
   return (
-    <>
+    <div className="bg-white">
       <Breadcrumb
         pageName="¿Deseas agregar nuevos productos?"
         description="Agrega nuevos Reconocimientos, Medallas, Promocionales, Trofeos, Copas y Impresiones."
@@ -19,7 +19,7 @@ const NewProductPage = () => {
       <section className="add-product pb-[120px] pt-[120px]">
         <NewProducts />
       </section>
-    </>
+    </div>
   );
 };
 

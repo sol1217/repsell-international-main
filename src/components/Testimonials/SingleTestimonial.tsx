@@ -29,7 +29,7 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => setIsHovered(!isHovered)}
     >
-      <div className="flex h-full flex-col gap-3 rounded-sm  bg-white p-8 shadow-two duration-300 hover:shadow-one lg:px-5 xl:px-8">
+      <div className="flex h-full flex-col gap-3 rounded-sm  bg-dark p-8 shadow-two duration-300 hover:shadow-one lg:px-5 xl:px-8">
         <div className="flex items-center gap-3 ">
           <Image
             className="rounded-full"
@@ -43,7 +43,7 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
           </div>
         </div>
 
-        <p className="mb-8 border-b border-blue-800 border-opacity-60 pb-5 text-base leading-relaxed text-body-color ">
+        <p className="mb-8 border-b border-blue-800 border-opacity-60 pb-5 leading-relaxed text-white  ">
           “{content}“
         </p>
       </div>

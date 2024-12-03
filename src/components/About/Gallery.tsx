@@ -19,8 +19,9 @@ const Images: Gallery[] = [
 
 const GalleryAbout = () => {
   return (
-    <div className="">
+    <div className="bg-white">
       <SectionTitle
+        titleColor="text-[#1e242e]"
         title="GALERÍA"
         paragraph="En Repsell Internacional, convertimos sus ideas en obras maestras de gran formato. Desde murales impresionantes hasta banners impactantes, nuestra impresión de gran formato eleva su visión al siguiente nivel. "
         center

@@ -80,9 +80,9 @@ const BlogSidebarPage = () => {
 
   return (
     <>
-      <section className="overflow-hidden pb-[120px] pt-[180px]">
+      <section className="overflow-hidden bg-white pb-[120px] pt-[180px]">
         {loading ? (
-          <p className="m-20">Cargando...</p>
+          <p className="m-20 text-dark">Cargando...</p>
         ) : (
           <div className="container">
             {blog ? (
@@ -493,7 +493,7 @@ const BlogSidebarPage = () => {
                 </div>
               </div>
             ) : (
-              <p>No se encontraron blogs.</p>
+              <p className="text-dark">No se encontraron blogs.</p>
             )}
           </div>
         )}

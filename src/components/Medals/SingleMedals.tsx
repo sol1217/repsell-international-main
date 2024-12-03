@@ -49,7 +49,7 @@ const SingleMedals = () => {
   return (
     <div className="container">
       {loading ? (
-        <p>Cargando...</p>
+        <p className="text-dark">Cargando...</p>
       ) : (
         <div className="products-box flex w-[80vw] flex-wrap items-center justify-center gap-3">
           {medals.length > 0 ? (
@@ -58,7 +58,7 @@ const SingleMedals = () => {
                 key={medal.id}
                 className="product-main medals-colors group relative mb-8 h-[740px] w-[400px] flex-wrap overflow-hidden rounded-sm rounded-b-2xl bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark"
               >
-                <div className="relative block aspect-[37/22] w-full rounded-t-2xl bg-white">
+                <div className="relative block aspect-[37/22] w-full rounded-t-2xl bg-dark">
                   <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-blue-950 px-4 py-2 text-sm font-semibold capitalize text-white">
                     {medal.category}
                   </span>
@@ -69,22 +69,22 @@ const SingleMedals = () => {
                     style={{ width: "300px", height: "300px" }}
                   />
                 </div>
-                <div className="h-full bg-white p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+                <div className="h-full bg-dark p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
                   <h3>
                     <Link
                       href="/blog-details"
-                      className="mb-4 block text-xl font-bold text-black dark:hover:text-primary sm:text-2xl"
+                      className="mb-4 block text-xl font-bold text-white dark:hover:text-primary sm:text-2xl"
                     >
                       {medal.name}
                     </Link>
                   </h3>
-                  <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
+                  <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 font-medium text-white">
                     {medal.description}
                   </p>
                   <div className="flex items-center">
                     <div className=" mr-5 flex flex-col items-center gap-3 border-r border-body-color border-opacity-60 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
                       <div className="w-full">
-                        <div className="mb-1 text-sm font-medium text-black">
+                        <div className="mb-1 text-sm font-medium text-white">
                           <p>Tamaño: {medal.height} CM</p>
                           <b className="border-b-2">Aproximadamente</b>
                         </div>
@@ -97,7 +97,7 @@ const SingleMedals = () => {
                       </button>
                     </div>
                     <div className="flex flex-col items-center gap-3">
-                      <div className="mb-1 w-full text-sm font-medium text-black">
+                      <div className="mb-1 w-full text-sm font-medium text-white">
                         Colores:
                       </div>
                       <div className="mr-4 flex w-full flex-row  flex-wrap gap-5">
@@ -138,7 +138,7 @@ const SingleMedals = () => {
               </div>
             ))
           ) : (
-            <p>No se encontraron medallas.</p>
+            <p className="text-dark">No se encontraron medallas.</p>
           )}
         </div>
       )}

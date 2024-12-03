@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 
 const NewBlogPage = () => {
   return (
-    <>
+    <div className="bg-white">
       <Breadcrumb
         pageName="¿Deseas crear un nuevo Blog?"
         description="Crea un nuevo blog que hable sobre alguna información o producto relevante."
       />
 
       <NewBlog />
-    </>
+    </div>
   );
 };
 

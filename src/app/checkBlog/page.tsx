@@ -4,9 +4,9 @@ import BlogsCheck from "@/components/Blog/BlogsCheck";
 
 const BlogPageCheck = () => {
   return (
-    <Fragment>
+    <div className="bg-white">
       <BlogsCheck />
-    </Fragment>
+    </div>
   );
 };
 

@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 const TrophiesAndCupsPage = () => {
   return (
-    <>
+    <div className="bg-white">
       <TrophiesAndCups />
-    </>
+    </div>
   );
 };
 

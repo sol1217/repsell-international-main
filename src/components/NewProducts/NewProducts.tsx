@@ -118,7 +118,7 @@ const NewProduct = () => {
   };
 
   return (
-    <>
+    <div className="bg-white">
       <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[10px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap ">
@@ -261,7 +261,7 @@ const NewProduct = () => {
                   </div>
                   <button
                     type="submit"
-                    className="mt-10 w-full rounded bg-primary px-6 py-4 text-base font-medium text-white outline-none transition-all duration-300 hover:bg-opacity-90"
+                    className="mt-10 w-full rounded bg-red-700 px-6 py-4 text-base font-medium text-white outline-none transition-all duration-300 hover:bg-opacity-90"
                   >
                     Enviar Producto
                   </button>
@@ -271,7 +271,7 @@ const NewProduct = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

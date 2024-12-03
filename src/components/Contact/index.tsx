@@ -34,11 +34,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <section
+      id="contact"
+      className="overflow-hidden bg-white py-16 md:py-20 lg:py-28"
+    >
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
-            <div className="contact-form mb-12 h-[670px] rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
+            <div className="contact-form mb-12 h-[720px] rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 Nuestro equipo está aquí para ayudarle
               </h2>
@@ -54,7 +57,7 @@ const Contact = () => {
                         htmlFor="name"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Nombre Completo
+                        Nombre Completo:
                       </label>
                       <input
                         name="from_name"
@@ -70,12 +73,76 @@ const Contact = () => {
                         htmlFor="email"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Correo Electrónico
+                        Correo Electrónico:
                       </label>
                       <input
                         type="email"
                         name="email"
                         placeholder="Escriba su correo"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label
+                        htmlFor="id"
+                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                      >
+                        Número de identificación:
+                      </label>
+                      <input
+                        type="id"
+                        name="id"
+                        placeholder="Número de identificación"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label
+                        htmlFor="type_id"
+                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                      >
+                        Tipo de identificación:
+                      </label>
+                      <input
+                        type="type_id"
+                        name="type_id"
+                        placeholder="Tipo de identificación"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label
+                        htmlFor="address"
+                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                      >
+                        Dirección:
+                      </label>
+                      <input
+                        type="address"
+                        name="address"
+                        placeholder=" Dirección"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label
+                        htmlFor="phone"
+                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                      >
+                        Teléfono:
+                      </label>
+                      <input
+                        type="phone"
+                        name="phone"
+                        placeholder="Teléfono"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -86,7 +153,7 @@ const Contact = () => {
                         htmlFor="message"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Mensaje
+                        Mensaje:
                       </label>
                       <textarea
                         name="message"

@@ -118,7 +118,7 @@ const ProductMain = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               {loading ? (
-                <p>Cargando...</p>
+                <p className="text-dark">Cargando...</p>
               ) : (
                 <div className="mx-auto max-w-[1200px] rounded bg-white px-6 py-10 shadow-three dark:bg-dark sm:p-[60px]">
                   <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">

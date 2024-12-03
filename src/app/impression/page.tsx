@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 const ImpressionPage = () => {
   return (
-    <>
+    <div className="bg-white">
       <Impression />
-    </>
+    </div>
   );
 };
 

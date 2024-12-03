@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 
 const ProductPage = () => {
   return (
-    <>
+    <div className="bg-white">
       <Breadcrumb
         pageName="Lista de Productos"
         description="Reconocimientos, Medallas, Promocionales, Trofeos, Copas y Impresiones."
       />
 
       <ProductMain />
-    </>
+    </div>
   );
 };
 

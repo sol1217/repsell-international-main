@@ -36,9 +36,10 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
+    <section className="relative z-10 bg-white py-16">
       <div className="container">
         <SectionTitle
+          titleColor="text-[#000000]"
           title=" La dedicación guía todas nuestras operaciones."
           paragraph="En Repsell Internacional, la calidad no es solo un objetivo, es nuestra promesa. "
           center

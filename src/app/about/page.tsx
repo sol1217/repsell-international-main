@@ -14,14 +14,15 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <>
+    <div className="border-2 bg-white">
       <Breadcrumb
+        color="text-[#1e242e]"
         pageName="Sobre Nosotros"
         description="Nuestra misión es brindar un servicio excepcional y garantizar que cada cliente reciba un producto que exceda sus expectativas."
       />
       <BlogDetailsPage />
       <GalleryAbout />
-    </>
+    </div>
   );
 };
 
