@@ -15,6 +15,7 @@ const NewBlogPage = () => {
   return (
     <div className="bg-white">
       <Breadcrumb
+        color="text-[#000000]"
         pageName="¿Deseas crear un nuevo Blog?"
         description="Crea un nuevo blog que hable sobre alguna información o producto relevante."
       />

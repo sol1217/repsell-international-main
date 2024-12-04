@@ -14,6 +14,7 @@ const ProductPage = () => {
   return (
     <div className="bg-white">
       <Breadcrumb
+        color="text-[#000000]"
         pageName="Lista de Productos"
         description="Reconocimientos, Medallas, Promocionales, Trofeos, Copas y Impresiones."
       />

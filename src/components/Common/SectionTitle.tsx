@@ -28,9 +28,7 @@ const SectionTitle = ({
         >
           {title}
         </h2>
-        <p
-          className={`text-base !leading-relaxed text-body-color md:text-lg  ${titleColor}`}
-        >
+        <p className={` !leading-relaxed  md:text-lg  ${titleColor}`}>
           {paragraph}
         </p>
       </div>

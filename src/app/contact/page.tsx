@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <>
+    <div className="">
       <Breadcrumb
         color="text-[#1e242e]"
         pageName="Contáctenos"
@@ -20,7 +20,7 @@ const ContactPage = () => {
       />
 
       <Contact />
-    </>
+    </div>
   );
 };
 

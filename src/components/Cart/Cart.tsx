@@ -83,6 +83,7 @@ const Cart = () => {
   return (
     <div className="flex flex-col gap-10 bg-white p-7 ">
       <Breadcrumb
+        color="text-[#000000]"
         pageName="Repsell International (Cotización)"
         description="Cotice sus reconocimientos, promocionales e impresión a gran formato"
       />
@@ -134,7 +135,7 @@ const Cart = () => {
                       type="number"
                       maxLength={8}
                       required
-                      placeholder="Ingresa un numero de telefono"
+                      placeholder="Ingresa un número de telefono"
                       name="number"
                       className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
                     />
@@ -142,7 +143,7 @@ const Cart = () => {
                       type="id"
                       required
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                      placeholder="Ingresa tu correo electronico"
+                      placeholder="Ingresa tu número identificación"
                       name="id"
                       className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
                     />
@@ -158,7 +159,7 @@ const Cart = () => {
                       type="adress"
                       required
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                      placeholder="Ingresa tu correo electronico"
+                      placeholder="Ingresa tu dirección"
                       name="adress"
                       className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
                     />

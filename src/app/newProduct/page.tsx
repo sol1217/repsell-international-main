@@ -12,6 +12,7 @@ const NewProductPage = () => {
   return (
     <div className="bg-white">
       <Breadcrumb
+        color="text-[#000000]"
         pageName="¿Deseas agregar nuevos productos?"
         description="Agrega nuevos Reconocimientos, Medallas, Promocionales, Trofeos, Copas y Impresiones."
       />

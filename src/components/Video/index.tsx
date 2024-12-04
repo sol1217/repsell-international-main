@@ -9,8 +9,8 @@ import SingleTestimonial from "@/components/Testimonials/SingleTestimonial";
 
 const Video = () => {
   return (
-    <section className=" relative z-10 bg-white py-16  lg:py-28">
-      <div className="container">
+    <section className=" relative z-10 flex items-center justify-center bg-white py-16  lg:py-28">
+      <div className="container  flex flex-col items-center justify-center">
         <SectionTitle
           titleColor="text-[#000000]"
           title="Nuestro personal está siempre dispuesto a ayudarle"
@@ -20,13 +20,13 @@ const Video = () => {
         />
 
         <div
-          className="-mx-4 flex flex-wrap items-center justify-center "
+          className="-mx-4 flex flex-wrap items-center justify-center"
           style={{ height: "400px" }}
         >
-          <div className="flex h-full w-full items-center justify-center gap-10 px-4">
-            <div className="">
+          <div className="2 flex h-full w-full items-center justify-center gap-10 px-4">
+            <div className="flex items-center justify-center ">
               <Image
-                className="repsell-staff custom-img-animation rounded-2xl"
+                className="staff custom-img-animation rounded-2xl"
                 src="/images/hero/staff.jpg"
                 alt="video image"
                 width={300}
@@ -35,7 +35,7 @@ const Video = () => {
             </div>
             <div className="">
               <Image
-                className="staff custom-img-center rounded-2xl"
+                className="repsell-staff custom-img-center rounded-2xl"
                 src="/images/hero/staff-2.jpg"
                 alt="video image"
                 width={300}

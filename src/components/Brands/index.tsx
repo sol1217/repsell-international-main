@@ -6,7 +6,7 @@ import SectionTitle from "@/components/Common/SectionTitle";
 
 const Brands = () => {
   return (
-    <section className="bg-white p-20">
+    <section className="border-b-2 bg-white p-20">
       <div className="container ">
         <div className="-mx-4 flex flex-wrap">
           <SectionTitle
@@ -16,7 +16,7 @@ const Brands = () => {
             center
           />
           <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center rounded-sm bg-gray-light dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px]">
+            <div className="flex flex-wrap items-center justify-center gap-10 rounded-sm bg-dark  sm:px-10 ">
               {brandsData.map((brand) => (
                 <SingleBrand key={brand.id} brand={brand} />
               ))}
@@ -34,8 +34,8 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, imageLight, name } = brand;
 
   return (
-    <div className="flex flex-row items-center justify-center rounded-2xl xl:w-1/5">
-      <div rel="nofollow noreferrer" className="relative  transition  ">
+    <div className="flex flex-row items-center justify-center rounded-2xl  xl:w-2/6">
+      <div rel="nofollow noreferrer" className="relative transition  ">
         <Image
           src={imageLight}
           alt={name}
