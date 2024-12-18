@@ -19,19 +19,16 @@ const AboutSectionOne = () => {
   );
 
   return (
-    <section
-      id="about"
-      className="relative z-10 bg-dark pt-16 md:pt-20 lg:pt-28"
-    >
+    <section id="about" className="relative z-10  pt-16 md:pt-20 lg:pt-28">
       <div className="video-repsell absolute inset-0 z-0 flex h-full w-full items-center justify-center">
         <video
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover opacity-50"
           autoPlay
           loop
           playsInline
           muted
         >
-          <source src="/images/video/futboll.mp4" type="video/mp4" />
+          <source src="/images/video/corporativo.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="container relative z-10">

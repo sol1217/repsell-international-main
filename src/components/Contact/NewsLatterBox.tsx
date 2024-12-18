@@ -75,13 +75,16 @@ const NewsLatterBox = () => {
               <FaWaze fontSize={40} color=" dark:text-black" />
             </a>
           </div>
-          <div className="mb-5 flex w-full  items-center justify-center rounded-sm bg-[#e11b24] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b26]/90 dark:shadow-submit-dark">
-            Teléfono central: 2221-2827
-          </div>
+          <a
+            href="https://wa.link/26xce4"
+            className="mb-5 flex w-full  items-center justify-center rounded-sm bg-[#e11b24] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b26]/90 dark:shadow-submit-dark"
+          >
+            Whatsapp
+          </a>
 
           <p className=" mt-10 text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
-            Nos ubicamos en Barrio corazón de Jesús de las antiguas bodegas de
-            la Yanber 200 sur, San José, 10108
+            Nos ubicamos en Avenida 16, calle 34, Barrio Corazón de Jesús, San
+            José, Costa Rica
           </p>
 
           <p className="mt-9 text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">

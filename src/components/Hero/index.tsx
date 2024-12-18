@@ -1,7 +1,3 @@
-import repsell from "../../../public/images/hero/repsell-name.png";
-import repsellDark from "../../../public/images/hero/repsell-name-dark.png";
-import Image from "next/image";
-
 const Hero = () => {
   return (
     <>

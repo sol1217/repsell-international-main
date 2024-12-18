@@ -2,7 +2,7 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
 import Image from "next/image";
-import prod from "../../../public/images/hero/products-text.png";
+import productos from "../../../public/images/hero/products-text.png";
 
 const Features = () => {
   return (
@@ -28,7 +28,7 @@ const Features = () => {
         <div className="container mx-auto px-4">
           {/* Logo Section */}
           <div className="mb-10 flex items-center justify-center">
-            <Image src={prod} alt="" height={300} width={300} />
+            <Image src={productos} alt="" height={300} width={300} />
           </div>
 
           {/* Section Title */}
@@ -39,7 +39,7 @@ const Features = () => {
           />
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-14  md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map((feature) => (
               <SingleFeature key={feature.id} feature={feature} />
             ))}

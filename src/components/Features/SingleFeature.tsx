@@ -8,10 +8,10 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph } = feature;
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <div className="wow fadeInUp" data-wow-delay=".15s">
         <div
-          className={`mb-10 flex h-[150px] w-[150px] items-center justify-center rounded-md bg-bg-color-dark text-primary 
+          className={`mb-10 flex h-[150px] w-[150px] items-center justify-center rounded-md bg-gray-400 text-primary 
         transition-transform duration-300 ${isHovered ? "scale-110" : "scale-100"}`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}

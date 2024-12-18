@@ -132,13 +132,6 @@ const BlogDetailsPage = () => {
                     <br />
                     <div className="mt-7 grid grid-cols-3 gap-5">
                       <Image
-                        src="/images/hero/st-5.jpeg"
-                        alt=""
-                        width={300}
-                        height={100}
-                        className="history-img h-[180px] w-full object-cover"
-                      />
-                      <Image
                         src="/images/hero/st-3.jpeg"
                         alt=""
                         width={300}
@@ -161,6 +154,13 @@ const BlogDetailsPage = () => {
                       />
                       <Image
                         src="/images/hero/st-4.jpeg"
+                        alt=""
+                        width={300}
+                        height={100}
+                        className="history-img h-[180px] w-full object-cover"
+                      />
+                      <Image
+                        src="/images/hero/st-6.jpg"
                         alt=""
                         width={300}
                         height={100}

@@ -2,7 +2,7 @@ import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 import Image from "next/image";
-import detail from "../../../public/images/hero/Cada-detalle-cuenta.png";
+import details from "../../../public/images/hero/cada-detalle-cuenta.png";
 
 const testimonialData: Testimonial[] = [
   {
@@ -46,7 +46,7 @@ const Testimonials = () => {
         />
         <div className="mb-9 flex items-center justify-center font-serif text-3xl caret-body-color-dark">
           <Image
-            src={detail}
+            src={details}
             alt="cada detalle cuenta"
             width={400}
             height={400}
