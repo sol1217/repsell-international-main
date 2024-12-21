@@ -79,7 +79,7 @@ const NewsLatterBox = () => {
             href="https://wa.link/26xce4"
             className="mb-5 flex w-full  items-center justify-center rounded-sm bg-[#e11b24] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b26]/90 dark:shadow-submit-dark"
           >
-            Whatsapp
+            Whatsapp 8968-2121
           </a>
 
           <p className=" mt-10 text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">

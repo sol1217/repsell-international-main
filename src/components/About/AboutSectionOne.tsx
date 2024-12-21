@@ -19,10 +19,13 @@ const AboutSectionOne = () => {
   );
 
   return (
-    <section id="about" className="relative z-10  pt-16 md:pt-20 lg:pt-28">
+    <section
+      id="about"
+      className="relative z-10 bg-dark  pt-16 md:pt-20 lg:pt-28"
+    >
       <div className="video-repsell absolute inset-0 z-0 flex h-full w-full items-center justify-center">
         <video
-          className="absolute inset-0 h-full w-full object-cover opacity-50"
+          className="absolute inset-0 h-full w-full object-cover opacity-50 mix-blend-darken"
           autoPlay
           loop
           playsInline
@@ -32,7 +35,7 @@ const AboutSectionOne = () => {
         </video>
       </div>
       <div className="container relative z-10">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="border-b border-body-color/[.15] pb-16  md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle

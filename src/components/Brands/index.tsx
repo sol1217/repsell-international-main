@@ -34,7 +34,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, imageLight, name } = brand;
 
   return (
-    <div className="flex flex-row items-center justify-center rounded-2xl  xl:w-2/6">
+    <div className="flex flex-row items-center justify-center rounded-2xl  ">
       <div rel="nofollow noreferrer" className="relative transition  ">
         <Image
           src={imageLight}

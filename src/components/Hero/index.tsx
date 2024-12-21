@@ -7,7 +7,7 @@ const Hero = () => {
       >
         <div className="video-repsell absolute inset-0 z-0 flex h-full w-full items-center justify-center">
           <video
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover  "
             autoPlay
             loop
             playsInline
