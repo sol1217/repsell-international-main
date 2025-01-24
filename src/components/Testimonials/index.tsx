@@ -11,7 +11,7 @@ const testimonialData: Testimonial[] = [
     designation: "Founder @TailGrids",
     content:
       "Está demasiado lindo el trofeo 🏆. Normalmente doy medallas al campeón, es la primera vez que daré también trofeo y sé que les va a gustar",
-    imagePerson: "/images/hero/person-2.jpg",
+    imagePerson: "/images/hero/person-2.png",
     star: 5,
   },
   {
@@ -20,7 +20,7 @@ const testimonialData: Testimonial[] = [
     designation: "Founder @UIdeck",
     content:
       "El cristal quedó perfecto muchas gracias y muchas gracias también por el excelente servicio ",
-    imagePerson: "/images/hero/person-1.jpg",
+    imagePerson: "/images/hero/person-1.png",
     star: 5,
   },
   {
@@ -29,7 +29,7 @@ const testimonialData: Testimonial[] = [
     designation: "Founder @Lineicons",
     content:
       "Esperamos el otro año volver a trabajar con ustedes, el trabajo quedó muy bien y ha gustado mucho. Gracias.",
-    imagePerson: "/images/hero/person-3.jpg",
+    imagePerson: "/images/hero/person-3.png",
     star: 5,
   },
 ];

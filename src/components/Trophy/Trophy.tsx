@@ -1,6 +1,6 @@
 import Image from "next/image";
 import trophy from "../../../public/images/products/trophy.png";
-import resina from "../../../public/images/products/trophy-product.png";
+import medals from "../../../public/images/products/san-silvestre.png";
 import SectionTitle from "@/components/Common/SectionTitle";
 import slogan from "../../../public/images/hero/SOMOS-LÍDER.png";
 
@@ -56,7 +56,7 @@ const Trophy = () => {
             </div>
             <Image
               className="custom-img-size custom-img-animation  h-auto w-[460px] sm:w-[250px]"
-              src={resina}
+              src={medals}
               alt=""
             />
           </div>
