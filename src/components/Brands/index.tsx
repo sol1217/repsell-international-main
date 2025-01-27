@@ -16,7 +16,7 @@ const Brands = () => {
             center
           />
           <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center gap-10 rounded-sm bg-dark  sm:px-10 ">
+            <div className="flex flex-wrap items-center justify-center gap-10 rounded-sm   sm:px-10 ">
               {brandsData.map((brand) => (
                 <SingleBrand key={brand.id} brand={brand} />
               ))}
@@ -36,13 +36,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   return (
     <div className="flex flex-row items-center justify-center rounded-2xl  ">
       <div rel="nofollow noreferrer" className="relative transition  ">
-        <Image
-          src={imageLight}
-          alt={name}
-          width={100}
-          height={100}
-          className="hidden dark:block"
-        />
+        <Image src={imageLight} alt={name} width={100} height={100} />
       </div>
     </div>
   );
