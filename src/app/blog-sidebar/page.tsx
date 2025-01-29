@@ -75,7 +75,7 @@ const BlogSidebarPage = () => {
   };
 
   const getHref = (category) => {
-    return categoryTranslationMap[category]?.href || "/not-found";
+    return categoryTranslationMap[category]?.href || "/medals";
   };
 
   return (

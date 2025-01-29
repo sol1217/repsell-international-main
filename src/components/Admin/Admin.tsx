@@ -7,6 +7,14 @@ const Admin = () => {
     <>
       <section className=" pb-[120px] pt-[150px]">
         <div className="container">
+          <div className="w-full justify-items-end ">
+            <a
+              className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+              href="/"
+            >
+              INICIO
+            </a>
+          </div>
           <div className="-flex flex-wrap items-center justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
