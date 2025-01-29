@@ -6,7 +6,7 @@ const brandsData: Brand[] = [
     name: "UNA",
     href: "https://uideck.com",
     image: "/images/brands/UNA-dark.png",
-    imageLight: "/images/brands/UNA.png",
+    imageLight: "/images/brands/UNA-dark.png",
   },
   {
     id: 5,
@@ -19,7 +19,7 @@ const brandsData: Brand[] = [
     id: 3,
     name: "LDA",
     href: "https://lineicons.com",
-    image: "/images/brands/LDA-dark.png",
+    image: "/images/brands/LDA.png",
     imageLight: "/images/brands/LDA.png",
   },
   {
@@ -34,7 +34,7 @@ const brandsData: Brand[] = [
     name: "UCR",
     href: "https://tailgrids.com",
     image: "/images/brands/UCR-dark.png",
-    imageLight: "/images/brands/UCR.png",
+    imageLight: "/images/brands/UCR-dark.png",
   },
   {
     id: 8,
@@ -48,7 +48,7 @@ const brandsData: Brand[] = [
     name: "INTEL",
     href: "https://tailadmin.com",
     image: "/images/brands/intel-dark.png",
-    imageLight: "/images/brands/intel.png",
+    imageLight: "/images/brands/intel-dark.png",
   },
   {
     id: 9,
@@ -62,7 +62,7 @@ const brandsData: Brand[] = [
     name: "TEC",
     href: "https://formbold.com",
     image: "/images/brands/TEC-dark.png",
-    imageLight: "/images/brands/TEC.png",
+    imageLight: "/images/brands/TEC-dark.png",
   },
   {
     id: 10,
