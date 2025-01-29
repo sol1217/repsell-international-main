@@ -7,7 +7,7 @@ const Admin = () => {
     <>
       <section className=" pb-[120px] pt-[150px]">
         <div className="container">
-          <div className="w-full justify-items-end ">
+          <div className="flex w-full items-center justify-end ">
             <a
               className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
               href="/"
