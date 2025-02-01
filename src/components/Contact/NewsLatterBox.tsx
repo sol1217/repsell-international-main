@@ -40,7 +40,7 @@ const NewsLatterBox = () => {
             </a>
 
             <a
-              href="https://wa.link/26xce4"
+              href="https://wa.link/7otvpd"
               aria-label="social-link"
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +76,7 @@ const NewsLatterBox = () => {
             </a>
           </div>
           <a
-            href="https://wa.link/26xce4"
+            href="https://wa.link/7otvpd"
             className="mb-5 flex w-full  items-center justify-center rounded-sm bg-[#e11b24] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#e11b26]/90 dark:shadow-submit-dark"
           >
             Whatsapp 8968-2121
