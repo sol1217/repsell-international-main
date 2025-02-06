@@ -2,20 +2,27 @@
 
 import { Feature } from "@/types/feature";
 import { useState } from "react";
+import background from "../../../public/images/hero/background.png";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { icon, title, paragraph } = feature;
+  const background = "url('/images/hero/background.png')";
 
   return (
     <div className="w-full ">
       <div className="wow fadeInUp" data-wow-delay=".15s">
         <div
-          className={`mb-10 flex h-[150px] w-[150px] items-center justify-center rounded-md bg-gray-400 text-primary 
+          className={`mb-10 flex h-[150px] w-[150px] items-center justify-center rounded-md  text-primary 
         transition-transform duration-300 ${isHovered ? "scale-110" : "scale-100"}`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onClick={() => setIsHovered(!isHovered)}
+          style={{
+            backgroundImage: background,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
           {icon}
         </div>

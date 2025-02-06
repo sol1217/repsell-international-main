@@ -37,14 +37,14 @@ const featuresData: Feature[] = [
   },
   {
     id: 1,
-    icon: <Image src={crystals} alt="crystals" width={150} height={150} />,
+    icon: <Image src={crystals} alt="crystals" width={145} height={145} />,
     title: "Cristales Grabados",
     paragraph:
       "Si busca un acabado más moderno y refinado, nuestros reconocimientos en cristal grabado con cajas de lujo destacan por su claridad y belleza. El grabado a láser en cristal permite detalles precisos y elegantes, transformando cada pieza en una verdadera obra de arte.",
   },
   {
     id: 1,
-    icon: <Image src={wood} alt="wood" width={150} height={150} />,
+    icon: <Image src={wood} alt="wood" width={115} height={95} />,
     title: "Madera Grabada",
     paragraph:
       "Para un toque más cálido y natural, nuestras piezas de madera grabada ofrecen una alternativa sofisticada. El grabado a láser en madera es perfecto para crear reconocimientos que combinan elegancia con durabilidad, manteniendo un aspecto tradicional y artesanal.",

@@ -16,25 +16,11 @@ const brandsData: Brand[] = [
     imageLight: "/images/brands/Grupo-irex.png",
   },
   {
-    id: 3,
-    name: "LDA",
-    href: "https://lineicons.com",
-    image: "/images/brands/LDA.png",
-    imageLight: "/images/brands/LDA.png",
-  },
-  {
     id: 7,
     name: "CRFOOTBALL",
     href: "https://formbold.com",
     image: "/images/brands/football-cr.png",
     imageLight: "/images/brands/football-cr.png",
-  },
-  {
-    id: 2,
-    name: "UCR",
-    href: "https://tailgrids.com",
-    image: "/images/brands/UCR-dark.png",
-    imageLight: "/images/brands/UCR-dark.png",
   },
   {
     id: 8,
@@ -70,6 +56,20 @@ const brandsData: Brand[] = [
     href: "https://formbold.com",
     image: "/images/brands/icoder.png",
     imageLight: "/images/brands/icoder.png",
+  },
+  {
+    id: 2,
+    name: "UCR",
+    href: "https://tailgrids.com",
+    image: "/images/brands/UCR-dark.png",
+    imageLight: "/images/brands/UCR-dark.png",
+  },
+  {
+    id: 3,
+    name: "LDA",
+    href: "https://lineicons.com",
+    image: "/images/brands/LDA.png",
+    imageLight: "/images/brands/LDA.png",
   },
 ];
 

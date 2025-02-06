@@ -167,7 +167,7 @@ const BlogDetailsPage = () => {
                         className="history-img h-[180px] w-full object-cover"
                       />
                       <Image
-                        src="/images/hero/st-5.jpeg"
+                        src="/images/hero/st-5.jpg"
                         alt=""
                         width={300}
                         height={100}
