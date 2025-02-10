@@ -16,7 +16,7 @@ const featuresData: Feature[] = [
   },
   {
     id: 1,
-    icon: <Image src={trophy} alt="trophy" width={100} height={100} />,
+    icon: <Image src={trophy} alt="trophy" width={130} height={130} />,
     title: "Trofeos",
     paragraph:
       "Los trofeos de Repsell Internacional son un símbolo duradero de excelencia. Disponemos de una amplia gama de diseños innovadores y en variedad de tamaños, todos personalizables, para que cada trofeo se ajuste a la magnitud del logro que representa, ya sea empresarial o deportivo.",
@@ -37,7 +37,7 @@ const featuresData: Feature[] = [
   },
   {
     id: 1,
-    icon: <Image src={crystals} alt="crystals" width={145} height={145} />,
+    icon: <Image src={crystals} alt="crystals" width={150} height={150} />,
     title: "Cristales Grabados",
     paragraph:
       "Si busca un acabado más moderno y refinado, nuestros reconocimientos en cristal grabado con cajas de lujo destacan por su claridad y belleza. El grabado a láser en cristal permite detalles precisos y elegantes, transformando cada pieza en una verdadera obra de arte.",
