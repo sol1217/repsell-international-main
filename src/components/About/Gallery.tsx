@@ -1,10 +1,10 @@
 import Image from "next/image";
-import galleryOne from "../../../public/images/products/gallery-1.jpeg";
+import galleryOne from "../../../public/images/hero/3.jpg";
 import galleryTwo from "../../../public/images/products/gallery-2.jpeg";
 import galleryThree from "../../../public/images/products/gallery-3.jpeg";
 import galleryFour from "../../../public/images/products/gallery-4.jpg";
 import galleryFive from "../../../public/images/products/gallery-5.jpeg";
-import gallerySix from "../../../public/images/products/gallery-6.jpeg";
+import gallerySix from "../../../public/images/products/gallery-6.jpg";
 import { Gallery } from "@/types/gallery";
 import SectionTitle from "@/components/Common/SectionTitle";
 

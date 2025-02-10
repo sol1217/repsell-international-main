@@ -99,9 +99,7 @@ const SingleImpression = () => {
                   <div className="flex flex-col items-center gap-3">
                     <div className="flex flex-row">
                       <div className="w-full">
-                        <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                          Colores:
-                        </h4>
+                        <h4 className="mb-1 text-sm font-medium ">Colores:</h4>
                       </div>
                       <div className="mr-4 flex  flex-wrap gap-3">
                         {(imp.color || "").split(",").map((color, index) => {
@@ -121,7 +119,7 @@ const SingleImpression = () => {
                                 className="rounded-full border-body-color dark:border-white"
                                 style={{ width: "24px", height: "24px" }}
                               />
-                              <span className="text-xs font-bold text-dark dark:text-white">
+                              <span className="text-xs font-bold ">
                                 {color.trim()}
                               </span>
                             </div>

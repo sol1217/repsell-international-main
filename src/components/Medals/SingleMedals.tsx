@@ -118,7 +118,7 @@ const SingleMedals = () => {
                                 className="rounded-full border-body-color dark:border-white"
                                 style={{ width: "24px", height: "24px" }}
                               />
-                              <span className="text-xs font-bold text-dark dark:text-white">
+                              <span className="text-xs font-bold text-white">
                                 {color.trim()}
                               </span>
                             </div>

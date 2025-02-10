@@ -10,8 +10,8 @@ import { FaTrashAlt } from "react-icons/fa";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
-  const [isEmailSent, setIsEmailSent] = useState(false); // Controla si el correo fue enviado correctamente
-  const [emailError, setEmailError] = useState(false); // Controla si hubo un error al enviar el correo
+  const [isEmailSent, setIsEmailSent] = useState(false);
+  const [emailError, setEmailError] = useState(false);
 
   const form = useRef();
 
@@ -135,7 +135,7 @@ const Cart = () => {
                       type="number"
                       maxLength={8}
                       required
-                      placeholder="Ingresa un número de telefono"
+                      placeholder="Ingresa un número de teléfono"
                       name="number"
                       className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
                     />
@@ -151,7 +151,7 @@ const Cart = () => {
                       type="email"
                       required
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                      placeholder="Ingresa tu correo electronico"
+                      placeholder="Ingresa tu correo electrónico"
                       name="email"
                       className="mb-3 mt-3 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#121723] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 dark:shadow-submit-dark"
                     />
