@@ -43,6 +43,10 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
           </div>
         </div>
 
+        <p className=" border-b border-blue-800   ">
+          {name}
+        </p>
+
         <p className="mb-8 border-b border-blue-800 border-opacity-60 pb-5 leading-relaxed text-white  ">
           “{content}“
         </p>

@@ -7,16 +7,16 @@ import details from "../../../public/images/hero/cada-detalle-cuenta.png";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
+    name: "Marlon Villalobos",
     designation: "Founder @TailGrids",
     content:
-      "Está demasiado lindo el trofeo 🏆. Normalmente doy medallas al campeón, es la primera vez que daré también trofeo y sé que les va a gustar",
+      "Está demasiado lindo el trofeo 🏆. Normalmente doy medallas al campeón, es la primera vez que daré también trofeo y les va a gustar",
     imagePerson: "/images/hero/person-2.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
+    name: "⁠María José Céspedes",
     designation: "Founder @UIdeck",
     content:
       "El cristal quedó perfecto muchas gracias y muchas gracias también por el excelente servicio ",
@@ -25,7 +25,7 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: 3,
-    name: "Lethium Frenci",
+    name: "Julio Zúñiga",
     designation: "Founder @Lineicons",
     content:
       "Esperamos el otro año volver a trabajar con ustedes, el trabajo quedó muy bien y ha gustado mucho. Gracias.",

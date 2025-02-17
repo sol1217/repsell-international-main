@@ -13,7 +13,7 @@ const NewsLatterBox = () => {
   return (
     <div className="relative z-10 flex h-[720px] flex-col items-center justify-center rounded-sm bg-white p-8 text-center shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-        Horario de atención
+        Horario de atención:
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
         Lunes a viernes de 8:15a.m a 5:15pm
