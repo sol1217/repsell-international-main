@@ -16,7 +16,7 @@ const NewsLatterBox = () => {
         Horario de atención:
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Lunes a viernes de 8:15a.m a 5:15pm
+        Lunes a viernes de 8:00a.m a 5:15pm
       </p>
 
       <div>
