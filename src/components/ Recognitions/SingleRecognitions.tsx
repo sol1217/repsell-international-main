@@ -1,19 +1,24 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaCheckCircle } from "react-icons/fa";
-import recognitions from "@/components/ Recognitions/Recognitions";
 import { colorMapping } from "@/utils/colorMapping";
-import white from "../../../public/images/products/color/white.jpeg";
 import gold from "../../../public/images/products/color/golden.jpeg";
 
 const SingleRecognitions = () => {
   const [recognitions, setRecognitions] = useState([]);
   const [addedRecognitionId, setAddedRecognitionId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [backgroundColor, setBackgroundColor] = useState("#004AAD");
+
+  useEffect(() => {
+    const savedColors = JSON.parse(localStorage.getItem("backgroundColors"));
+    if (savedColors && savedColors.recognitions) {
+      setBackgroundColor(savedColors.recognitions);
+    }
+  }, []);
 
   useEffect(() => {
     const fetchRecognitions = async () => {
@@ -41,8 +46,8 @@ const SingleRecognitions = () => {
       JSON.parse(localStorage.getItem("recognitions")) || [];
     const updatedRecognitions = [...storedRecognitions, recognition];
     localStorage.setItem("recognitions", JSON.stringify(updatedRecognitions));
-    setAddedRecognitionId(recognition.id); // Set the added recognition ID to display the message
-    setTimeout(() => setAddedRecognitionId(null), 3000); // Clear the message after 3 seconds
+    setAddedRecognitionId(recognition.id);
+    setTimeout(() => setAddedRecognitionId(null), 3000);
   };
 
   return (
@@ -55,9 +60,13 @@ const SingleRecognitions = () => {
             recognitions.map((recognition) => (
               <div
                 key={recognition.id}
-                className="product-main group relative mb-8 h-[700px] w-[400px] flex-wrap overflow-hidden rounded-sm rounded-b-2xl shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark"
+                style={{ background: backgroundColor }}
+                className="product-main group relative mb-8 h-[700px] w-[400px] flex-wrap overflow-hidden rounded-2xl shadow-one duration-300 hover:shadow-two dark:hover:shadow-gray-dark"
               >
-                <div className=" relative block aspect-[37/22] w-full rounded-t-2xl bg-dark">
+                <div
+                  className=" relative block aspect-[37/22] w-full rounded-t-2xl"
+                  style={{ background: backgroundColor }}
+                >
                   <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-blue-950 px-4 py-2 text-sm font-semibold capitalize text-white">
                     {recognition.category}
                   </span>
@@ -68,9 +77,12 @@ const SingleRecognitions = () => {
                     style={{ width: "300px", height: "300px" }}
                   />
                 </div>
-                <div className="h-full rounded-b-2xl bg-dark p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+                <div
+                  style={{ background: backgroundColor }}
+                  className="h-full rounded-b-2xl  p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8"
+                >
                   <h3>
-                    <div className="mb-4 block text-xl font-bold text-white caret-bg-color-dark hover:text-primary dark:hover:text-red-700 sm:text-2xl">
+                    <div className="mb-4 block text-xl font-bold text-white caret-bg-color-dark hover:text-blue-700 dark:hover:text-red-700 sm:text-2xl">
                       {recognition.name}
                     </div>
                   </h3>

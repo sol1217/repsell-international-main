@@ -11,6 +11,51 @@ const ProductMain = () => {
   const [medals, setMedals] = useState([]);
   const [impresion, setImpresion] = useState([]);
   const [loading, setLoading] = useState(true);
+  const initialColors = {
+    trophies: "#004AAD",
+    recognitions: "#E72603",
+    promotional: "#004AAD",
+    medals: "#E72603",
+    impresion: "#BFBFBF",
+  };
+
+  const [backgroundColors, setBackgroundColors] = useState(initialColors);
+  const [successMessages, setSuccessMessages] = useState({});
+
+  useEffect(() => {
+    const savedColors = JSON.parse(localStorage.getItem("backgroundColors"));
+
+    if (savedColors) {
+      setBackgroundColors((prevColors) => ({
+        ...prevColors,
+        ...savedColors,
+      }));
+    }
+  }, []);
+
+  const handleColorChange = (category, color) => {
+    setBackgroundColors((prevColors) => ({
+      ...prevColors,
+      [category]: color,
+    }));
+  };
+
+  const saveColor = (category) => {
+    const updatedColors = { ...backgroundColors };
+    localStorage.setItem("backgroundColors", JSON.stringify(updatedColors));
+
+    setSuccessMessages((prevMessages) => ({
+      ...prevMessages,
+      [category]: `Color guardado para ${category}`,
+    }));
+
+    setTimeout(() => {
+      setSuccessMessages((prevMessages) => ({
+        ...prevMessages,
+        [category]: null,
+      }));
+    }, 3000);
+  };
 
   useEffect(() => {
     fetchProducts();
@@ -62,7 +107,6 @@ const ProductMain = () => {
       );
       if (response.status === 200) {
         alert("Producto eliminado correctamente.");
-        // Refrescar la lista de productos después de eliminar
         fetchProducts();
       } else {
         alert("Error al eliminar el producto.");
@@ -134,6 +178,48 @@ const ProductMain = () => {
                     >
                       Añadir producto
                     </Link>
+                  </div>
+                  <div>
+                    <h2
+                      className="mb-8 text-center"
+                      style={{ fontSize: "26px" }}
+                    >
+                      Colores de fondo en productos
+                    </h2>
+                    <div className="mb-6 flex flex-col items-center justify-center gap-3 ">
+                      {Object.entries(backgroundColors).map(
+                        ([category, color]) => (
+                          <div
+                            key={category}
+                            className="border-stroke flex w-full justify-between rounded-sm border border-primary bg-primary/5 px-6 py-3 text-base"
+                          >
+                            {category.toUpperCase()}
+                            <div className="flex flex-row items-center justify-center gap-3">
+                              <input
+                                type="text"
+                                placeholder="Ej: #004AAD o linear-gradient(90deg, #004AAD, #E72603)"
+                                value={color}
+                                onChange={(e) =>
+                                  handleColorChange(category, e.target.value)
+                                }
+                              />
+
+                              <button
+                                onClick={() => saveColor(category)}
+                                className="text-primary hover:underline"
+                              >
+                                Editar
+                              </button>
+                            </div>
+                            {successMessages[category] && (
+                              <h4 className="mt-2 text-sm text-green-600">
+                                ✅ {successMessages[category]}
+                              </h4>
+                            )}
+                          </div>
+                        ),
+                      )}
+                    </div>
                   </div>
                   {renderProducts(trophies, "Trofeos", "trophies")}
                   {renderProducts(

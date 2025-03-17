@@ -9,6 +9,14 @@ const SinglePromotional = () => {
   const [promotionals, setPromotionals] = useState([]);
   const [addedPromotionalId, setAddedPromotionalId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [backgroundColor, setBackgroundColor] = useState("#004AAD");
+
+  useEffect(() => {
+    const savedColors = JSON.parse(localStorage.getItem("backgroundColors"));
+    if (savedColors && savedColors.promotional) {
+      setBackgroundColor(savedColors.promotional);
+    }
+  }, []);
 
   useEffect(() => {
     const fetchPromotional = async () => {
@@ -50,9 +58,13 @@ const SinglePromotional = () => {
             promotionals.map((promotional) => (
               <div
                 key={promotional.id}
-                className="product-main group relative mb-8 h-[680px] w-[400px] flex-wrap overflow-hidden rounded-sm rounded-b-2xl bg-dark shadow-one duration-300 hover:shadow-two "
+                style={{ background: backgroundColor }}
+                className="product-main group relative mb-8 h-[680px] w-[400px] flex-wrap overflow-hidden rounded-2xl shadow-one duration-300 hover:shadow-two "
               >
-                <div className="relative block aspect-[37/22] w-full rounded-t-2xl bg-dark">
+                <div
+                  className="relative block aspect-[37/22] w-full rounded-t-2xl"
+                  style={{ background: backgroundColor }}
+                >
                   <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-blue-950 px-4 py-2 text-sm font-semibold capitalize text-white">
                     {promotional.category}
                   </span>
@@ -63,7 +75,10 @@ const SinglePromotional = () => {
                     style={{ width: "300px", height: "300px" }}
                   />
                 </div>
-                <div className="h-full bg-dark p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+                <div
+                  style={{ background: backgroundColor }}
+                  className="h-full p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8"
+                >
                   <h3>
                     <Link
                       href="/blog-details"

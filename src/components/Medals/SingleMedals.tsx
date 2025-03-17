@@ -14,6 +14,14 @@ const SingleMedals = () => {
   const [medals, setMedals] = useState([]);
   const [addedMedalId, setAddedMedalId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [backgroundColor, setBackgroundColor] = useState("#004AAD");
+
+  useEffect(() => {
+    const savedColors = JSON.parse(localStorage.getItem("backgroundColors"));
+    if (savedColors && savedColors.medals) {
+      setBackgroundColor(savedColors.medals);
+    }
+  }, []);
 
   useEffect(() => {
     const fetchMedals = async () => {
@@ -40,11 +48,9 @@ const SingleMedals = () => {
     let storedItems = JSON.parse(localStorage.getItem("selectedMedals")) || [];
     storedItems.push(medal);
     localStorage.setItem("selectedMedals", JSON.stringify(storedItems));
-    setAddedMedalId(medal.id); // Set the added medal ID to display the message
-    setTimeout(() => setAddedMedalId(null), 3000); // Clear the message after 3 seconds
+    setAddedMedalId(medal.id);
+    setTimeout(() => setAddedMedalId(null), 3000);
   };
-
-  const defaultImageSrc = "/images/default-color.png";
 
   return (
     <div className="container">
@@ -56,9 +62,13 @@ const SingleMedals = () => {
             medals.map((medal) => (
               <div
                 key={medal.id}
-                className="product-main medals-colors group relative mb-8 h-[740px] w-[400px] flex-wrap overflow-hidden rounded-sm rounded-b-2xl bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark"
+                style={{ background: backgroundColor }}
+                className="product-main medals-colors group relative mb-8 h-[740px] w-[400px] flex-wrap overflow-hidden rounded-2xl bg-white shadow-one duration-300  dark:hover:shadow-gray-dark"
               >
-                <div className="relative block aspect-[37/22] w-full rounded-t-2xl bg-dark">
+                <div
+                  style={{ background: backgroundColor }}
+                  className="relative block aspect-[37/22] w-full rounded-t-2xl "
+                >
                   <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-blue-950 px-4 py-2 text-sm font-semibold capitalize text-white">
                     {medal.category}
                   </span>
@@ -69,7 +79,10 @@ const SingleMedals = () => {
                     style={{ width: "300px", height: "300px" }}
                   />
                 </div>
-                <div className="h-full bg-dark p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+                <div
+                  style={{ background: backgroundColor }}
+                  className="h-full  p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8"
+                >
                   <h3>
                     <Link
                       href="/blog-details"

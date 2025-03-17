@@ -12,6 +12,30 @@ const SingleTrophiesAndCups = () => {
   const [trophies, setTrophies] = useState([]);
   const [addedTrophyId, setAddedTrophyId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [backgroundColor, setBackgroundColor] = useState("#004AAD");
+
+  useEffect(() => {
+    // Obtener el color desde localStorage
+    const savedColors = JSON.parse(localStorage.getItem("backgroundColors"));
+    if (savedColors && savedColors.trophies) {
+      setBackgroundColor(savedColors.trophies);
+    }
+
+    const fetchTrophies = async () => {
+      try {
+        const response = await axios.get(
+          "https://repsell-international-backend.onrender.com/trophies",
+        );
+        setTrophies(response.data.data);
+      } catch (error) {
+        console.error("Error fetching trophies:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTrophies();
+  }, []);
 
   useEffect(() => {
     const fetchTrophies = async () => {
@@ -47,16 +71,20 @@ const SingleTrophiesAndCups = () => {
       {loading ? (
         <p className="text-dark">Cargando...</p>
       ) : (
-        <div className="products-box flex w-[80vw] flex-wrap items-center justify-center gap-3">
+        <div className="products-box flex w-[80vw]  flex-wrap items-center justify-center gap-3">
           {trophies.length > 0 ? (
             trophies.map((trophy) => (
               <div
                 key={trophy.id}
-                className="product-main group relative  mb-8 h-[650px] w-[400px] flex-wrap overflow-hidden rounded-sm rounded-b-2xl bg-dark shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark"
+                style={{ background: backgroundColor }}
+                className="product-main group relative  mb-8 h-[650px] w-[400px] flex-wrap overflow-hidden rounded-2xl shadow-one duration-300 hover:shadow-two "
               >
-                <div className="relative block aspect-[37/22] w-full rounded-t-2xl bg-dark ">
+                <div
+                  className="relative block aspect-[37/22] w-full rounded-t-2xl"
+                  style={{ backgroundColor }}
+                >
                   <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full  bg-blue-950 px-4 py-2 text-sm font-semibold capitalize text-white">
-                    {trophy.category}
+                    {trophy.category} | "Trofeos"
                   </span>
                   <img
                     className="mx-auto object-contain"
@@ -65,9 +93,12 @@ const SingleTrophiesAndCups = () => {
                     style={{ width: "300px", height: "300px" }}
                   />
                 </div>
-                <div className="h-full bg-dark p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+                <div
+                  className="h-full p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8"
+                  style={{ background: backgroundColor }}
+                >
                   <h3>
-                    <div className="mb-4 block text-xl font-bold text-white dark:hover:text-primary sm:text-2xl">
+                    <div className="mb-4 block text-xl font-bold text-white hover:text-blue-700 dark:hover:text-primary sm:text-2xl">
                       {trophy.name}
                     </div>
                   </h3>
