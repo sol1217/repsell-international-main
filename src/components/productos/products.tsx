@@ -33,11 +33,28 @@ const ProductMain = () => {
     }
   }, []);
 
-  const handleColorChange = (category, color) => {
+  const handleColorChange = async (category, color) => {
     setBackgroundColors((prevColors) => ({
       ...prevColors,
       [category]: color,
     }));
+
+    // Guardar en la base de datos
+    try {
+      await axios.put(
+        `https://repsell-international-backend.onrender.com/update-background`,
+        {
+          category,
+          background: color,
+        },
+      );
+
+      // Guardar en localStorage
+      const updatedColors = { ...backgroundColors, [category]: color };
+      localStorage.setItem("backgroundColors", JSON.stringify(updatedColors));
+    } catch (error) {
+      console.error("Error al actualizar el color de fondo:", error);
+    }
   };
 
   const saveColor = (category) => {
@@ -90,6 +107,18 @@ const ProductMain = () => {
       setPromotional(promotionalRes.data.data || []);
       setMedals(medalsRes.data.data || []);
       setImpresion(impresionRes.data.data || []);
+
+      // Extraer los colores desde la base de datos
+      const newColors = {
+        trophies: trophiesRes.data.data[0]?.background || "#004AAD",
+        recognitions: recognitionsRes.data.data[0]?.background || "#E72603",
+        promotional: promotionalRes.data.data[0]?.background || "#004AAD",
+        medals: medalsRes.data.data[0]?.background || "#E72603",
+        impresion: impresionRes.data.data[0]?.background || "#BFBFBF",
+      };
+
+      setBackgroundColors(newColors);
+      localStorage.setItem("backgroundColors", JSON.stringify(newColors));
     } catch (error) {
       console.error("Error fetching products:", error);
     } finally {
@@ -192,18 +221,18 @@ const ProductMain = () => {
                           <div
                             key={category}
                             className="border-stroke flex w-full justify-between rounded-sm border border-primary bg-primary/5 px-6 py-3 text-base"
+                            style={{ background: color }} // Aquí aplicamos el color de fondo
                           >
                             {category.toUpperCase()}
                             <div className="flex flex-row items-center justify-center gap-3">
                               <input
                                 type="text"
                                 placeholder="Ej: #004AAD o linear-gradient(90deg, #004AAD, #E72603)"
-                                value={color}
+                                value={color || ""} // Asegurar que color tenga un valor
                                 onChange={(e) =>
                                   handleColorChange(category, e.target.value)
                                 }
                               />
-
                               <button
                                 onClick={() => saveColor(category)}
                                 className="text-primary hover:underline"
@@ -212,9 +241,9 @@ const ProductMain = () => {
                               </button>
                             </div>
                             {successMessages[category] && (
-                              <h4 className="mt-2 text-sm text-green-600">
+                              <h3 className="mt-2 text-sm text-green-600">
                                 ✅ {successMessages[category]}
-                              </h4>
+                              </h3>
                             )}
                           </div>
                         ),

@@ -24,10 +24,13 @@ const SinglePromotional = () => {
         const response = await axios.get(
           "https://repsell-international-backend.onrender.com/promotional",
         );
+
+        // Filtrar productos únicos
         const uniquePromotional = response.data.data.filter(
           (promotional, index, self) =>
             index === self.findIndex((m) => m.name === promotional.name),
         );
+
         setPromotionals(uniquePromotional);
       } catch (error) {
         console.error("Error fetching promotional:", error);
@@ -58,12 +61,12 @@ const SinglePromotional = () => {
             promotionals.map((promotional) => (
               <div
                 key={promotional.id}
-                style={{ background: backgroundColor }}
+                style={{ background: promotional.background || "#004AAD" }} // Color dinámico
                 className="product-main group relative mb-8 h-[680px] w-[400px] flex-wrap overflow-hidden rounded-2xl shadow-one duration-300 hover:shadow-two "
               >
                 <div
                   className="relative block aspect-[37/22] w-full rounded-t-2xl"
-                  style={{ background: backgroundColor }}
+                  style={{ background: promotional.background || "#004AAD" }} // Color dinámico
                 >
                   <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-blue-950 px-4 py-2 text-sm font-semibold capitalize text-white">
                     {promotional.category}
@@ -76,7 +79,7 @@ const SinglePromotional = () => {
                   />
                 </div>
                 <div
-                  style={{ background: backgroundColor }}
+                  style={{ background: promotional.background || "#004AAD" }} // Color dinámico
                   className="h-full p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8"
                 >
                   <h3>
